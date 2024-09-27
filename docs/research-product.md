@@ -7,6 +7,8 @@
 - **Other products**: any digital asset, uniquely identified, whose nature does not fall in the first three types
 
 ## Properties
+
+
 ``local_identifier``
 ----
 *String* (mandatory): Unique code identifiying the :ref:`Research product <Research product>` in the SKG (if any, otherwise "stateless identifier")
