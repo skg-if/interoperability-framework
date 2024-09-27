@@ -109,7 +109,7 @@ Each object is structured as follows:
 - `person` *String* (mandatory): The identifier of a [Person]() contributing to the [Research product](#research-product).
 - `declared_affiliations` *List* (recommended): A list of [Organisations]() identifiers that reflect the declared affiliations of a [Person]() for the [Research product](#research-product).
 - `rank` *Integer* (recommended): The rank (i.e., order of appearance) of the [Person]() in the author list of a [Research product](#research-product).
-- `roles` *List* (recommended): A list of the specific roles that a [Person]() had in the [Research product](#research-product). Each element in the list is a *String* compliant with the `CRediT taxonomy](https://credit.niso.org)_.
+- `roles` *List* (recommended): A list of the specific roles that a [Person]() had in the [Research product](#research-product). Each element in the list is a *String* compliant with the [CRediT taxonomy](https://credit.niso.org).
 - `is_listed_author` *Boolean* (recommended): True if the [Person]() indicated is listed as an author of the [Research product](#research-product), False otherwise (e.g., another kind of contribution).
 
 ```json
