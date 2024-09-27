@@ -63,10 +63,10 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 
 ### `product_type`
 *String* (optional): The type of the [Research product](#research-product). One of the following values:
-    - `literature`
-    - `research data`
-    - `research software`
-    - `other`
+- `literature`
+- `research data`
+- `research software`
+- `other`
 
 ```json
     "product_type": "literature"
