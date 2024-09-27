@@ -1,10 +1,10 @@
 # Venue
-A [Venue](#venue) is an entity that models a publishing “gateway” used by [Person](Person) to make their [Research products](Research product) available to others.
+A [Venue](#venue) is an entity that models a publishing “gateway” used by [Person]() to make their [Research products](https://skg-if.github.io/interoperability-framework/research-product) available to others.
 
-:Example: [Episciences](https://episciences.org)  is an overlay platform supporting the management of open-access journals on top of the Open Access repository [HAL](https://hal.science). In this context, episciences.org is a publishing [Venue](#venue) (journal, open access, open peer review), while HAL is a [Data source](Data source). Articles published via episciences.org will be therefore linked to the respective journal (publishing [Venue](#venue)) and the data source HAL. 
-    However, HAL is also a publishing [Venue](#venue) for researchers that are directly uploading their [Research product](Research product). More specifically, a publishing [Venue](#venue) with peer-review and some support for metadata curation. In this case, a [Research product](Research product) will be linked to HAL both as a publishing [Venue](#venue) and as a [Data source](Data source). 
+**Example:** [Episciences](https://episciences.org)  is an overlay platform supporting the management of open-access journals on top of the Open Access repository [HAL](https://hal.science). In this context, episciences.org is a publishing [Venue](#venue) (journal, open access, open peer review), while HAL is a [Data source](Data source). Articles published via episciences.org will be therefore linked to the respective journal (publishing [Venue](#venue)) and the data source HAL. 
+    However, HAL is also a publishing [Venue](#venue) for researchers that are directly uploading their [Research product](https://skg-if.github.io/interoperability-framework/research-product). More specifically, a publishing [Venue](#venue) with peer-review and some support for metadata curation. In this case, a [Research product](https://skg-if.github.io/interoperability-framework/research-product) will be linked to HAL both as a publishing [Venue](#venue) and as a [Data source](Data source). 
 
-**Note:** Each [Research product](Research product) must be associated with its publishing [Venue](#venue) and its [Data source](Data source). 
+**Note:** Each [Research product](https://skg-if.github.io/interoperability-framework/research-product) must be associated with its publishing [Venue](#venue) and its [Data source](Data source). 
 
 
 

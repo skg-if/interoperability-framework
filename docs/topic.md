@@ -6,6 +6,8 @@ A [Topic](#topic) describes the scientific disciplines, subjects and keywords po
 This section describes the metadata fields for a [Topic](#topic).
 
 
+## Properties
+
 ### `local_identifier`		
 *String* (mandatory): Unique code identifiying the [Topic](#topic) in the SKG (if any, otherwise "stateless identifier").
  

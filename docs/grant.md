@@ -4,6 +4,7 @@ The entity [Grant](#grant) describes funding awarded to a [Person](Person) or an
 by a funding body. These bodies, both public and private, can be funders, foundations, governments, agencies or institutions. 
 
 
+## Properties
 
 ### `local_identifier`
 *String* (mandatory): Unique code identifiying the [Grant](#grant) at the funder.
