@@ -15,24 +15,22 @@
 ```
 
 
-`identifiers`
+### `identifiers`
 *List* (recommended):  A list of objects representing external identifiers for the entity. Each object is structured as follows.
 
 - `scheme` *String* (mandatory): The scheme for the external identifier (e.g., doi, handle, purl, pubmed, etc.).
 - `value` *String* (mandatory): The external identifier.
 
-.. code-block:: json
-   :linenos:
-
+```json
     "identifiers": [
         {
             "scheme": "doi"
             "value": "10.1103/PhysRevE.80.056103"
         }
     ]
+```
 
-
-`entity_type`
+### `entity_type`
 ----
 *String* (mandatory): Field stating what kind of entity is being serialised. Needed for parsing purposes; fixed to `product`.
 
