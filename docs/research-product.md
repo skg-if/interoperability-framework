@@ -160,8 +160,8 @@ Each manifestation object has the following structure:
     - `volume` *String* (optional): Volume number (for journals, books, conferences).
     - `edition` *String* (optional): The edition (for journals and books).
     - `number` *String* (optional): Journal number.
-    - `venue` *String* (optional): A [Venue]() identifier for the manifestation.
-    - `hosting_data_source` *String* (optional): A [Data source]() identifier for the manifestation.`
+    - `venue` *String* (optional): A [Venue](https://skg-if.github.io/interoperability-framework/venue) identifier for the manifestation.
+    - `hosting_data_source` *String* (optional): A [Data source](https://skg-if.github.io/interoperability-framework/data-source) identifier for the manifestation.`
 
 ```json
     "manifestations": [
@@ -204,7 +204,7 @@ Each manifestation object has the following structure:
 ```
  
 ### `funding`
-*List* (optional): A list of relevant [Grant]() identifiers associated with the [Research product](#research-product).
+*List* (optional): A list of relevant [Grant](https://skg-if.github.io/interoperability-framework/grant) identifiers associated with the [Research product](#research-product).
 
 ```json
     "funding": ["grant_1", "grant_2"]
