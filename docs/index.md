@@ -1,14 +1,13 @@
 # Core model entities
 
 The SKG-IF model six core entities and their relationships. These are:
-- Research product
-- Agent
-- Grant
-- Venue
+- [Research product](#research-product)
+- [Agent](#agent)
+- [Grant](#grant)
+- [Venue](#venue)
 - [Topic](#topic)
-- Data source
+- [Data source](#data-source)
  
-
 
 ## Research product
 
