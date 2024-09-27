@@ -10,27 +10,27 @@ A [Venue](Venue) is an entity that models a publishing “gateway” used by [Pe
 
 
 ## Properties
-`local_identifier`		
+### `local_identifier`		
 *String* (mandatory): Unique code identifiying the [Venue](Venue) in the SKG (if any, otherwise "stateless identifier").
  
 ```json
     "local_identifier": "123_local_id"
 ```
 
-`identifiers`
+### `identifiers`
 *List* (recommended): A list of objects representing external identifiers for the entity. Each object is structured as follows.
 
-- scheme` *String* (mandatory): The scheme for the external identifier. It can be one of the following
-    - issn`
-    - eissn`
-    - lissn`
-    - isbn`
-    - opendoar`
-    - re3data.org`
-    - fairsharing`
-    - doi`
-    - handle`
-- value` *String* (mandatory): The external identifier.
+- `scheme` *String* (mandatory): The scheme for the external identifier. It can be one of the following
+    - `issn`
+    - `eissn`
+    - `lissn`
+    - `isbn`
+    - `opendoar`
+    - `re3data.org`
+    - `fairsharing`
+    - `doi`
+    - `handle`
+- `value` *String* (mandatory): The external identifier.
 
 ```json
     "identifiers": [
@@ -45,28 +45,28 @@ A [Venue](Venue) is an entity that models a publishing “gateway” used by [Pe
     ]
 ```
 
-`entity_type`
+### `entity_type`
 *String* (mandatory): Field stating what kind of entity is being serialised. Needed for parsing purposes; fixed to `venue`.
 
 ```json
     "entity_type": "venue"
 ```
 
-`name` 
+### `name` 
  *String* (optional): The name of the [Venue](Venue).
 
 ```json
     "name": "Lecture Notes in Computer Science"
 ```
 
-`acronym` 
+### `acronym` 
  *String* (optional): Acronym used by a [Venue](Venue).
 
 ```json
     "acronym": "JASIST"
 ```
 
-`type`
+### `type`
 *String* (optional): The type of the [Venue](Venue). The String follows the vocabulary below
 
 | SKG-IF     | OpenCitations                                                                                |
@@ -82,28 +82,28 @@ A [Venue](Venue) is an entity that models a publishing “gateway” used by [Pe
     "type": "repository"
 ```
 
-`publisher`
+### `publisher`
 *String* (optional): The name of the publisher (for journals, books, conferences).
 
 ```json
     "publisher": "Springer Nature"
 ```
 
-`series`
+### `series`
 *String* (optional): The name of the conference or book series.
 
 ```json
     "series": "Lecture Notes in Computer Science (LNCS)"
 ```
 
-`is_full_oa`
+### `is_full_oa`
 *Boolean* (optional): True if the [Venue](Venue) contains only open access products (to the best of knowledge, at the time of expert).
  
 ```json
     "is_currently_full_oa": true
 ```
 
-`creation_date`
+### `creation_date`
 *String* (optional): The date of creation of the [Venue](Venue) expressed as [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
  
 ```json
@@ -111,11 +111,11 @@ A [Venue](Venue) is an entity that models a publishing “gateway” used by [Pe
 ```
 
 
-`contributions`
+### `contributions`
 *List* (optional) : A list of all the [Person]() that contributed to the [Venue](Venue). Each element of the list is structured as follows:
 
-- person` *String* (mandatory): The id of a [Person]().
-- roles` *List* (mandatory): The roles of the [Person]() contributing to the [Venue](Venue).
+- `person` *String* (mandatory): The id of a [Person]().
+- `roles` *List* (mandatory): The roles of the [Person]() contributing to the [Venue](Venue).
 
 ```json
    "contributions": [
