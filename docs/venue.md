@@ -69,19 +69,14 @@ A [Venue](Venue) is an entity that models a publishing “gateway” used by [Pe
 `type`
 *String* (optional): The type of the [Venue](Venue). The String follows the vocabulary below
 
-.. tabularcolumns:: p{0.132\linewidth}p{0.198\linewidth}p{0.330\linewidth}
-.. csv-table:: Controlled vocabulary for different types of venue and its mapping towards OpenCitations
-   :name: tables-csv-example
-   :header: "SKG-IF", "OpenCitations"
-   :class: longtable
-   :align: center
-
-   "`repository`", "Repository, Scientific database"
-   "`journal`", "Journal issue, Journal volume, Journal"
-   "`conference`", "Proceedings series, Proceedings"
-   "`book`", "Book, Book part, Book section, Book series, Book set, Edited book, Reference book, Monograph"
-   "`other`", "Report series, Standard series, Archival document"
-   "`unknown`", ""
+| SKG-IF     | OpenCitations                                                                                |
+|------------|----------------------------------------------------------------------------------------------|
+| `repository` | Repository, Scientific database                                                              |
+| `journal`    | Journal issue, Journal volume, Journal                                                       |
+| `conference` | Proceedings series, Proceedings                                                              |
+| `book`       | Book, Book part, Book section, Book series, Book set, Edited book, Reference book, Monograph |
+| `other`      | Report series, Standard series, Archival document                                            |
+| `unknown`    |                                                                                              |
 
 ```json
     "type": "repository"
