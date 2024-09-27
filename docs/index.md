@@ -2,8 +2,8 @@
 
 The SKG-IF model six core entities and their relationships. These are:
 - [Research product](https://skg-if.github.io/interoperability-framework/research-product)
-- [Agent](#agent)
-- [Grant](#grant)
-- [Venue](#venue)
-- [Topic](#topic)
-- [Data source](#data-source)
+- [Agent](https://skg-if.github.io/interoperability-framework/agent)
+- [Grant](https://skg-if.github.io/interoperability-framework/grant)
+- [Venue](https://skg-if.github.io/interoperability-framework/venue)
+- [Topic](https://skg-if.github.io/interoperability-framework/topic)
+- [Data source](https://skg-if.github.io/interoperability-framework/data-source)
