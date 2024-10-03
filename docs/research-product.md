@@ -120,7 +120,7 @@ Each object is structured as follows:
 - `declared_affiliations` *List* (recommended): A list of [Organisations](https://skg-if.github.io/interoperability-framework/agent) that reflect the declared affiliations of a [Agent](https://skg-if.github.io/interoperability-framework/agent) for the [Research product]().
 - `rank` *Integer* (recommended): The rank (i.e., order of appearance) of the [Agent](https://skg-if.github.io/interoperability-framework/agent) with a specific role (e.g. the order of an author in a list) of a [Research product]().
 - `role` *String* (recommended): The role that an [Agent](https://skg-if.github.io/interoperability-framework/agent) had in the [Research product](), to choose among `author`, `editor`, and `publisher`.
-- `contribution` *List* (recommended): The contributions that an [Agent](https://skg-if.github.io/interoperability-framework/agent) had in the [Research product](). Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.:
+- `contribution` *List* (recommended): The contributions that an [Agent](https://skg-if.github.io/interoperability-framework/agent) had in the [Research product](). Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.,
     - `conceptualization`
     - `data curation`
     - `formal analysis`
@@ -238,7 +238,7 @@ Each object is structured as follows:
                 "hosting_data_source": "123"
             }
         }
-    ],
+    ]
 ```
 
 ### `relevant_organisations`
