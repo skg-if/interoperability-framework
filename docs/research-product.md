@@ -83,9 +83,9 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 ### `topics`
 *List* (optional): A list objects referring to [Topic](https://skg-if.github.io/interoperability-framework/topic) covered by the [Research product](#research-product). 
 Each object in the list has the following properties:
-- `term` *String* (mandatory): The identifier of a [Topic](https://skg-if.github.io/interoperability-framework/topic) relevant for the [Research product](#research-product). `new`
+- `term` *String* (mandatory): The identifier of a [Topic](https://skg-if.github.io/interoperability-framework/topic) relevant for the [Research product](#research-product). `[new]`
 - `provenance` *List* (recommended): A list of provenance information tracking the origin of the relation between a [Topic](https://skg-if.github.io/interoperability-framework/topic) and a [Research product](#research-product). Each topic provenance object has the following properties:
-    - `associated_with` *String* (mandatory): the `local_identifier` of the [Agent]() responsible for the topic relation. `new`
+    - `associated_with` *String* (mandatory): the `local_identifier` of the [Agent]() responsible for the topic relation. `[new]`
     - `trust` *Float* (mandatory): A numeric value associated to the trust given to the relation to a [Topic](https://skg-if.github.io/interoperability-framework/topic). The float should be normalised in the range [0,1].
  
 ```json
@@ -112,13 +112,27 @@ Each object in the list has the following properties:
 ```
 
 ### `contributions`
-*List* (optional): A list of objects that describe a [Person], his/her role, rank and declared affiliations to [Organisations] when working to a [Research product](#research-product).
+*List* (optional): A list of objects that describe an [Agent](), its role, contribution, rank and declared affiliations to [Organisations]() when working on a [Research product](). 
 Each object is structured as follows:
-- `person` *String* (mandatory): The identifier of a [Person]() contributing to the [Research product](#research-product).
-- `declared_affiliations` *List* (recommended): A list of [Organisations]() identifiers that reflect the declared affiliations of a [Person]() for the [Research product](#research-product).
-- `rank` *Integer* (recommended): The rank (i.e., order of appearance) of the [Person]() in the author list of a [Research product](#research-product).
-- `roles` *List* (recommended): A list of the specific roles that a [Person]() had in the [Research product](#research-product). Each element in the list is a *String* compliant with the [CRediT taxonomy](https://credit.niso.org).
-- `is_listed_author` *Boolean* (recommended): True if the [Person]() indicated is listed as an author of the [Research product](#research-product), False otherwise (e.g., another kind of contribution).
+- `by` *String* (mandatory): The identifier of an [Agent] contributing to the [Research product]().
+- `declared_affiliations` *List* (recommended): A list of [Organisations]() that reflect the declared affiliations of a [Agent]() for the [Research product](#research-product).
+- `rank` *Integer* (recommended): The rank (i.e., order of appearance) of the [Agent]() with a specific role (e.g. the order of an author in a list) of a [Research product]().
+- `role` *String* (recommended): The role that an [Agent]() had in the [Research product](), to choose among `author`, `editor`, and `publisher`.
+- `contribution` *List* (recommended): The contributions that an [Agent]() had in the [Research product](). Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.:
+    - conceptualization
+    - data curation
+    - formal analysis
+    - funding acquisition
+    - investigation
+    - methodology
+    - project administration
+    - resources
+    - software
+    - supervision
+    - validation
+    - visualization
+    - writing – original draft
+    - writing – review & editing
 
 ```json
     "contributions": [
