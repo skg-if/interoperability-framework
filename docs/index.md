@@ -1,6 +1,6 @@
 # Core model entities
 
-The SKG-IF modelS six core entities and their relationships. These are:
+The SKG-IF models six core entities and their relationships. These are:
 - [Research product](https://skg-if.github.io/interoperability-framework/research-product)
 - [Agent](https://skg-if.github.io/interoperability-framework/agent)
 - [Grant](https://skg-if.github.io/interoperability-framework/grant)
