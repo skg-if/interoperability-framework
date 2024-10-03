@@ -242,7 +242,7 @@ Each object is structured as follows:
 ```
 
 ### `relevant_organisations`
-*List* (optional): A list of relevant [Organisation](https://skg-if.github.io/interoperability-framework/agent) identifiers associated with the [Research product]() (In case the individual affiliations of the [Person]() are not available).
+*List* (optional): A list of relevant [Organisation](https://skg-if.github.io/interoperability-framework/agent) identifiers associated with the [Research product](), in case the individual affiliations of the [Person](https://skg-if.github.io/interoperability-framework/agent) are not available.
 
 ```json
     "relevant_organisations": ["org_1", "org5"]

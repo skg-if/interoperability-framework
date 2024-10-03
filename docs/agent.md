@@ -50,26 +50,26 @@ Each object is structured as follows:
 ```
 
 ### `given_name`
-*String* (optional): The given name of a Person.
+*String* (optional): The given name of a [Person]().
 
 ```json
     "given_name": "Andrea"
 ```
 
 ### `family_name`
-*String* (optional): The family name of a Person.
+*String* (optional): The family name of a [Person]().
 
 ```json
     "family_name": "Mannocci"
 ```
 
 ### `affiliations`
-*List* (optional): A list of all the affiliations of a Person (à la ORCID). Each element of the list is structured as follows:
-- `affiliation` *String* (mandatory): The identifier of the Organisation a Person is affiliated with.
-- `role` *String* (mandatory): The role that a Person had in the context of the Organisation. Needed for parsing purposes; fixed to “affiliate”.
-- `period` *Object* (recommended): the time period where the Person was affiliated to the Organisation. It includes the following information:
-- `start` *String* (mandatory): The start datetime of the affiliation with the Organisation. The string should be compliant with the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime string.
-- `end` *String* (optional): The end datetime (if any) of the affiliation with the Organisation. The string should be compliant with the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime string.
+*List* (optional): A list of all the affiliations of a [Person]() (à la ORCID). Each element of the list is structured as follows:
+- `affiliation` *String* (mandatory): The identifier of the [Organisation]() a [Person]() is affiliated with.
+- `role` *String* (mandatory): The role that a [Person]() had in the context of the [Organisation](). Needed for parsing purposes; fixed to “affiliate”.
+- `period` *Object* (recommended): the time period where the [Person]() was affiliated to the [Organisation](). It includes the following information:
+- `start` *String* (mandatory): The start datetime of the affiliation with the [Organisation](). The string should be compliant with the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime string.
+- `end` *String* (optional): The end datetime (if any) of the affiliation with the [Organisation](). The string should be compliant with the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime string.
 
 ```json
     "affiliations": [
@@ -92,14 +92,14 @@ Each object is structured as follows:
 ```
 
 ### `short_name`
-*String* (optional): The short name/acronym for the Organisation.
+*String* (optional): The short name/acronym for the [Organisation]().
 
 ```json
     "short_name": "CNR"
 ```
 
 ### `other_names`
-*List* (optional): A list of other names, maybe in different languages, identifiying the Organisation.
+*List* (optional): A list of other names, maybe in different languages, identifiying the [Organisation]().
 
 ```json
      "other_names": [ 
@@ -109,21 +109,21 @@ Each object is structured as follows:
 ```
 
 ### `website`
-*String* (optional): The website URL for the Organisation.
+*String* (optional): The website URL for the [Organisation]().
 
 ```json
     "website": "https://www.cnr.it/"
 ```
 
 ### `country`
-*String* (optional): The country code of the Organisation expressed as [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
+*String* (optional): The country code of the [Organisation]() expressed as [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
 
 ```json
     "country": "IT"
 ```
 
 ### `type`
-*List* (optional): The types of the Organisation. One or more from the following values:
+*List* (optional): The types of the [Organisation](). One or more from the following values:
 - `archive`
 - `company`
 - `education`
