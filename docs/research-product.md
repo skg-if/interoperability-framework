@@ -16,7 +16,7 @@
 **Suggestion:** use a URL as a string to make this resource dereferenceable on the Web.
  
 ```json
-    "local identifier": "https://w3id.org/oc/meta/br/062501777134",
+    "local identifier": "https://w3id.org/oc/meta/br/062501777134"
 ```
 
 
@@ -175,23 +175,20 @@ Each object is structured as follows:
 - `peer review` *Object* (suggested): Whether the manifestation has undergone a peer review. It must be specify only if information about peer reviewing exists, and has the following properties:
     - `status` *String* (mandatory): describe if the manifestation has been already reviewed (i.e. “peer reviewed”) or if it is currently under review (i.e. “under review”).
     - `description` *String* (suggested): describe the type of peer review that applies, to choose from `single-blind peer review`, `double-blind peer review`, `open peer review`.
-
 - `access_rights` *Object* (mandatory): The access right for the specific materialisation. It specifies the following properties:
     - `status` *String* (mandatory): describe if the manifestation is open access (`open`), closed access (`closed`), under embargo (`embargoed`), restricted access (`restricted`), or unavailable for some reason (`unavailable`).
     - `description` *String* (suggested): describe and qualify the specific status selected.
 - `licence` *String* (recommended): The URL of the licence specific to the manifestation.
 - `version` *String* (recommended): The version for a software or research data product.
-
-
 - `biblio` *Object* (optional): An object containing bibliographic information about a manifestation. The object has the following properties:
     - `issue` *String* (optional): Issue number.
-    - `pages` *Object* (optional): the pages where the manifestation in defined (within its venue). It includes the following information 
+    - `pages` *Object* (optional): the pages where the manifestation in defined (within its [Venue](https://skg-if.github.io/interoperability-framework/venue)). It includes the following information 
         - `first` *String* (mandatory): The starting page.
         - `last` *String* (mandatory): The ending page.
     - `volume` *String* (optional): Volume number (for journals, books, conferences).
     - `edition` *String* (optional): The edition (for journals and books).
-    - `number` *String* (optional): a number of the manifestation within the venue (e.g. chapter number).
-    - `in` *String* (optional): A [Venue]() identifier for the manifestation.
+    - `number` *String* (optional): a number of the manifestation within the [Venue](https://skg-if.github.io/interoperability-framework/venue) (e.g. chapter number).
+    - `in` *String* (optional): A [Venue](https://skg-if.github.io/interoperability-framework/venue) identifier for the manifestation.
     - `hosting_data_source` *String* (optional): A Data source URL for the manifestation.
 
 ```json
