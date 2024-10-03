@@ -1,13 +1,13 @@
 # Grant
 
-The entity [Grant](#grant) describes funding awarded to a [Person](Person) or an [Organisation](Organisation) 
-by a funding body. These bodies, both public and private, can be funders, foundations, governments, agencies or institutions. 
+The entity [Grant]() describes funding awarded to a [Agent](https://skg-if.github.io/interoperability-framework/agent) by a funding body. 
+These bodies, both public and private, can be funders, foundations, governments, agencies or institutions.
 
 
 ## Properties
 
 ### `local_identifier`
-*String* (mandatory): Unique code identifiying the [Grant](#grant) at the funder.
+*String* (mandatory): Unique code identifiying the [Grant]() at the funder.
  
 ```json
     "local_identifier": "101095129"
@@ -37,35 +37,35 @@ by a funding body. These bodies, both public and private, can be funders, founda
 ```
 
 ### `title`
-*String* (optional): Title of the [Grant](#grant).
+*String* (optional): Title of the [Grant]().
  
 ```json
     "title": "GraspOS: next Generation Research Assessment to Promote Open Science"
 ```
 
 ### `abstract`
-*String* (optional): The abstract or a description of the [Grant](#grant).
+*String* (optional): The abstract or a description of the [Grant]().
  
 ```json
     "abstract": "GraspOS aims to build and operate a data infrastructure to support the policy reforms and pave the way towards a responsible research assessment system that embeds OS practices and accelerates its adoption in Europe. GraspOS will focus on extending the EOSC ecosystem with tools and services that will facilitate monitoring the use and uptake of various types of research services and outputs (publications, datasets, software) and will catalyse the implementation of policy-level rewards to foster OS practices. These tools and services will build upon multiple sources of metric data (e.g. OpenCitations, Scholexplorer) including capabilities offered by the EOSC Core, that will be federated in the context of the project, and will take into consideration both contemporary guidelines for Responsible Research Assessment (RRA), like those provided by initiatives like DORA and the Leiden Manifesto, and the suggestions from a diversity of relevant stakeholders. GraspOS will also incorporate piloting activities to co-design, showcase, validate, and evaluate GraspOS’s key results considering domain-specific aspects and different levels of OS-aware RRA, such as the researcher (individual/group), institution, and national level."
 ```
 
 ### `acronym`
-*String* (optional): The acronym of the [Grant](#grant).
+*String* (optional): The acronym of the [Grant]().
  
 ```json
     "acronym": "GraspOS"
 ```
 
-### `funder`
-*String* (optional): The name of the body funding the [Grant](#grant).
+### `funding_agency`
+*String* (optional): The local identifier of an Organisation funding the [Grant]().
 
 ```json
     "funder": "EC"
 ```
 
 ### `funding_stream`
-*String* (optional): The funding stream of the [Grant](#grant).
+*String* (optional): The funding stream of the [Grant]().
 
 ```json
     "funding_stream": "Horizon Europe"
@@ -79,31 +79,29 @@ by a funding body. These bodies, both public and private, can be funders, founda
 ```
 
 ### `funded_amount`
-*Numeric* (optional): Amount funded for the [Grant](#grant).
+*Numeric* (optional): Amount funded for the [Grant]().
 
 ```json
     "funded_amount": 2.985.441
 ```
 
 ### `keywords`
-*List* (optional): A list of keywords for the [Grant](#grant).
+*List* (optional): A list of keywords for the [Grant]().
  
 ```json
     "keywords": ["Open science", "mutual learning", "open research"]
 ```
 
-### `start_date`
-*String* (optional): The date the [Grant](#grant) started expressed as [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
+### `duration`
+*Object* (optional): the duration of the [Grant](). It includes the following information:
+- `start` *String* (mandatory): The start datetime of the [Grant](). The string should be compliant with the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime string.
+- `end` *String* (optional): The end datetime (if any) of the [Grant](). The string should be compliant with the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime string.
 
 ```json
-    "start_date": "2019-09-13"
-```
-
-### `end_date`
-*String* (optional): The date the [Grant](#grant) finished expressed as [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
- 
-```json
-    "end_date": "2022-12-03"
+    "duration": {
+        "start": "2023-01-01T00:00:00",
+        "end": "2025-12-31T23:59:59"
+    }
 ```
 
 ### `website`
@@ -114,25 +112,20 @@ by a funding body. These bodies, both public and private, can be funders, founda
 ```
 
 ### `beneficiaries`
-*List* (optional): A list of the [Organisation]() identifiers funded by the [Grant](#grant).
+*List* (optional): A list of the [Organisation](https://skg-if.github.io/interoperability-framework/agent) identifiers funded by the [Grant]().
  
 ```json
     "beneficiaries": ["org_2", "org_5"]
 ```
 
-### `contributors`
-*List* (optional): A list of the [Person]() contributing to the [Grant](#grant).
- 
-- `person`: The identifier of the [Person] who is the principal investigator  
-- `organisation`: The identifier of the [Organisation](Organisation) the principal investigator has declared as affiliation for the [Grant](#grant).
-- `poles` *List* (recommended): A list of the roles that the [Person] has in the [Grant](#grant).
-
-```json
-    "contributors": [
-        {
-            "person": "person_2",
-            "organisation": "org_3",
-            "roles": ["principal investigator"]
-        }
-    ]
-```
+### `contributions`
+*List* (optional): A list of objects, each describing an [Agent](https://skg-if.github.io/interoperability-framework/agent), its contribution, and declared affiliations to [Organisations](https://skg-if.github.io/interoperability-framework/agent) in the context of the [Grant](). Each object is structured as follows:
+- `by` *String* (mandatory): The identifier of an [Agent](https://skg-if.github.io/interoperability-framework/agent) contributing to the [Grant]().
+- `declared affiliations` *List* (recommended): A list of [Organisations](https://skg-if.github.io/interoperability-framework/agent) that reflect the declared affiliations of an [Agent](https://skg-if.github.io/interoperability-framework/agent) for the [Grant]().
+- `roles` *List* (recommended): The roles that an [Agent](https://skg-if.github.io/interoperability-framework/agent) had in the [Grant](). Each element in the list is a String compliant with the project roles in [SCoRO](https://sparontologies.github.io/scoro/current/scoro.html#http://purl.org/spar/scoro/ProjectRole), i.e.,
+    - `co-applicant`
+    - `lead applicant`
+    - `project leader`
+    - `project manager`
+    - `project member`
+    - `workpackage leader`
