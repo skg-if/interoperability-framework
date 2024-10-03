@@ -114,10 +114,10 @@ Each object in the list has the following properties:
 ```
 
 ### `contributions`
-*List* (optional): A list of objects that describe an [Agent](https://skg-if.github.io/interoperability-framework/agent), its role, contribution, rank and declared affiliations to [Organisations]() when working on a [Research product](). 
+*List* (optional): A list of objects that describe an [Agent](https://skg-if.github.io/interoperability-framework/agent), its role, contribution, rank and declared affiliations to [Organisations](https://skg-if.github.io/interoperability-framework/agent) when working on a [Research product](). 
 Each object is structured as follows:
 - `by` *String* (mandatory): The identifier of an [Agent](https://skg-if.github.io/interoperability-framework/agent) contributing to the [Research product]().
-- `declared_affiliations` *List* (recommended): A list of [Organisations]() that reflect the declared affiliations of a [Agent](https://skg-if.github.io/interoperability-framework/agent) for the [Research product]().
+- `declared_affiliations` *List* (recommended): A list of [Organisations](https://skg-if.github.io/interoperability-framework/agent) that reflect the declared affiliations of a [Agent](https://skg-if.github.io/interoperability-framework/agent) for the [Research product]().
 - `rank` *Integer* (recommended): The rank (i.e., order of appearance) of the [Agent](https://skg-if.github.io/interoperability-framework/agent) with a specific role (e.g. the order of an author in a list) of a [Research product]().
 - `role` *String* (recommended): The role that an [Agent](https://skg-if.github.io/interoperability-framework/agent) had in the [Research product](), to choose among `author`, `editor`, and `publisher`.
 - `contribution` *List* (recommended): The contributions that an [Agent](https://skg-if.github.io/interoperability-framework/agent) had in the [Research product](). Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.:
@@ -242,7 +242,7 @@ Each object is structured as follows:
 ```
 
 ### `relevant_organisations`
-*List* (optional): A list of relevant [Organisation]() identifiers associated with the [Research product]() (In case the individual affiliations of the [Person]() are not available).
+*List* (optional): A list of relevant [Organisation](https://skg-if.github.io/interoperability-framework/agent) identifiers associated with the [Research product]() (In case the individual affiliations of the [Person]() are not available).
 
 ```json
     "relevant_organisations": ["org_1", "org5"]
