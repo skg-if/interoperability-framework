@@ -119,29 +119,29 @@ Each object is structured as follows:
 - `rank` *Integer* (recommended): The rank (i.e., order of appearance) of the [Agent]() with a specific role (e.g. the order of an author in a list) of a [Research product]().
 - `role` *String* (recommended): The role that an [Agent]() had in the [Research product](), to choose among `author`, `editor`, and `publisher`.
 - `contribution` *List* (recommended): The contributions that an [Agent]() had in the [Research product](). Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.:
-    - conceptualization
-    - data curation
-    - formal analysis
-    - funding acquisition
-    - investigation
-    - methodology
-    - project administration
-    - resources
-    - software
-    - supervision
-    - validation
-    - visualization
-    - writing – original draft
-    - writing – review & editing
+    - `conceptualization`
+    - `data curation`
+    - `formal analysis`
+    - `funding acquisition`
+    - `investigation`
+    - `methodology`
+    - `project administration`
+    - `resources`
+    - `software`
+    - `supervision`
+    - `validation`
+    - `visualization`
+    - `writing – original draft`
+    - `writing – review & editing`
 
 ```json
     "contributions": [
         {
-            "person": "person_123",
+            "by": "person_123",
             "declared_affiliations": ["org_1", "org_3"],
             "rank": 1,
-            "roles": ["writing-original-draft", "conceptualization"],
-            "is_listed_author": true
+            "contribution": ["writing – original draft", "conceptualization"],
+            "role": "author"
         }
     ]
 ```
