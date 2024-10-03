@@ -11,7 +11,7 @@
 ## Properties
 
 ### `local_identifier`
-*String* (mandatory): Unique code identifiying the [Research product](#research-product) in the SKG (if any, otherwise "stateless identifier")
+*String* (mandatory): Unique code identifiying the [Research product]() in the SKG (if any, otherwise "stateless identifier")
 
 **Suggestion:** use a URL as a string to make this resource dereferenceable on the Web.
  
@@ -46,7 +46,7 @@
 ```
 
 ### `titles`
-*Object* (optional): The titles of a [Research product](#research-product) (multiple for multilinguism). 
+*Object* (optional): The titles of a [Research product]() (multiple for multilinguism). 
 The object is a dictionary, the keys represent language codes following [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes); the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
 
 ```json
@@ -58,7 +58,7 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 ```
 
 ### `abstracts`
-*Object* (optional): The abstracts of a [Research product](#research-product) (multiple for multilinguism).
+*Object* (optional): The abstracts of a [Research product]() (multiple for multilinguism).
 The object is a dictionary, the keys represent language codes following [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes); the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
 
 ```json
@@ -70,7 +70,7 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 ```
 
 ### `product_type`
-*String* (optional): The type of the [Research product](#research-product). One of the following values:
+*String* (optional): The type of the [Research product](). One of the following values:
 - `literature`
 - `research data`
 - `research software`
@@ -81,11 +81,11 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 ```
 
 ### `topics`
-*List* (optional): A list objects referring to [Topic](https://skg-if.github.io/interoperability-framework/topic) covered by the [Research product](#research-product). 
+*List* (optional): A list objects referring to [Topic](https://skg-if.github.io/interoperability-framework/topic) covered by the [Research product](). 
 Each object in the list has the following properties:
-- `term` *String* (mandatory): The identifier of a [Topic](https://skg-if.github.io/interoperability-framework/topic) relevant for the [Research product](#research-product). `[new]`
-- `provenance` *List* (recommended): A list of provenance information tracking the origin of the relation between a [Topic](https://skg-if.github.io/interoperability-framework/topic) and a [Research product](#research-product). Each topic provenance object has the following properties:
-    - `associated_with` *String* (mandatory): the `local_identifier` of the [Agent]() responsible for the topic relation. `[new]`
+- `term` *String* (mandatory): The identifier of a [Topic](https://skg-if.github.io/interoperability-framework/topic) relevant for the [Research product]().
+- `provenance` *List* (recommended): A list of provenance information tracking the origin of the relation between a [Topic](https://skg-if.github.io/interoperability-framework/topic) and a [Research product](). Each topic provenance object has the following properties:
+    - `associated_with` *String* (mandatory): the `local_identifier` of the [Agent](https://skg-if.github.io/interoperability-framework/agent) responsible for the topic relation.
     - `trust` *Float* (mandatory): A numeric value associated to the trust given to the relation to a [Topic](https://skg-if.github.io/interoperability-framework/topic). The float should be normalised in the range [0,1].
  
 ```json
@@ -112,13 +112,13 @@ Each object in the list has the following properties:
 ```
 
 ### `contributions`
-*List* (optional): A list of objects that describe an [Agent](), its role, contribution, rank and declared affiliations to [Organisations]() when working on a [Research product](). 
+*List* (optional): A list of objects that describe an [Agent](https://skg-if.github.io/interoperability-framework/agent), its role, contribution, rank and declared affiliations to [Organisations]() when working on a [Research product](). 
 Each object is structured as follows:
-- `by` *String* (mandatory): The identifier of an [Agent] contributing to the [Research product]().
-- `declared_affiliations` *List* (recommended): A list of [Organisations]() that reflect the declared affiliations of a [Agent]() for the [Research product](#research-product).
-- `rank` *Integer* (recommended): The rank (i.e., order of appearance) of the [Agent]() with a specific role (e.g. the order of an author in a list) of a [Research product]().
-- `role` *String* (recommended): The role that an [Agent]() had in the [Research product](), to choose among `author`, `editor`, and `publisher`.
-- `contribution` *List* (recommended): The contributions that an [Agent]() had in the [Research product](). Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.:
+- `by` *String* (mandatory): The identifier of an [Agent](https://skg-if.github.io/interoperability-framework/agent) contributing to the [Research product]().
+- `declared_affiliations` *List* (recommended): A list of [Organisations]() that reflect the declared affiliations of a [Agent](https://skg-if.github.io/interoperability-framework/agent) for the [Research product]().
+- `rank` *Integer* (recommended): The rank (i.e., order of appearance) of the [Agent](https://skg-if.github.io/interoperability-framework/agent) with a specific role (e.g. the order of an author in a list) of a [Research product]().
+- `role` *String* (recommended): The role that an [Agent](https://skg-if.github.io/interoperability-framework/agent) had in the [Research product](), to choose among `author`, `editor`, and `publisher`.
+- `contribution` *List* (recommended): The contributions that an [Agent](https://skg-if.github.io/interoperability-framework/agent) had in the [Research product](). Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.:
     - `conceptualization`
     - `data curation`
     - `formal analysis`
@@ -147,124 +147,130 @@ Each object is structured as follows:
 ```
 
 ### `manifestations`
-*List* (optional):  A list of objects representing multiple manifestations of the same [Research product](#research-product) (e.g., a preprint, a postprint, etc.).
-Each manifestation object has the following structure:
-- `product_local_type` *String* (mandatory): The type of the manifestation, e.g., preprint. 
-- `product_local_type_schema` *String* (mandatory): The schema of the manifestation type, e.g., a link to the vocabulary of allowed product types.
-- `dates` *List* (mandatory): Relevant dates for the [Research product](#research-product). Each date has the following properties:
-    - `value` *String* (mandatory): The relevant date for the [Research product](#research-product) expressed as a [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date string.
-    - `type` *String* (mandatory): The type of the date (e.g., publishing, embargo, preprint, ...).
-- `peer_review` *String* (mandatory): Whether the [Research product](#research-product) has undergone a peer review process. It can be one of the following:
-    - `peer-reviewed`
-    - `not peer-reviewed`
-    - `single-blind`
-    - `double-blind`
-    - `open peer review`
-- `metadata_curation` *String* (mandatory): Whether the [Research product](#research-product) has undergone a metadata curation process. It can be one of the following :
-    - `yes`
-    - `no`
-    - `unavailable`
-- `url` *String* (mandatory): An URL for the manifestation.
-- `pid` *String* (recommended): The pid for the specific manifestation.
-- `access_rights` *String* (mandatory): The access right for the specific materialisation. One of the following 
-    - `open`
-    - `closed`
-    - `embargo`
-    - `restricted`
-    - `unavailable`
-- `licence` *String* (recommended): Licence specific to the manifestation.
-- `license_schema` *String* (recommended): Schema of the licence.
-- `version` *String* (recommended): Version for a software or research data product.
-- `biblio` *Object* (optional): An object containing bibliographic information about a [Research product](#research-product) of literature type. The object has the following properties:
+*List* (optional):  A list of objects representing multiple manifestations of the same [Research product]() (e.g., a preprint, a postprint, etc.). Each manifestation object has the following structure:
+- `type` *String* (mandatory): The type of the manifestation (e.g., preprint). The type has the following properties:
+    - `labels` *Object* (mandatory): the labels describing the type (multiple for multilinguism). The object is a dictionary, the keys represent language codes following [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1); the special key none is reserved whenever the information about the language is not available or cannot be shared.
+    - `defined_in` *String* (mandatory): the URL of the schema of the manifestation type, e.g., a link to the vocabulary of allowed product types.
+    - `class` *String* (suggested): The URL of the class identifying the entity (e.g., in an ontology) describing that type.
+- `dates` *Object* (mandatory): Relevant dates for the manifestation. The object is a dictionary, the keys represent the type of date and the value is expressed as either a string or a list of string, where each string is compliant with the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime string. The possible dates that are specifiable are:
+    - `acceptance`: The date of acceptance of an entity. Examples of entities to which a date accepted may be relevant are a thesis (accepted by a university examination board) or an article (accepted by a journal editor).
+    - `access`: The date on which a particular digital item, such as a PDF or an HTML file, has been accessed by somebody.
+    - `collected`: The date on which some item has been collected, for example the data gathered by means of questionnaires.
+    - `copyright`: The date on which an entity has been copyrighted.
+    - `correction`: The date on which something, for example a document, is corrected.
+    - `creation`: The date on which an entity has been created.
+    - `decision`: The date on which a particular endeavour, such as a grant application, has been or will be approved or rejected by somebody.
+    - `deposit`: The date on which an entity has been deposited, for example in a library, repository, supplementary information archive, database or similar place of document or information storage.
+    - `distribution`: The date on which something is distributed, for example the date on which a preprint of a document is e-mailed to colleagues and other academics by the author(s), or the date on which a printed announcement of forthcoming theatre events is mailed to those those on the theatre's mailing list.
+    - `embargo`: The date before which an entity should not be published, or before which a press release should not be reported on. For open-access journal articles, the embargo date is the date before which availability of the open-access version of the article is restricted by the publisher, following subscription-access availability of the published work.
+    - `modified`: The date on which an entity has been modified.
+    - `publication`: The date of formal issuance of a resource (e.g. a publication or a patent).
+    - `received`: The date on which some item is received, for example a document being received by a publisher.
+    - `request`: The date on which an agent is requested to do something, for example a reviewer is requested to write a review of a paper submitted to a journal for publication, or an author is requested to supply a revised version of the paper in response to the reviews received.
+    - `retraction`: The date on which something, for example a claim or a journal article, is retracted.
+    - `validity`: Date of validity of a resource.
+- `identifiers` *List* (recommended): A list of objects representing external identifiers for the manifestation. Each object is structured as follows:
+    - `scheme` *String* (mandatory): The scheme for the external identifier (e.g., doi, handle, url, pubmed, etc.).
+    - `value` *String* (mandatory): The external identifier.
+- `peer review` *Object* (suggested): Whether the manifestation has undergone a peer review. It must be specify only if information about peer reviewing exists, and has the following properties:
+    - `status` *String* (mandatory): describe if the manifestation has been already reviewed (i.e. “peer reviewed”) or if it is currently under review (i.e. “under review”).
+    - `description` *String* (suggested): describe the type of peer review that applies, to choose from `single-blind peer review`, `double-blind peer review`, `open peer review`.
+
+- `access_rights` *Object* (mandatory): The access right for the specific materialisation. It specifies the following properties:
+    - `status` *String* (mandatory): describe if the manifestation is open access (`open`), closed access (`closed`), under embargo (`embargoed`), restricted access (`restricted`), or unavailable for some reason (`unavailable`).
+    - `description` *String* (suggested): describe and qualify the specific status selected.
+- `licence` *String* (recommended): The URL of the licence specific to the manifestation.
+- `version` *String* (recommended): The version for a software or research data product.
+
+
+- `biblio` *Object* (optional): An object containing bibliographic information about a manifestation. The object has the following properties:
     - `issue` *String* (optional): Issue number.
-    - `start_page` *String* (optional): The starting page.
-    - `end_page` *String* (optional): The ending page.
+    - `pages` *Object* (optional): the pages where the manifestation in defined (within its venue). It includes the following information 
+        - `first` *String* (mandatory): The starting page.
+        - `last` *String* (mandatory): The ending page.
     - `volume` *String* (optional): Volume number (for journals, books, conferences).
     - `edition` *String* (optional): The edition (for journals and books).
-    - `number` *String* (optional): Journal number.
-    - `venue` *String* (optional): A [Venue](https://skg-if.github.io/interoperability-framework/venue) identifier for the manifestation.
-    - `hosting_data_source` *String* (optional): A [Data source](https://skg-if.github.io/interoperability-framework/data-source) identifier for the manifestation.`
+    - `number` *String* (optional): a number of the manifestation within the venue (e.g. chapter number).
+    - `in` *String* (optional): A [Venue]() identifier for the manifestation.
+    - `hosting_data_source` *String* (optional): A Data source URL for the manifestation.
 
 ```json
     "manifestations": [
         {
-            "product_local_type": "",
-            "product_local_type_schema": "",
-            "dates": [
+            "type": {
+                "class": "http://purl.org/spar/fabio/Preprint",
+                "labels": {
+                    "en": "preprint"
+                },
+                "defined_in": "http://purl.org/spar/fabio"
+            },
+            "dates": {
+                "modified": ["2024-01-15T14:15:43Z", "2024-02-11T11:12:04Z"],
+                "distribution": "2024-02-12T12:00:00Z"
+            },
+            "identifiers": [
                 {
-                    "value": "2012-03-21",
-                    "type": "preprint"
+                    "scheme": "arxiv",
+                    "value": "2407.13329"
+                },
+                {
+                    "scheme": "url",
+                    "value": "https://arxiv.org/abs/2407.13329"
                 }
             ],
-            "peer_review": "open",
-            "metadata_curation": "yes",
-            "access_rights": "",
-            "license": "",
-            "license_schema": "",
-            "version": "v1.0",
-            "url": "https://link.springer.com/chapter/...",
-            "pid": "https://doi.org/10.1007/...",
+            "peer_review": {
+                "status": "peer reviewed",
+                "description": "single-blind peer review"
+            },
+            "access_rights": {
+                "status": "restricted",
+                "description": "Only publishers can access the manifestation"
+            },
+            "license": "https://creativecommons.org/licenses/by/4.0/legalcode.en",
+            "version": "1.0.0",
             "biblio": {
                 "issue": "1",
-                "start_page": "640",
-                "end_page": "645",
-                "volume": "13833",
-                "edition": "1",
-                "number": "7"
+                "pages": {
+                    "first": "640",
+                    "last": "645"
+                },
+                "volume": "17",
+                "in": "ven1",
+                "hosting_data_source": "https://arxiv.org/pdf/2407.13329"
             }
-            "venue": "venue_7",
-            "hosting_data_source": "datasource_4",
         }
-    ]
+    ],
 ```
 
 ### `relevant_organisations`
-*List* (optional): A list of relevant [Organisation]() identifiers associated with the [Research product](#research-product) (In case the individual affiliations of the [Person]() are not available).
+*List* (optional): A list of relevant [Organisation]() identifiers associated with the [Research product]() (In case the individual affiliations of the [Person]() are not available).
 
 ```json
     "relevant_organisations": ["org_1", "org5"]
 ```
  
 ### `funding`
-*List* (optional): A list of relevant [Grant](https://skg-if.github.io/interoperability-framework/grant) identifiers associated with the [Research product](#research-product).
+*List* (optional): A list of relevant [Grant](https://skg-if.github.io/interoperability-framework/grant) identifiers associated with the [Research product]().
 
 ```json
     "funding": ["grant_1", "grant_2"]
 ```    
 
 ### `related_products`
-*List* (optional): A list of objects representing related [Research product](#research-product) and the semantics of such relationships.
-Each object in the list is structured as follows:
+*Object* (optional): A dictionary of objects representing related [Research products](), where the semantics of such relationships is specified as a key. It is structured as follows:
+`cites` *List* (optional): A list of [Research products]() identifiers that are cited by the current [Research products]().
+`is_supplemented_by` *List* (optional): A list of [Research products]() identifiers that are supplement of the current [Research products]().
+`is_documented_by` *List* (optional): A list of [Research products]() identifiers that documents the current [Research products]().
+`is_new_version_of` *List* (optional): A list of [Research products]() identifiers that are prior versions of the current [Research products]().
+`is_part_of` *List* (optional): A list of [Research products]() identifiers that contains the current [Research products]().
 
-- `relation_type` *String* (mandatory): A list of [Research product](#research-product) identifiers supplementing the present one. One of the following selection of [DataCite relationTypes](https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf) 
-    - `cites`
-    - `is_supplemented_by`
-    - `is_documented_by`
-    - `is_new_version_of`
-    - `is_part_of`
-- `products` *List* (mandatory): A list of [Research product](#research-product) identifiers describing the present one.
 
 ```json
-    "related_products": [
-        {
-            "relation_type": "cites", 
-            "products": ["product_2", "product_3", "product_4"]
-        },
-        {
-            "relation_type": "is_supplemented_by",
-            "products": ["product_7", "product_8", "product_9"],
-        },
-        {
-            "relation_type": "is_documented_by",
-            "products": ["product_10", "product_13"],
-        },
-        {
-            "relation_type": "is_new_version_of",
-            "products": ["product_5"],
-        },
-        {
-            "relation_type": "is_part_of",
-            "products": ["product_11"],
-        }
-    ]
+    "related_products": {
+        "cites": ["product_2", "product_3", "product_4"],
+        "is_supplemented_by": ["product_7", "product_8", "product_9"],
+        "is_documented_by": ["product_10", "product_13"],
+        "is_new_version_of": ["product_10", "product_13"],
+        "is_part_of": ["product_11"]
+    }
 ```
