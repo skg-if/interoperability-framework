@@ -149,7 +149,7 @@ Each object is structured as follows:
 ### `manifestations`
 *List* (optional):  A list of objects representing multiple manifestations of the same [Research product]() (e.g., a preprint, a postprint, etc.). Each manifestation object has the following structure:
 - `type` *String* (mandatory): The type of the manifestation (e.g., preprint). The type has the following properties:
-    - `labels` *Object* (mandatory): the labels describing the type (multiple for multilinguism). The object is a dictionary, the keys represent language codes following [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1); the special key none is reserved whenever the information about the language is not available or cannot be shared.
+    - `labels` *Object* (mandatory): the labels describing the type (multiple for multilinguism). The object is a dictionary, the keys represent language codes following [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1); the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
     - `defined_in` *String* (mandatory): the URL of the schema of the manifestation type, e.g., a link to the vocabulary of allowed product types.
     - `class` *String* (suggested): The URL of the class identifying the entity (e.g., in an ontology) describing that type.
 - `dates` *Object* (mandatory): Relevant dates for the manifestation. The object is a dictionary, the keys represent the type of date and the value is expressed as either a string or a list of string, where each string is compliant with the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime string. The possible dates that are specifiable are:
@@ -187,7 +187,7 @@ Each object is structured as follows:
         - `last` *String* (mandatory): The ending page.
     - `volume` *String* (optional): Volume number (for journals, books, conferences).
     - `edition` *String* (optional): The edition (for journals and books).
-    - `number` *String* (optional): a number of the manifestation within the [Venue](https://skg-if.github.io/interoperability-framework/venue) (e.g. chapter number).
+    - `number` *String* (optional): a number of the manifestation within the [Venue](https://skg-if.github.io/interoperability-framework/venue) (e.g., chapter number).
     - `in` *String* (optional): A [Venue](https://skg-if.github.io/interoperability-framework/venue) identifier for the manifestation.
     - `hosting_data_source` *String* (optional): A Data source URL for the manifestation.
 
@@ -255,11 +255,11 @@ Each object is structured as follows:
 
 ### `related_products`
 *Object* (optional): A dictionary of objects representing related [Research products](), where the semantics of such relationships is specified as a key. It is structured as follows:
-`cites` *List* (optional): A list of [Research products]() identifiers that are cited by the current [Research products]().
-`is_supplemented_by` *List* (optional): A list of [Research products]() identifiers that are supplement of the current [Research products]().
-`is_documented_by` *List* (optional): A list of [Research products]() identifiers that documents the current [Research products]().
-`is_new_version_of` *List* (optional): A list of [Research products]() identifiers that are prior versions of the current [Research products]().
-`is_part_of` *List* (optional): A list of [Research products]() identifiers that contains the current [Research products]().
+- `cites` *List* (optional): A list of [Research products]() identifiers that are cited by the current [Research products]().
+- `is_supplemented_by` *List* (optional): A list of [Research products]() identifiers that are supplement of the current [Research products]().
+- `is_documented_by` *List* (optional): A list of [Research products]() identifiers that documents the current [Research products]().
+- `is_new_version_of` *List* (optional): A list of [Research products]() identifiers that are prior versions of the current [Research products]().
+- `is_part_of` *List* (optional): A list of [Research products]() identifiers that contains the current [Research products]().
 
 
 ```json
