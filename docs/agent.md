@@ -1,6 +1,6 @@
 # Agent
 
-The [Agent]() entity represents an individual (e.g., a person, an organisation, or another kind of entity being able to act) who is involved in the creation, publication, dissemination, etc. of [Research products](). 
+The [Agent]() entity represents an individual (e.g., a person, an organisation, or another kind of entity being able to act) who is involved in the creation, publication, dissemination, etc. of a [Research product](https://skg-if.github.io/interoperability-framework/research-product). 
 An [Agent]() can be an author, a reviewer, an editor, a publisher, a researcher, or any other stakeholder involved in the scholarly communication process.
 
 This page describes the metadata fields for an [Agent]() and all its subtypes (i.e., persons and organisations).

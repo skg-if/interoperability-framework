@@ -25,7 +25,7 @@
 - `scheme` *String* (mandatory): The scheme for the external identifier (e.g., doi, handle, purl, pubmed, etc.).
 - `value` *String* (mandatory): The external identifier.
 
-**Note:** the current version of SKG-IF includes the following types of identifiers (to be specified as strings in the field “scheme”): doi, pmid, url …
+**Note:** the current version of SKG-IF includes the following types of identifiers (to be specified as strings in the field “scheme”): doi, pmid, url, ...
 
 ```json
     "identifiers": [
