@@ -12,10 +12,11 @@
 
 ### `local_identifier`
 *String* (mandatory): Unique code identifiying the [Research product](#research-product) in the SKG (if any, otherwise "stateless identifier")
-_Suggestion_: use a URL as a string to make this resource dereferenceable on the Web.
 
+**Suggestion:** use a URL as a string to make this resource dereferenceable on the Web.
+ 
 ```json
-    "local_identifier": "product_1"
+    "local identifier": "https://w3id.org/oc/meta/br/062501777134",
 ```
 
 
@@ -27,8 +28,12 @@ _Suggestion_: use a URL as a string to make this resource dereferenceable on the
 ```json
     "identifiers": [
         {
-            "scheme": "doi"
-            "value": "10.1103/PhysRevE.80.056103"
+            "scheme": "doi",
+            "value": "10.1162/qss_a_00023"
+        },
+        {
+            "scheme": "omid",
+            "value": "br/062501777134"
         }
     ]
 ```
@@ -78,27 +83,27 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 ### `topics`
 *List* (optional): A list objects referring to [Topic](https://skg-if.github.io/interoperability-framework/topic) covered by the [Research product](#research-product). 
 Each object in the list has the following properties:
-- `topic` *String* (mandatory): The identifier of a [Topic](https://skg-if.github.io/interoperability-framework/topic) relevant for the [Research product](#research-product).
+- `term` *String* (mandatory): The identifier of a [Topic](https://skg-if.github.io/interoperability-framework/topic) relevant for the [Research product](#research-product). `new`
 - `provenance` *List* (recommended): A list of provenance information tracking the origin of the relation between a [Topic](https://skg-if.github.io/interoperability-framework/topic) and a [Research product](#research-product). Each topic provenance object has the following properties:
-    - `type` *String* (mandatory): A string tracking the provenance of the topic relation.
+    - `associated_with` *String* (mandatory): the `local_identifier` of the [Agent]() responsible for the topic relation. `new`
     - `trust` *Float* (mandatory): A numeric value associated to the trust given to the relation to a [Topic](https://skg-if.github.io/interoperability-framework/topic). The float should be normalised in the range [0,1].
  
 ```json
     "topics": [
         {
-            "topic": "topic_1",
+            "term": "topic_1",
             "provenance": [
                 {
-                    "type": "OpenAIRE mining",
+                    "associated_with": "openaire-infra",
                     "trust": 0.7
                 }
             ]
         },
         {
-            "topic": "topic_2",
+            "term": "topic_2",
             "provenance": [
                 {
-                    "type": "OpenAlex",
+                    "type": "openalex-infra",
                     "trust": 0.9
                 }
             ]
