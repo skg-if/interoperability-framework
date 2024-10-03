@@ -12,6 +12,7 @@
 
 ### `local_identifier`
 *String* (mandatory): Unique code identifiying the [Research product](#research-product) in the SKG (if any, otherwise "stateless identifier")
+_Suggestion_: use a URL as a string to make this resource dereferenceable on the Web.
 
 ```json
     "local_identifier": "product_1"
