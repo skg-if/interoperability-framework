@@ -153,7 +153,7 @@ Each object is structured as follows:
 - `type` *String* (mandatory): The type of the manifestation (e.g., preprint). The type has the following properties:
     - `labels` *Object* (mandatory): the labels describing the type (multiple for multilinguism). The object is a dictionary, the keys represent language codes following [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1); the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
     - `defined_in` *String* (mandatory): the URL of the schema of the manifestation type, e.g., a link to the vocabulary of allowed product types.
-    - `class` *String* (suggested): The URL of the class identifying the entity (e.g., in an ontology) describing that type.
+    - `class` *String* (recommended): The URL of the class identifying the entity (e.g., in an ontology) describing that type.
 - `dates` *Object* (mandatory): Relevant dates for the manifestation. The object is a dictionary, the keys represent the type of date and the value is expressed as either a string or a list of string, where each string is compliant with the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime string. The possible dates that are specifiable are:
     - `acceptance`: The date of acceptance of an entity. Examples of entities to which a date accepted may be relevant are a thesis (accepted by a university examination board) or an article (accepted by a journal editor).
     - `access`: The date on which a particular digital item, such as a PDF or an HTML file, has been accessed by somebody.
@@ -174,12 +174,12 @@ Each object is structured as follows:
 - `identifiers` *List* (recommended): A list of objects representing external identifiers for the manifestation. Each object is structured as follows:
     - `scheme` *String* (mandatory): The scheme for the external identifier (e.g., doi, handle, url, pubmed, etc.).
     - `value` *String* (mandatory): The external identifier.
-- `peer review` *Object* (suggested): Whether the manifestation has undergone a peer review. It must be specify only if information about peer reviewing exists, and has the following properties:
+- `peer review` *Object* (recommended): Whether the manifestation has undergone a peer review. It must be specify only if information about peer reviewing exists, and has the following properties:
     - `status` *String* (mandatory): describe if the manifestation has been already reviewed (i.e. “peer reviewed”) or if it is currently under review (i.e. “under review”).
-    - `description` *String* (suggested): describe the type of peer review that applies, to choose from `single-blind peer review`, `double-blind peer review`, `open peer review`.
+    - `description` *String* (recommended): describe the type of peer review that applies, to choose from `single-blind peer review`, `double-blind peer review`, `open peer review`.
 - `access_rights` *Object* (mandatory): The access right for the specific materialisation. It specifies the following properties:
     - `status` *String* (mandatory): describe if the manifestation is open access (`open`), closed access (`closed`), under embargo (`embargoed`), restricted access (`restricted`), or unavailable for some reason (`unavailable`).
-    - `description` *String* (suggested): describe and qualify the specific status selected.
+    - `description` *String* (recommended): describe and qualify the specific status selected.
 - `licence` *String* (recommended): The URL of the licence specific to the manifestation.
 - `version` *String* (recommended): The version for a software or research data product.
 - `biblio` *Object* (optional): An object containing bibliographic information about a manifestation. The object has the following properties:
@@ -225,7 +225,7 @@ Each object is structured as follows:
                 "status": "restricted",
                 "description": "Only publishers can access the manifestation"
             },
-            "license": "https://creativecommons.org/licenses/by/4.0/legalcode.en",
+            "licence": "https://creativecommons.org/licenses/by/4.0/legalcode.en",
             "version": "1.0.0",
             "biblio": {
                 "issue": "1",
