@@ -7,12 +7,21 @@ These bodies, both public and private, can be funders, foundations, governments,
 ## Properties
 
 ### `local_identifier`
-*String* (mandatory): Unique code identifiying the [Grant]() at the funder.
- 
+*String* (mandatory): Unique code identifying the [Grant]() in the SKG (if any, otherwise "stateless identifier").
+
+**Suggestion**: use a URL as a string to make this resource dereferenceable on the Web.
+
 ```json
-    "local_identifier": "101095129"
+    "local_identifier": "grant-1"
 ```
 
+
+### `grant_number`
+*String* (recommended): Unique code identifiying the [Grant]() at the funder.
+ 
+```json
+    "grant_number": "101095129"
+```
 
 ### `identifiers`
 *List* (recommended):  A list of objects representing external identifiers for the entity. Each object is structured as follows.
