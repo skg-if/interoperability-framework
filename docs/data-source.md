@@ -15,7 +15,7 @@ However, HAL is also a publishing [Venue](/interoperability-framework/venue) for
 ### `local_identifier`		
 *String* (mandatory): Unique code identifiying a [Data source]() in the SKG (if any, otherwise "stateless identifier").
  
-**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/).
+**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
     "local_identifier": "https://ror.org/00m2zh467"

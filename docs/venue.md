@@ -13,7 +13,7 @@ A [Venue]() is an entity that models a publishing “gateway” used by [Person]
 ### `local_identifier`		
 *String* (mandatory): Unique code identifiying the [Venue]() in the SKG (if any, otherwise "stateless identifier").
  
-**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/).
+**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
     "local_identifier": "https://w3id.org/oc/meta/br/062501778099"
@@ -101,10 +101,10 @@ A [Venue]() is an entity that models a publishing “gateway” used by [Person]
 ```
 
 ### `creation_date`
-*String* (optional): The date of creation of the [Venue]() expressed as [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
+*String* (optional): The date of creation of the [Venue](). The string should be compliant with the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime string.
  
 ```json
-    "creation_date": "2019-09-13"
+    "creation_date": "2019-09-13T00:00:00+00:00"
 ```
 
 ### `contributions`

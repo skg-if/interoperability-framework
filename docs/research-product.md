@@ -13,7 +13,7 @@
 ### `local_identifier`
 *String* (mandatory): Unique code identifiying the [Research product]() in the SKG (if any, otherwise "stateless identifier").
 
-**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/).
+**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
     "local_identifier": "https://w3id.org/oc/meta/br/062501777134"
@@ -171,6 +171,14 @@ Each object is structured as follows:
     - `request`: The date on which an agent is requested to do something, for example a reviewer is requested to write a review of a paper submitted to a journal for publication, or an author is requested to supply a revised version of the paper in response to the reviews received.
     - `retraction`: The date on which something, for example a claim or a journal article, is retracted.
     - `validity`: Date of validity of a resource.
+  ```json
+    "dates": { 
+        "creation": "2019-07-27T21:04:13+00:00",
+        "modified": ["2019-09-15T08:41:30+00:00", "2019-12-09T21:40:56+00:00"],
+        "publication": "2020-02-01T00:00:00+00:00",
+
+    }
+  ```
 - `identifiers` *List* (recommended): A list of objects representing external identifiers for the manifestation. Each object is structured as follows:
     - `scheme` *String* (mandatory): The scheme for the external identifier (e.g., doi, handle, url, pubmed, etc.).
     - `value` *String* (mandatory): The external identifier.

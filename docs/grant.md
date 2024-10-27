@@ -9,7 +9,7 @@ These bodies, both public and private, can be funders, foundations, governments,
 ### `local_identifier`
 *String* (mandatory): Unique code identifying the [Grant]() in the SKG (if any, otherwise "stateless identifier").
 
-**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/).
+**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
     "local_identifier": "https://doi.org/10.3030/101095129"
