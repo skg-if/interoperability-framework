@@ -11,12 +11,12 @@
 ## Properties
 
 ### `local_identifier`
-*String* (mandatory): Unique code identifiying the [Research product]() in the SKG (if any, otherwise "stateless identifier")
+*String* (mandatory): Unique code identifiying the [Research product]() in the SKG (if any, otherwise "stateless identifier").
 
-**Suggestion:** use a URL as a string to make this resource dereferenceable on the Web.
- 
+**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/).
+
 ```json
-    "local identifier": "https://w3id.org/oc/meta/br/062501777134"
+    "local_identifier": "https://w3id.org/oc/meta/br/062501777134"
 ```
 
 

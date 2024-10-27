@@ -13,8 +13,10 @@ A [Venue]() is an entity that models a publishing “gateway” used by [Person]
 ### `local_identifier`		
 *String* (mandatory): Unique code identifiying the [Venue]() in the SKG (if any, otherwise "stateless identifier").
  
+**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/).
+
 ```json
-    "local_identifier": "123_local_id"
+    "local_identifier": "https://w3id.org/oc/meta/br/062501778099"
 ```
 
 ### `identifiers`

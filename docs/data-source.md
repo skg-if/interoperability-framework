@@ -4,9 +4,10 @@ A [Data source]() is a service where published material (metadata and files) are
 A data source is described by the [EOSC Profile for data sources](https://wiki.eoscfuture.eu/display/PUBLIC/D.+v4.00+EOSC+Data+Source+Profile).
 
 **Example:** [Episciences](https://episciences.org)  is an overlay platform supporting the management of open-access journals on top of the Open Access repository [HAL](https://hal.science). In this context, episciences.org is a publishing [Venue](https://skg-if.github.io/interoperability-framework/venue) (journal, open access, open peer review), while HAL is a [Data source](). Articles published via episciences.org will be therefore linked to the respective journal (publishing [Venue](https://skg-if.github.io/interoperability-framework/venue)) and the data source HAL. 
-    However, HAL is also a publishing [Venue](https://skg-if.github.io/interoperability-framework/venue) for researchers that are directly uploading their [Research product](Research product). More specifically, a publishing [Venue](https://skg-if.github.io/interoperability-framework/venue) with peer-review and some support for metadata curation. In this case, a [Research product](https://skg-if.github.io/interoperability-framework/research-product) will be linked to HAL both as a publishing [Venue](https://skg-if.github.io/interoperability-framework/venue) and as a [Data source](). 
 
-**Note:** each [Research product](https://skg-if.github.io/interoperability-framework/research-product) must be associated with its publishing [Venue](https://skg-if.github.io/interoperability-framework/venue) and its [Data source]().
+However, HAL is also a publishing [Venue](/interoperability-framework/venue) for researchers that are directly uploading their [Research product](/interoperability-framework/research-product/). More specifically, a publishing [Venue](/interoperability-framework/venue/) with peer-review and some support for metadata curation. In this case, a [Research product](/interoperability-framework/research-product) will be linked to HAL both as a publishing [Venue](/interoperability-framework/venue) and as a [Data source](). 
+
+**Note:** each [Research product](/interoperability-framework/research-product) must be associated with its publishing [Venue](/interoperability-framework/venue) and its [Data source]().
 
 
 ## Properties
@@ -14,8 +15,10 @@ A data source is described by the [EOSC Profile for data sources](https://wiki.e
 ### `local_identifier`		
 *String* (mandatory): Unique code identifiying a [Data source]() in the SKG (if any, otherwise "stateless identifier").
  
+**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/).
+
 ```json
-    "local_identifier": "123"
+    "local_identifier": "https://ror.org/00m2zh467"
 ```
 
 ### `identifiers`

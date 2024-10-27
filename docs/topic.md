@@ -1,6 +1,6 @@
 # Topic
 
-A [Topic]() describes the scientific disciplines, subjects and keywords potentially relevant for a [Research product](https://skg-if.github.io/interoperability-framework/research-product).
+A [Topic]() describes the scientific disciplines, subjects and keywords potentially relevant for a [Research product](/interoperability-framework/research-product).
 
 
 This section describes the metadata fields for a [Topic]().
@@ -11,8 +11,10 @@ This section describes the metadata fields for a [Topic]().
 ### `local_identifier`		
 *String* (mandatory): Unique code identifiying the [Topic]() in the SKG (if any, otherwise "stateless identifier").
 
+**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/).
+
 ```json
-    "local_identifier": "topic_1"
+    "local_identifier": "http://id.loc.gov/authorities/classification/Q"
 ```
 
 ### `identifiers`

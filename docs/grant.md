@@ -1,6 +1,6 @@
 # Grant
 
-The entity [Grant]() describes funding awarded to a [Agent](https://skg-if.github.io/interoperability-framework/agent) by a funding body. 
+The entity [Grant]() describes funding awarded to a [Agent](/interoperability-framework/agent/) by a funding body. 
 These bodies, both public and private, can be funders, foundations, governments, agencies or institutions.
 
 
@@ -9,10 +9,10 @@ These bodies, both public and private, can be funders, foundations, governments,
 ### `local_identifier`
 *String* (mandatory): Unique code identifying the [Grant]() in the SKG (if any, otherwise "stateless identifier").
 
-**Suggestion**: use a URL as a string to make this resource dereferenceable on the Web.
+**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/).
 
 ```json
-    "local_identifier": "grant-1"
+    "local_identifier": "https://doi.org/10.3030/101095129"
 ```
 
 

@@ -1,4 +1,8 @@
-# JSON-LD preamble
+# SKG-IF Interoperability Framework
+
+This document contains the description of the JSON-LD format used for exchanging data compliant with the [SKG-IF Data Model](/data-model/).
+
+## JSON-LD preamble
 
 Each document compliant with the SKG-IF format must start with the following preamble:
 
@@ -25,12 +29,60 @@ https://w3id.org/skg-if/sandbox/<provider acronym>/
 
 where the `<provider acronym>` should be substituted with the one of the provider of SKG-IF-compliant data – e.g. `https://w3id.org/skg-if/sandbox/oc/`. It is up to the provider to choose the right acronym to use.
 
-# Core model entities
 
-The SKG-IF models six core entities and their relationships. These are:
-- [Research product](https://skg-if.github.io/interoperability-framework/research-product)
-- [Agent](https://skg-if.github.io/interoperability-framework/agent)
-- [Grant](https://skg-if.github.io/interoperability-framework/grant)
-- [Venue](https://skg-if.github.io/interoperability-framework/venue)
-- [Topic](https://skg-if.github.io/interoperability-framework/topic)
-- [Data source](https://skg-if.github.io/interoperability-framework/data-source)
+## Local identifiers of entities
+
+All the strings specified for defining local identifiers of SKG-ID entities are **always interpreted as URLs**. 
+
+In case a full URL is specified as a local identifier, such URL is used for identifying the related entity without any additional intervention by the Interoperability Framework. It is up to the source providing the data, though, to be sure it is **deferenceable** on the Web. For instance, if an SKG-IF document specifies the following local identifier
+
+```json
+    "local_identifier": "https://w3id.org/oc/meta/br/062501777134"
+```
+
+then the URL `https://w3id.org/oc/meta/br/062501777134` is used as stateless identifier for the entity described. In this example, the URL specified resolves to some available data on the Web since the original source handles all the URLs it provides as local identifiers via content negotiation.
+
+It is also possible to specify a non-URL string as a local identifier. In this case, the Interoperability Framework interprets it as a URL by combining the base URL specified in the [JSON-LD preamble above]() of the SKG-IF document with the string specified. For instance, supposing that the base URL declared in the preamble is `https://w3id.org/skg-if/sandbox/oc/` as shown in the example above, if an SKG-IF document specifies the following local identifier
+
+```json
+    "local_identifier": "my-entity-id-1"
+```
+
+it is interpreted by the Interoperability Framework as `https://w3id.org/skg-if/sandbox/oc/my-entity-id-1`.
+
+The local identifiers specified for any SKG-IF entity are usually those adopted by the particular source providing SKG-IF documents for referring to such entities internally to its system. However, it is also possible that a source may not have such an internal identifier explicitly defined and need to create new SKG-IF local identifiers on-the-fly, while creating the SKG-IF document to return. 
+
+To this end, it is important to clarify that all these URLs specified as local identifiers of SKG-IF entities (either directly or indirectly via the combitation of the SKG-IF base and the string) identify the related entity **globally**, at least in theory. In particular, if the same URL is used in two or more SKG-IF documents, it refer always to the same entity. 
+
+Thus, in case one specifies a non-URL string for a local identifier of an entity, and such non-URL string is created on-the-fly for the reason highlighted above, it is up to the source providing the SKG-IF data to prepare a string that does not create inconsistencies with other SKG-IF data generated in the past.
+
+Please note that having two distinct local identifiers referring to the same real world entity does not create particular issues - in particular when other external identifiers (e.g. DOI, ORCID, ROR) are specified and can be used to decupling entities. Instead, having a local identifier that refers to two distinct entities (either in the same SKG-IF document or in different SKG-IF documents) creates consistency problems and may result in erroneous interpretation of the SKG-IF data.
+
+Thus, in case there is the need of creating such on-the-fly identifiers, the recommendation is to clearly state that by adopting the following template:
+
+```
+otf___<session identifier>___<identifier string>
+```
+
+where
+
+* `otf` stands for *on-the-fly* to explicitly clarify the local identifiers it has been created for the purpose of creating this SKG-IF document; 
+* `<session identifier>` is a string portion that enables the source to uniquely identifier the session in which such SKG-IF document has been created - e.g. it could be the current time of the software run to create the SKG expressed in milliseconds;
+* `<session identifier>` is a string portion that identifies the particular entity in consideration. For instance, a possible example of such a local identifier would be
+
+```json
+    "local_identifier": "otf___1730027051396___person-1"
+```
+
+that is interpreted by the Interoperability Framework (considering having `https://w3id.org/skg-if/sandbox/oc/` as base URL) as `https://w3id.org/skg-if/sandbox/oc/otf___1730027051396___person-1`.
+
+
+## Core model entities
+
+The SKG-IF Interoperability Framework enables to exchange data about six core entities and their relationships. These are:
+- [Research product](/interoperability-framework/research-product)
+- [Agent](/interoperability-framework/agent)
+- [Grant](/interoperability-framework/grant)
+- [Venue](/interoperability-framework/venue)
+- [Topic](/interoperability-framework/topic)
+- [Data source](/interoperability-framework/data-source)
