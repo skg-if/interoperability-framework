@@ -1,9 +1,18 @@
 # SKG-IF Interoperability Framework
-
 This document contains the description of the JSON-LD format used for exchanging data compliant with the [SKG-IF Data Model](/data-model/).
 
-## JSON-LD preamble
 
+## Core model entities
+The SKG-IF Interoperability Framework enables to exchange data about six core entities and their relationships. These are:
+- [Research product](/interoperability-framework/research-product)
+- [Agent](/interoperability-framework/agent)
+- [Grant](/interoperability-framework/grant)
+- [Venue](/interoperability-framework/venue)
+- [Topic](/interoperability-framework/topic)
+- [Data source](/interoperability-framework/data-source)
+
+
+## JSON-LD preamble
 Each document compliant with the SKG-IF format must start with the following preamble:
 
 ```
@@ -31,7 +40,6 @@ where the `<provider acronym>` should be substituted with the one of the provide
 
 
 ## Local identifiers of entities
-
 All the strings specified for defining local identifiers of SKG-ID entities are **always interpreted as URLs**. 
 
 In case a full URL is specified as a local identifier, such URL is used for identifying the related entity without any additional intervention by the Interoperability Framework. It is up to the source providing the data, though, to be sure it is **deferenceable** on the Web. For instance, if an SKG-IF document specifies the following local identifier
@@ -75,14 +83,3 @@ where
 ```
 
 that is interpreted by the Interoperability Framework (considering having `https://w3id.org/skg-if/sandbox/oc/` as base URL) as `https://w3id.org/skg-if/sandbox/oc/otf___1730027051396___person-1`.
-
-
-## Core model entities
-
-The SKG-IF Interoperability Framework enables to exchange data about six core entities and their relationships. These are:
-- [Research product](/interoperability-framework/research-product)
-- [Agent](/interoperability-framework/agent)
-- [Grant](/interoperability-framework/grant)
-- [Venue](/interoperability-framework/venue)
-- [Topic](/interoperability-framework/topic)
-- [Data source](/interoperability-framework/data-source)
