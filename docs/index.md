@@ -1,3 +1,8 @@
+---
+title: SKG-IF Interoperability Framework
+layout: default
+---
+
 # SKG-IF Interoperability Framework
 This document contains the description of the JSON-LD format used for exchanging data compliant with the [SKG-IF Data Model](/data-model/).
 
