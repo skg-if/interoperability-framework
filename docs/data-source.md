@@ -61,7 +61,7 @@ However, HAL is also a publishing [Venue](/interoperability-framework/venue) for
 - `for` *String* (mandatory): The Product type to which the persistent identifier is referring to. To choose from
     - `literature` (from [EOSC vocabulary Research Product Type](https://wiki.eoscfuture.eu/display/PUBLIC/D.+v4.00+EOSC+Data+Source+Profile#D.v4.00EOSCDataSourceProfile-ResearchProductType))
     - `research data` (from [EOSC vocabulary Research Product Type](https://wiki.eoscfuture.eu/display/PUBLIC/D.+v4.00+EOSC+Data+Source+Profile#D.v4.00EOSCDataSourceProfile-ResearchProductType))
-    - software (from [EOSC vocabulary Research Product Type](https://wiki.eoscfuture.eu/display/PUBLIC/D.+v4.00+EOSC+Data+Source+Profile#D.v4.00EOSCDataSourceProfile-ResearchProductType))
+    - `software` (from [EOSC vocabulary Research Product Type](https://wiki.eoscfuture.eu/display/PUBLIC/D.+v4.00+EOSC+Data+Source+Profile#D.v4.00EOSCDataSourceProfile-ResearchProductType))
     - `metadata`
     - `any` 
 - `pid_schemes` *List* (mandatory): the list of persistent identifier schemes used to refer to ProductTypes. Each elements must be drawn by the EOSC vocabulary Persistent Identity Scheme, i.e.,
