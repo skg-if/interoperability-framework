@@ -5,17 +5,16 @@ nav_order: 2
 ---
 
 # SKG-IF Interoperability Framework
-This document contains the description of the JSON-LD format used for exchanging data compliant with the [SKG-IF Data Model](/data-model/).
 
-
-## Core model entities
 The SKG-IF Interoperability Framework enables to exchange data about six core entities and their relationships. These are:
-- [Research product](/interoperability-framework/research-product)
-- [Agent](/interoperability-framework/agent)
-- [Grant](/interoperability-framework/grant)
-- [Venue](/interoperability-framework/venue)
-- [Topic](/interoperability-framework/topic)
-- [Data source](/interoperability-framework/data-source)
+- Research product
+- Agent
+- Grant
+- Venue
+- Topic
+- Data source
+
+This section contains the description of the JSON-LD format used for exchanging data compliant with the [SKG-IF Data Model](/data-model/).
 
 
 ## JSON-LD preamble
