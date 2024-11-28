@@ -1,3 +1,10 @@
+---
+title: Topic
+parent: Interoperability Framework
+layout: default
+nav_order: 5
+---
+
 # Topic
 
 A [Topic]() describes the scientific disciplines, subjects and keywords potentially relevant for a [Research product](/interoperability-framework/research-product).

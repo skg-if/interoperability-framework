@@ -1,3 +1,10 @@
+---
+title: Research product
+parent: Interoperability Framework
+layout: default
+nav_order: 1
+---
+
 # Research product
 
 **Research products** may be of four types, as follows.

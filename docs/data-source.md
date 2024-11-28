@@ -1,3 +1,10 @@
+---
+title: Data source
+parent: Interoperability Framework
+layout: default
+nav_order: 6
+---
+
 # Data source
 
 A [Data source]() is a service or platform where a [Research product](/interoperability-framework/research-product/) (its metadata and files) is stored, preserved, and made discoverable and accessible. 

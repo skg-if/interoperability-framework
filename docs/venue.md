@@ -1,3 +1,10 @@
+---
+title: Venue
+parent: Interoperability Framework
+layout: default
+nav_order: 4
+---
+
 # Venue
 A [Venue]() is an entity that models a publishing “gateway” used by an [Agent](https://skg-if.github.io/interoperability-framework/agent) to make their [Research products](https://skg-if.github.io/interoperability-framework/research-product) available to others.
 

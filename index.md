@@ -1,6 +1,7 @@
 ---
-title: SKG-IF Interoperability Framework
+title: Interoperability Framework
 layout: default
+nav_order: 2
 ---
 
 # SKG-IF Interoperability Framework

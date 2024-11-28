@@ -1,3 +1,10 @@
+---
+title: Grant
+parent: Interoperability Framework
+layout: default
+nav_order: 3
+---
+
 # Grant
 
 The entity [Grant]() describes funding awarded to a [Agent](/interoperability-framework/agent/) by a funding body. 
