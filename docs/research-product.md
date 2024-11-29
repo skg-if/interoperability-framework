@@ -90,12 +90,12 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 ```
 
 ### `topics`
-*List* (optional): A list objects referring to [Topic](https://skg-if.github.io/interoperability-framework/topic) covered by the [Research product](). 
+*List* (optional): A list objects referring to [Topic](https://skg-if.github.io/interoperability-framework/docs/topic) covered by the [Research product](). 
 Each object in the list has the following properties:
-- `term` *String* (mandatory): The identifier of a [Topic](https://skg-if.github.io/interoperability-framework/topic) relevant for the [Research product]().
-- `provenance` *List* (recommended): A list of provenance information tracking the origin of the relation between a [Topic](https://skg-if.github.io/interoperability-framework/topic) and a [Research product](). Each topic provenance object has the following properties:
-    - `associated_with` *String* (mandatory): the `local_identifier` of the [Agent](https://skg-if.github.io/interoperability-framework/docs/agent) responsible for the topic relation.
-    - `trust` *Float* (mandatory): A numeric value associated to the trust given to the relation to a [Topic](https://skg-if.github.io/interoperability-framework/topic). The float should be normalised in the range [0,1].
+- `term` *String* (mandatory): The identifier of a [Topic](https://skg-if.github.io/interoperability-framework/docs/topic) relevant for the [Research product]().
+- `provenance` *List* (recommended): A list of provenance information tracking the origin of the relation between a [Topic](https://skg-if.github.io/interoperability-framework/docs/topic) and a [Research product](). Each topic provenance object has the following properties:
+- `associated_with` *String* (mandatory): the `local_identifier` of the [Agent](https://skg-if.github.io/interoperability-framework/docs/agent) responsible for the topic relation.
+- `trust` *Float* (mandatory): A numeric value associated to the trust given to the relation to a [Topic](https://skg-if.github.io/interoperability-framework/docs/topic). The float should be normalised in the range [0,1].
  
 ```json
     "topics": [
@@ -191,13 +191,13 @@ Each object is structured as follows:
 - `version` *String* (recommended): The version for a software or research data product.
 - `biblio` *Object* (optional): An object containing bibliographic information about a manifestation. The object has the following properties:
     - `issue` *String* (optional): Issue number.
-    - `pages` *Object* (optional): the pages where the manifestation in defined (within its [Venue](https://skg-if.github.io/interoperability-framework/venue)). It includes the following information 
+    - `pages` *Object* (optional): the pages where the manifestation in defined (within its [Venue](https://skg-if.github.io/interoperability-framework/docs/venue)). It includes the following information 
         - `first` *String* (mandatory): The starting page.
         - `last` *String* (mandatory): The ending page.
     - `volume` *String* (optional): Volume number (for journals, books, conferences).
     - `edition` *String* (optional): The edition (for journals and books).
-    - `number` *String* (optional): a number of the manifestation within the [Venue](https://skg-if.github.io/interoperability-framework/venue) (e.g., chapter number).
-    - `in` *String* (optional): A [Venue](https://skg-if.github.io/interoperability-framework/venue) identifier for the manifestation.
+    - `number` *String* (optional): a number of the manifestation within the [Venue](https://skg-if.github.io/interoperability-framework/docs/venue) (e.g., chapter number).
+    - `in` *String* (optional): A [Venue](https://skg-if.github.io/interoperability-framework/docs/venue) identifier for the manifestation.
     - `hosting_data_source` *String* (optional): A Data source URL for the manifestation.
 
 ```json
@@ -256,7 +256,7 @@ Each object is structured as follows:
 ```
  
 ### `funding`
-*List* (optional): A list of relevant [Grant](https://skg-if.github.io/interoperability-framework/grant) identifiers associated with the [Research product]().
+*List* (optional): A list of relevant [Grant](https://skg-if.github.io/interoperability-framework/docs/grant) identifiers associated with the [Research product]().
 
 ```json
     "funding": ["grant_1", "grant_2"]
