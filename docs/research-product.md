@@ -18,7 +18,7 @@ nav_order: 1
 ## Properties
 
 ### `local_identifier`
-*String* (mandatory): Unique code identifiying the [Research product]() in the SKG (if any, otherwise "stateless identifier").
+*String* (mandatory): Unique code identifiying the [Research product] in the SKG (if any, otherwise "stateless identifier").
 
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
@@ -55,8 +55,8 @@ nav_order: 1
 ```
 
 ### `titles`
-*Object* (optional): The titles of a [Research product]() (multiple for multilinguism). 
-The object is a dictionary, the keys represent language codes following [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes); the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
+*Object* (optional): The titles of a [Research product] (multiple for multilinguism). 
+The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
 
 ```json
     "titles": {
@@ -67,8 +67,8 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 ```
 
 ### `abstracts`
-*Object* (optional): The abstracts of a [Research product]() (multiple for multilinguism).
-The object is a dictionary, the keys represent language codes following [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes); the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
+*Object* (optional): The abstracts of a [Research product] (multiple for multilinguism).
+The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
 
 ```json
     "abstracts": {
@@ -79,7 +79,7 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 ```
 
 ### `product_type`
-*String* (optional): The type of the [Research product](). One of the following values:
+*String* (optional): The type of the [Research product]. One of the following values:
 - `literature`
 - `research data`
 - `research software`
@@ -158,7 +158,7 @@ Each object is structured as follows:
 ### `manifestations`
 *List* (optional):  A list of objects representing multiple manifestations of the same [Research product]() (e.g., a preprint, a postprint, etc.). Each manifestation object has the following structure:
 - `type` *String* (mandatory): The type of the manifestation (e.g., preprint). The type has the following properties:
-    - `labels` *Object* (mandatory): the labels describing the type (multiple for multilinguism). The object is a dictionary, the keys represent language codes following [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1); the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
+    - `labels` *Object* (mandatory): the labels describing the type (multiple for multilinguism). The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
     - `defined_in` *String* (mandatory): the URL of the schema of the manifestation type, e.g., a link to the vocabulary of allowed product types.
     - `class` *String* (recommended): The URL of the class identifying the entity (e.g., in an ontology) describing that type.
 - `dates` *Object* (mandatory): Relevant dates for the manifestation. The object is a dictionary, the keys represent the type of date and the value is expressed as either a string or a list of string, where each string is compliant with the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime string. The possible dates that are specifiable are:
@@ -280,3 +280,8 @@ Each object is structured as follows:
         "is_part_of": ["product_11"]
     }
 ```
+
+[Research product]: 
+[ISO 639-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+[ISO 639-1]: https://en.wikipedia.org/wiki/ISO_639-1
+[Topic]: {% link topic.md %}
