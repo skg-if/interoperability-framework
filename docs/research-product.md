@@ -94,7 +94,7 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 Each object in the list has the following properties:
 - `term` *String* (mandatory): The identifier of a [Topic](https://skg-if.github.io/interoperability-framework/topic) relevant for the [Research product]().
 - `provenance` *List* (recommended): A list of provenance information tracking the origin of the relation between a [Topic](https://skg-if.github.io/interoperability-framework/topic) and a [Research product](). Each topic provenance object has the following properties:
-    - `associated_with` *String* (mandatory): the `local_identifier` of the [Agent](https://skg-if.github.io/interoperability-framework/agent) responsible for the topic relation.
+    - `associated_with` *String* (mandatory): the `local_identifier` of the [Agent](https://skg-if.github.io/interoperability-framework/docs/agent) responsible for the topic relation.
     - `trust` *Float* (mandatory): A numeric value associated to the trust given to the relation to a [Topic](https://skg-if.github.io/interoperability-framework/topic). The float should be normalised in the range [0,1].
  
 ```json
@@ -121,13 +121,13 @@ Each object in the list has the following properties:
 ```
 
 ### `contributions`
-*List* (optional): A list of objects that describe an [Agent](https://skg-if.github.io/interoperability-framework/agent), its role, contribution, rank and declared affiliations to [Organisations](https://skg-if.github.io/interoperability-framework/agent) when working on a [Research product](). 
+*List* (optional): A list of objects that describe an [Agent](https://skg-if.github.io/interoperability-framework/docs/agent), its role, contribution, rank and declared affiliations to [Organisations](https://skg-if.github.io/interoperability-framework/docs/agent) when working on a [Research product](). 
 Each object is structured as follows:
-- `by` *String* (mandatory): The identifier of an [Agent](https://skg-if.github.io/interoperability-framework/agent) contributing to the [Research product]().
-- `declared_affiliations` *List* (recommended): A list of [Organisations](https://skg-if.github.io/interoperability-framework/agent) that reflect the declared affiliations of a [Agent](https://skg-if.github.io/interoperability-framework/agent) for the [Research product]().
-- `rank` *Integer* (recommended): The rank (i.e., order of appearance) of the [Agent](https://skg-if.github.io/interoperability-framework/agent) with a specific role (e.g. the order of an author in a list) of a [Research product]().
-- `role` *String* (recommended): The role that an [Agent](https://skg-if.github.io/interoperability-framework/agent) had in the [Research product](), to choose among `author`, `editor`, and `publisher`.
-- `contribution` *List* (recommended): The contributions that an [Agent](https://skg-if.github.io/interoperability-framework/agent) had in the [Research product](). Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.,
+- `by` *String* (mandatory): The identifier of an [Agent](https://skg-if.github.io/interoperability-framework/docs/agent) contributing to the [Research product]().
+- `declared_affiliations` *List* (recommended): A list of [Organisations](https://skg-if.github.io/interoperability-framework/docs/agent) that reflect the declared affiliations of a [Agent](https://skg-if.github.io/interoperability-framework/docs/agent) for the [Research product]().
+- `rank` *Integer* (recommended): The rank (i.e., order of appearance) of the [Agent](https://skg-if.github.io/interoperability-framework/docs/agent) with a specific role (e.g. the order of an author in a list) of a [Research product]().
+- `role` *String* (recommended): The role that an [Agent](https://skg-if.github.io/interoperability-framework/docs/agent) had in the [Research product](), to choose among `author`, `editor`, and `publisher`.
+- `contribution` *List* (recommended): The contributions that an [Agent](https://skg-if.github.io/interoperability-framework/docs/agent) had in the [Research product](). Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.,
     - `conceptualization`
     - `data curation`
     - `formal analysis`
@@ -249,7 +249,7 @@ Each object is structured as follows:
 ```
 
 ### `relevant_organisations`
-*List* (optional): A list of relevant [Organisation](https://skg-if.github.io/interoperability-framework/agent) identifiers associated with the [Research product](), in case the individual affiliations of the [Person](https://skg-if.github.io/interoperability-framework/agent) are not available.
+*List* (optional): A list of relevant [Organisation](https://skg-if.github.io/interoperability-framework/docs/agent) identifiers associated with the [Research product](), in case the individual affiliations of the [Person](https://skg-if.github.io/interoperability-framework/docs/agent) are not available.
 
 ```json
     "relevant_organisations": ["org_1", "org5"]
