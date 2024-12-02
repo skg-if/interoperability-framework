@@ -132,7 +132,7 @@ However, HAL is also a publishing [Venue] for researchers that are directly uplo
 ```
 
 ### disciplines
-*List* (optional): The disciplines for which the [Data source] is dedicated. The disciplines must be specified using the Library of Congress Classification codes, available at <https://id.loc.gov/authorities/classification> (e.g. “PA3000-PA3049” for classical literature). In case the [Data source] is discipline agnostic, the string `all` should be specified.
+*List* (optional): The disciplines for which the [Data source] is dedicated. The disciplines must be specified using the Library of Congress Classification codes, available at <https://id.loc.gov/authorities/classification> (e.g. `PA3000-PA3049` for classical literature). In case the [Data source] is discipline agnostic, the string `all` should be specified.
  
 ```json
     "discipline": [
