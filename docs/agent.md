@@ -147,5 +147,5 @@ Each object is structured as follows:
 ```
 
 ----
-[Agent]: 
+[Agent]: https://skg-if.github.io/interoperability-framework/docs/agent.html
 [Research product]: https://skg-if.github.io/interoperability-framework/docs/research-product.html
