@@ -148,7 +148,7 @@ Each object is structured as follows:
 
 ----
 [Agent]: https://skg-if.github.io/interoperability-framework/docs/agent.html
-[Organisation]: {% link docs/agent.md %}
+[Organisation]: https://skg-if.github.io/interoperability-framework/docs/agent.html
 [Person]: https://skg-if.github.io/interoperability-framework/docs/agent.html
 [Research product]: https://skg-if.github.io/interoperability-framework/docs/research-product.html
 [ISO 3166-1 alpha-2]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
