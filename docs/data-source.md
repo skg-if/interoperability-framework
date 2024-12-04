@@ -14,7 +14,7 @@ A data source is described by the [EOSC Profile for data sources](https://wiki.e
 
 However, HAL is also a publishing [Venue] for researchers that are directly uploading their [Research product]. More specifically, a publishing [Venue] with peer-review and some support for metadata curation. In this case, a [Research product] will be linked to HAL both as a publishing [Venue] and as a [Data source]. 
 
-**Note:** each [Research product] must be associated with its publishing [Venue] and its [Data source].
+<!-- **Note:** each [Research product] must be associated with its publishing [Venue] and its [Data source]. -->
 
 
 ## Properties

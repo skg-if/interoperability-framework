@@ -11,7 +11,7 @@ A [Venue] is an entity that models a publishing “gateway” used by an [Agent]
 **Example:** [Episciences](https://episciences.org)  is an overlay platform supporting the management of open-access journals on top of the Open Access repository [HAL](https://hal.science). In this context, episciences.org is a publishing [Venue] (journal, open access, open peer review), while HAL is a [Data source]. Articles published via episciences.org will be therefore linked to the respective journal (publishing [Venue]) and the data source HAL. 
     However, HAL is also a publishing [Venue] for researchers that are directly uploading their [Research product]. More specifically, a publishing [Venue] with peer-review and some support for metadata curation. In this case, a [Research product] will be linked to HAL both as a publishing [Venue] and as a [Data source]. 
 
-**Note:** Each [Research product] must be associated with its publishing [Venue] and its [Data source]. 
+<!-- **Note:** Each [Research product] must be associated with its publishing [Venue] and its [Data source].  -->
 
 
 
