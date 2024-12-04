@@ -42,18 +42,18 @@ Each object is structured as follows:
     ]
 ```
 
-### `name`
-*String* (optional): The string containing whatever concatenation of an [Agent] name(s).
-
-```json
-    "name": "Andrea Mannocci, PhD"
-```
-
 ### `entity_type`
 *String* (mandatory): Field stating what kind of entity is being serialised. It can be `agent` (generic agent), `person`, or `organisation`.
 
 ```json
     "entity_type": "person"
+```
+
+### `name`
+*String* (optional): The string containing whatever concatenation of an [Agent] name(s).
+
+```json
+    "name": "Andrea Mannocci, PhD"
 ```
 
 ### `given_name`
