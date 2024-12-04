@@ -140,10 +140,14 @@ A [Venue] is an entity that models a publishing “gateway” used by an [Agent]
 ```
 
 ----
-[Venue]: https://skg-if.github.io/interoperability-framework/docs/venue.html
-[Data source]: https://skg-if.github.io/interoperability-framework/docs/data-source.html
-[Research product]: https://skg-if.github.io/interoperability-framework/docs/research-product.html
-[Research products]: https://skg-if.github.io/interoperability-framework/docs/research-product.html
-[Agent]: https://skg-if.github.io/interoperability-framework/docs/agent.html
-[Agents]: https://skg-if.github.io/interoperability-framework/docs/agent.html
+[Agent]: {% link interoperability-framework/docs/agent.md %}
+[Agents]: {% link interoperability-framework/docs/agent.md %}
+[Person]: {% link interoperability-framework/docs/agent.md %}
+[Organisation]: {% link interoperability-framework/docs/organisation.md %}
+[Research product]: {% link interoperability-framework/docs/research-product.md %}
+[Research products]: {% link interoperability-framework/docs/research-product.md %}
+[Venue]: {% link interoperability-framework/docs/venue.md %}
+[Grant]: {% link interoperability-framework/docs/grant.md %}
+[Topic]: {% link interoperability-framework/docs/topic.md %}
+[Data source]: {% link interoperability-framework/docs/data-source.md %}
 [ISO 8601]: https://en.wikipedia.org/wiki/ISO_8601

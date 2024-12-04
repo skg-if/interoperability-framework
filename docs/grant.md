@@ -147,9 +147,14 @@ These bodies, both public and private, can be funders, foundations, governments,
     - `workpackage leader`
 
 ----
-[Grant]: https://skg-if.github.io/interoperability-framework/docs/grant.html
-[Agent]: https://skg-if.github.io/interoperability-framework/docs/agent.html
-[Organisations]: https://skg-if.github.io/interoperability-framework/docs/agent.html
+[Agent]: {% link interoperability-framework/docs/agent.md %}
+[Person]: {% link interoperability-framework/docs/agent.md %}
+[Organisation]: {% link interoperability-framework/docs/organisation.md %}
+[Research product]: {% link interoperability-framework/docs/research-product.md %}
+[Venue]: {% link interoperability-framework/docs/venue.md %}
+[Grant]: {% link interoperability-framework/docs/grant.md %}
+[Topic]: {% link interoperability-framework/docs/topic.md %}
+[Data source]: {% link interoperability-framework/docs/data-source.md %}
 [ISO 8601]: https://en.wikipedia.org/wiki/ISO_8601
 [ISO 4217]: https://en.wikipedia.org/wiki/ISO_4217
 [SCoRO]: https://sparontologies.github.io/scoro/current/scoro.html#http://purl.org/spar/scoro/ProjectRole

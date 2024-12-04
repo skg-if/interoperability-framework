@@ -18,7 +18,7 @@ nav_order: 1
 ## Properties
 
 ### `local_identifier`
-*String* (mandatory): Unique code identifiying the [Research product]() in the SKG (if any, otherwise "stateless identifier").
+*String* (mandatory): Unique code identifiying the [Research product] in the SKG (if any, otherwise "stateless identifier").
 
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
@@ -55,8 +55,8 @@ nav_order: 1
 ```
 
 ### `titles`
-*Object* (optional): The titles of a [Research product]() (multiple for multilinguism). 
-The object is a dictionary, the keys represent language codes following [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes); the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
+*Object* (optional): The titles of a [Research product] (multiple for multilinguism). 
+The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
 
 ```json
     "titles": {
@@ -67,8 +67,8 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 ```
 
 ### `abstracts`
-*Object* (optional): The abstracts of a [Research product]() (multiple for multilinguism).
-The object is a dictionary, the keys represent language codes following [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes); the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
+*Object* (optional): The abstracts of a [Research product] (multiple for multilinguism).
+The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
 
 ```json
     "abstracts": {
@@ -79,7 +79,7 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 ```
 
 ### `product_type`
-*String* (optional): The type of the [Research product](). One of the following values:
+*String* (optional): The type of the [Research product]. One of the following values:
 - `literature`
 - `research data`
 - `research software`
@@ -90,12 +90,12 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 ```
 
 ### `topics`
-*List* (optional): A list objects referring to [Topic](https://skg-if.github.io/interoperability-framework/docs/topic) covered by the [Research product](). 
+*List* (optional): A list objects referring to [Topic] covered by the [Research product]. 
 Each object in the list has the following properties:
-- `term` *String* (mandatory): The identifier of a [Topic](https://skg-if.github.io/interoperability-framework/docs/topic) relevant for the [Research product]().
-- `provenance` *List* (recommended): A list of provenance information tracking the origin of the relation between a [Topic](https://skg-if.github.io/interoperability-framework/docs/topic) and a [Research product](). Each topic provenance object has the following properties:
-- `associated_with` *String* (mandatory): the `local_identifier` of the [Agent](https://skg-if.github.io/interoperability-framework/docs/agent) responsible for the topic relation.
-- `trust` *Float* (mandatory): A numeric value associated to the trust given to the relation to a [Topic](https://skg-if.github.io/interoperability-framework/docs/topic). The float should be normalised in the range [0,1].
+- `term` *String* (mandatory): The identifier of a [Topic] relevant for the [Research product].
+- `provenance` *List* (recommended): A list of provenance information tracking the origin of the relation between a [Topic] and a [Research product]. Each topic provenance object has the following properties:
+- `associated_with` *String* (mandatory): the `local_identifier` of the [Agent] responsible for the topic relation.
+- `trust` *Float* (mandatory): A numeric value associated to the trust given to the relation to a [Topic]. The float should be normalised in the range [0,1].
  
 ```json
     "topics": [
@@ -121,13 +121,13 @@ Each object in the list has the following properties:
 ```
 
 ### `contributions`
-*List* (optional): A list of objects that describe an [Agent](https://skg-if.github.io/interoperability-framework/docs/agent), its role, contribution, rank and declared affiliations to [Organisations](https://skg-if.github.io/interoperability-framework/docs/agent) when working on a [Research product](). 
+*List* (optional): A list of objects that describe an [Agent], its role, contribution, rank and declared affiliations to [Organisations](https://skg-if.github.io/interoperability-framework/docs/agent) when working on a [Research product]. 
 Each object is structured as follows:
-- `by` *String* (mandatory): The identifier of an [Agent](https://skg-if.github.io/interoperability-framework/docs/agent) contributing to the [Research product]().
-- `declared_affiliations` *List* (recommended): A list of [Organisations](https://skg-if.github.io/interoperability-framework/docs/agent) that reflect the declared affiliations of a [Agent](https://skg-if.github.io/interoperability-framework/docs/agent) for the [Research product]().
-- `rank` *Integer* (recommended): The rank (i.e., order of appearance) of the [Agent](https://skg-if.github.io/interoperability-framework/docs/agent) with a specific role (e.g. the order of an author in a list) of a [Research product]().
-- `role` *String* (recommended): The role that an [Agent](https://skg-if.github.io/interoperability-framework/docs/agent) had in the [Research product](), to choose among `author`, `editor`, and `publisher`.
-- `contribution` *List* (recommended): The contributions that an [Agent](https://skg-if.github.io/interoperability-framework/docs/agent) had in the [Research product](). Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.,
+- `by` *String* (mandatory): The identifier of an [Agent] contributing to the [Research product].
+- `declared_affiliations` *List* (recommended): A list of [Organisations](https://skg-if.github.io/interoperability-framework/docs/agent) that reflect the declared affiliations of a [Agent] for the [Research product].
+- `rank` *Integer* (recommended): The rank (i.e., order of appearance) of the [Agent] with a specific role (e.g. the order of an author in a list) of a [Research product].
+- `role` *String* (recommended): The role that an [Agent] had in the [Research product], to choose among `author`, `editor`, and `publisher`.
+- `contribution` *List* (recommended): The contributions that an [Agent] had in the [Research product]. Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.,
     - `conceptualization`
     - `data curation`
     - `formal analysis`
@@ -156,9 +156,9 @@ Each object is structured as follows:
 ```
 
 ### `manifestations`
-*List* (optional):  A list of objects representing multiple manifestations of the same [Research product]() (e.g., a preprint, a postprint, etc.). Each manifestation object has the following structure:
+*List* (optional):  A list of objects representing multiple manifestations of the same [Research product] (e.g., a preprint, a postprint, etc.). Each manifestation object has the following structure:
 - `type` *String* (mandatory): The type of the manifestation (e.g., preprint). The type has the following properties:
-    - `labels` *Object* (mandatory): the labels describing the type (multiple for multilinguism). The object is a dictionary, the keys represent language codes following [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes); the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
+    - `labels` *Object* (mandatory): the labels describing the type (multiple for multilinguism). The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
     - `defined_in` *String* (mandatory): the URL of the schema of the manifestation type, e.g., a link to the vocabulary of allowed product types.
     - `class` *String* (recommended): The URL of the class identifying the entity (e.g., in an ontology) describing that type.
 - `dates` *Object* (mandatory): Relevant dates for the manifestation. The object is a dictionary, the keys represent the type of date and the value is expressed as either a string or a list of string, where each string is compliant with the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime string. The possible dates that are specifiable are:
@@ -249,14 +249,14 @@ Each object is structured as follows:
 ```
 
 ### `relevant_organisations`
-*List* (optional): A list of relevant [Organisation](https://skg-if.github.io/interoperability-framework/docs/agent) identifiers associated with the [Research product](), in case the individual affiliations of the [Person](https://skg-if.github.io/interoperability-framework/docs/agent) are not available.
+*List* (optional): A list of relevant [Organisation](https://skg-if.github.io/interoperability-framework/docs/agent) identifiers associated with the [Research product], in case the individual affiliations of the [Person](https://skg-if.github.io/interoperability-framework/docs/agent) are not available.
 
 ```json
     "relevant_organisations": ["org_1", "org5"]
 ```
  
 ### `funding`
-*List* (optional): A list of relevant [Grant](https://skg-if.github.io/interoperability-framework/docs/grant) identifiers associated with the [Research product]().
+*List* (optional): A list of relevant [Grant](https://skg-if.github.io/interoperability-framework/docs/grant) identifiers associated with the [Research product].
 
 ```json
     "funding": ["grant_1", "grant_2"]
@@ -280,3 +280,14 @@ Each object is structured as follows:
         "is_part_of": ["product_11"]
     }
 ```
+
+----
+[Agent]: {% link interoperability-framework/docs/agent.md %}
+[Person]: {% link interoperability-framework/docs/agent.md %}
+[Organisation]: {% link interoperability-framework/docs/organisation.md %}
+[Research product]: {% link interoperability-framework/docs/research-product.md %}
+[Venue]: {% link interoperability-framework/docs/venue.md %}
+[Grant]: {% link interoperability-framework/docs/grant.md %}
+[Topic]: {% link interoperability-framework/docs/topic.md %}
+[Data source]: {% link interoperability-framework/docs/data-source.md %}
+[ISO 639-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes

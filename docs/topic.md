@@ -61,6 +61,12 @@ This section describes the metadata fields for a [Topic].
 ```
 
 ----
-[Topic]: https://skg-if.github.io/interoperability-framework/docs/topic.html
-[Research product]: https://skg-if.github.io/interoperability-framework/docs/research-product.html
+[Agent]: {% link interoperability-framework/docs/agent.md %}
+[Person]: {% link interoperability-framework/docs/agent.md %}
+[Organisation]: {% link interoperability-framework/docs/organisation.md %}
+[Research product]: {% link interoperability-framework/docs/research-product.md %}
+[Venue]: {% link interoperability-framework/docs/venue.md %}
+[Grant]: {% link interoperability-framework/docs/grant.md %}
+[Topic]: {% link interoperability-framework/docs/topic.md %}
+[Data source]: {% link interoperability-framework/docs/data-source.md %}
 [ISO 639-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes

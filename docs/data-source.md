@@ -179,8 +179,13 @@ However, HAL is also a publishing [Venue] for researchers that are directly uplo
 ```
 
 ----
-[Research product]: https://skg-if.github.io/interoperability-framework/docs/research-product.html
-[Venue]: https://skg-if.github.io/interoperability-framework/docs/venue.html
-[Data source]: https://skg-if.github.io/interoperability-framework/docs/data-source.html
+[Agent]: {% link interoperability-framework/docs/agent.md %}
+[Person]: {% link interoperability-framework/docs/agent.md %}
+[Organisation]: {% link interoperability-framework/docs/organisation.md %}
+[Research product]: {% link interoperability-framework/docs/research-product.md %}
+[Venue]: {% link interoperability-framework/docs/venue.md %}
+[Grant]: {% link interoperability-framework/docs/grant.md %}
+[Topic]: {% link interoperability-framework/docs/topic.md %}
+[Data source]: {% link interoperability-framework/docs/data-source.md %}
 [EOSC vocabulary Research Product Type]: https://wiki.eoscfuture.eu/display/PUBLIC/D.+v4.00+EOSC+Data+Source+Profile#D.v4.00EOSCDataSourceProfile-ResearchProductType
 [COAR Access Rights 1.0]: https://vocabularies.coar-repositories.org/access_rights/

@@ -147,9 +147,13 @@ Each object is structured as follows:
 ```
 
 ----
-[Agent]: https://skg-if.github.io/interoperability-framework/docs/agent.html
-[Organisation]: https://skg-if.github.io/interoperability-framework/docs/agent.html
-[Person]: https://skg-if.github.io/interoperability-framework/docs/agent.html
-[Research product]: https://skg-if.github.io/interoperability-framework/docs/research-product.html
+[Agent]: {% link interoperability-framework/docs/agent.md %}
+[Person]: {% link interoperability-framework/docs/agent.md %}
+[Organisation]: {% link interoperability-framework/docs/organisation.md %}
+[Research product]: {% link interoperability-framework/docs/research-product.md %}
+[Venue]: {% link interoperability-framework/docs/venue.md %}
+[Grant]: {% link interoperability-framework/docs/grant.md %}
+[Topic]: {% link interoperability-framework/docs/topic.md %}
+[Data source]: {% link interoperability-framework/docs/data-source.md %}
 [ISO 3166-1 alpha-2]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 [ISO 8601]: https://en.wikipedia.org/wiki/ISO_8601
