@@ -18,7 +18,7 @@ This page describes the metadata fields for an [Agent] and all its subtypes (i.e
 ### `local_identifier`
 *String* (mandatory): Unique code identifying the [Agent] in the SKG (if any, otherwise "stateless identifier").
 
-**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](https://skg-if.github.io/interoperability-framework/#local-identifiers-of-entities).
+**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
     "local_identifier": "https://w3id.org/oc/meta/ra/0614010840729"

@@ -20,7 +20,7 @@ A [Venue] is an entity that models a publishing “gateway” used by an [Agent]
 ### `local_identifier`		
 *String* (mandatory): Unique code identifiying the [Venue] in the SKG (if any, otherwise "stateless identifier").
  
-**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Frameworkhttps://skg-if.github.io/interoperability-framework/#local-identifiers-of-entities).
+**Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
     "local_identifier": "https://w3id.org/oc/meta/br/062501778099"
