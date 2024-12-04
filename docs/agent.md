@@ -149,7 +149,7 @@ Each object is structured as follows:
 ----
 [Agent]: {% link interoperability-framework/docs/agent.md %}
 [Person]: {% link interoperability-framework/docs/agent.md %}
-[Organisation]: {% link interoperability-framework/docs/organisation.md %}
+[Organisation]: {% link interoperability-framework/docs/agent.md %}
 [Research product]: {% link interoperability-framework/docs/research-product.md %}
 [Venue]: {% link interoperability-framework/docs/venue.md %}
 [Grant]: {% link interoperability-framework/docs/grant.md %}
