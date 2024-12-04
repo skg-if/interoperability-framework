@@ -121,10 +121,10 @@ Each object in the list has the following properties:
 ```
 
 ### `contributions`
-*List* (optional): A list of objects that describe an [Agent], its role, contribution, rank and declared affiliations to [Organisations](https://skg-if.github.io/interoperability-framework/docs/agent) when working on a [Research product]. 
+*List* (optional): A list of objects that describe an [Agent], its role, contribution, rank and declared affiliations to [Organisations] when working on a [Research product]. 
 Each object is structured as follows:
 - `by` *String* (mandatory): The identifier of an [Agent] contributing to the [Research product].
-- `declared_affiliations` *List* (recommended): A list of [Organisations](https://skg-if.github.io/interoperability-framework/docs/agent) that reflect the declared affiliations of a [Agent] for the [Research product].
+- `declared_affiliations` *List* (recommended): A list of [Organisations] that reflect the declared affiliations of a [Agent] for the [Research product].
 - `rank` *Integer* (recommended): The rank (i.e., order of appearance) of the [Agent] with a specific role (e.g. the order of an author in a list) of a [Research product].
 - `role` *String* (recommended): The role that an [Agent] had in the [Research product], to choose among `author`, `editor`, and `publisher`.
 - `contribution` *List* (recommended): The contributions that an [Agent] had in the [Research product]. Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.,
@@ -161,7 +161,7 @@ Each object is structured as follows:
     - `labels` *Object* (mandatory): the labels describing the type (multiple for multilinguism). The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
     - `defined_in` *String* (mandatory): the URL of the schema of the manifestation type, e.g., a link to the vocabulary of allowed product types.
     - `class` *String* (recommended): The URL of the class identifying the entity (e.g., in an ontology) describing that type.
-- `dates` *Object* (mandatory): Relevant dates for the manifestation. The object is a dictionary, the keys represent the type of date and the value is expressed as either a string or a list of string, where each string is compliant with the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime string. The possible dates that are specifiable are:
+- `dates` *Object* (mandatory): Relevant dates for the manifestation. The object is a dictionary, the keys represent the type of date and the value is expressed as either a string or a list of string, where each string is compliant with the [ISO 8601] datetime string. The possible dates that are specifiable are:
     - `acceptance`: The date of acceptance of an entity. Examples of entities to which a date accepted may be relevant are a thesis (accepted by a university examination board) or an article (accepted by a journal editor).
     - `access`: The date on which a particular digital item, such as a PDF or an HTML file, has been accessed by somebody.
     - `collected`: The date on which some item has been collected, for example the data gathered by means of questionnaires.
@@ -191,13 +191,13 @@ Each object is structured as follows:
 - `version` *String* (recommended): The version for a software or research data product.
 - `biblio` *Object* (optional): An object containing bibliographic information about a manifestation. The object has the following properties:
     - `issue` *String* (optional): Issue number.
-    - `pages` *Object* (optional): the pages where the manifestation in defined (within its [Venue](https://skg-if.github.io/interoperability-framework/docs/venue)). It includes the following information 
+    - `pages` *Object* (optional): the pages where the manifestation in defined (within its [Venue]). It includes the following information 
         - `first` *String* (mandatory): The starting page.
         - `last` *String* (mandatory): The ending page.
     - `volume` *String* (optional): Volume number (for journals, books, conferences).
     - `edition` *String* (optional): The edition (for journals and books).
-    - `number` *String* (optional): a number of the manifestation within the [Venue](https://skg-if.github.io/interoperability-framework/docs/venue) (e.g., chapter number).
-    - `in` *String* (optional): A [Venue](https://skg-if.github.io/interoperability-framework/docs/venue) identifier for the manifestation.
+    - `number` *String* (optional): a number of the manifestation within the [Venue] (e.g., chapter number).
+    - `in` *String* (optional): A [Venue] identifier for the manifestation.
     - `hosting_data_source` *String* (optional): A Data source URL for the manifestation.
 
 ```json
@@ -249,14 +249,14 @@ Each object is structured as follows:
 ```
 
 ### `relevant_organisations`
-*List* (optional): A list of relevant [Organisation](https://skg-if.github.io/interoperability-framework/docs/agent) identifiers associated with the [Research product], in case the individual affiliations of the [Person](https://skg-if.github.io/interoperability-framework/docs/agent) are not available.
+*List* (optional): A list of relevant [Organisation] identifiers associated with the [Research product], in case the individual affiliations of the [Agent] are not available.
 
 ```json
     "relevant_organisations": ["org_1", "org5"]
 ```
  
 ### `funding`
-*List* (optional): A list of relevant [Grant](https://skg-if.github.io/interoperability-framework/docs/grant) identifiers associated with the [Research product].
+*List* (optional): A list of relevant [Grant] identifiers associated with the [Research product].
 
 ```json
     "funding": ["grant_1", "grant_2"]
@@ -285,9 +285,11 @@ Each object is structured as follows:
 [Agent]: {% link interoperability-framework/docs/agent.md %}
 [Person]: {% link interoperability-framework/docs/agent.md %}
 [Organisation]: {% link interoperability-framework/docs/agent.md %}
+[Organisations]: {% link interoperability-framework/docs/agent.md %}
 [Research product]: {% link interoperability-framework/docs/research-product.md %}
 [Venue]: {% link interoperability-framework/docs/venue.md %}
 [Grant]: {% link interoperability-framework/docs/grant.md %}
 [Topic]: {% link interoperability-framework/docs/topic.md %}
 [Data source]: {% link interoperability-framework/docs/data-source.md %}
 [ISO 639-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+[ISO 8601]: https://en.wikipedia.org/wiki/ISO_8601
