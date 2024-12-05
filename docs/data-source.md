@@ -10,9 +10,10 @@ nav_order: 6
 A [Data source] is a service or platform where a [Research product] (its metadata and files) is stored, preserved, and made discoverable and accessible. 
 A data source is described by the [EOSC Profile for data sources](https://wiki.eoscfuture.eu/display/PUBLIC/D.+v4.00+EOSC+Data+Source+Profile).
 
-**Example:** [Episciences](https://episciences.org)  is an overlay platform supporting the management of open-access journals on top of the Open Access repository [HAL](https://hal.science). In this context, episciences.org is a publishing [Venue] (journal, open access, open peer review), while HAL is a [Data source]. Articles published via episciences.org will be therefore linked to the respective journal (publishing [Venue]) and the data source HAL. 
-
-However, HAL is also a publishing [Venue] for researchers that are directly uploading their [Research product]. More specifically, a publishing [Venue] with peer-review and some support for metadata curation. In this case, a [Research product] will be linked to HAL both as a publishing [Venue] and as a [Data source]. 
+{: .highlight }
+>**Example:** [Episciences](https://episciences.org)  is an overlay platform supporting the management of open-access journals on top of the Open Access repository [HAL](https://hal.science). In this context, episciences.org is a publishing [Venue] (journal, open access, open peer review), while HAL is a [Data source]. Articles published via episciences.org will be therefore linked to the respective journal (publishing [Venue]) and the data source HAL. 
+>
+>However, HAL is also a publishing [Venue] for researchers that are directly uploading their [Research product]. More specifically, a publishing [Venue] with peer-review and some support for metadata curation. In this case, a [Research product] will be linked to HAL both as a publishing [Venue] and as a [Data source]. 
 
 <!-- **Note:** each [Research product] must be associated with its publishing [Venue] and its [Data source]. -->
 
@@ -21,7 +22,8 @@ However, HAL is also a publishing [Venue] for researchers that are directly uplo
 
 ### `local_identifier`		
 *String* (mandatory): Unique code identifiying a [Data source] in the SKG (if any, otherwise "stateless identifier").
- 
+
+{: .highlight }
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json

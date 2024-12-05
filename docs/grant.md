@@ -16,6 +16,7 @@ These bodies, both public and private, can be funders, foundations, governments,
 ### `local_identifier`
 *String* (mandatory): Unique code identifying the [Grant] in the SKG (if any, otherwise "stateless identifier").
 
+{: .highlight }
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
@@ -33,8 +34,11 @@ These bodies, both public and private, can be funders, foundations, governments,
 ### `identifiers`
 *List* (recommended):  A list of objects representing external identifiers for the entity. Each object is structured as follows.
 
-- `scheme` *String* (mandatory): The scheme for the external identifier (e.g., DOI).
+- `scheme` *String* (mandatory): The scheme for the external identifier.
 - `value` *String* (mandatory): The external identifier.
+
+{: .important }
+The current version of SKG-IF includes the following types of identifiers for (to be specified as strings in the field “scheme”): `doi`, ...
 
 ```json
     "identifiers": [
@@ -74,7 +78,7 @@ These bodies, both public and private, can be funders, foundations, governments,
 ```
 
 ### `funding_agency`
-*String* (optional): The local identifier of an Organisation funding the [Grant].
+*String* (optional): The local identifier of an [Organisation] funding the [Grant].
 
 ```json
     "funder": "EC"
@@ -88,7 +92,7 @@ These bodies, both public and private, can be funders, foundations, governments,
 ```
 
 ### `currency`
-*String* (mandatory, if `funded_amount` is provided; optional otherwise): Currency of the funded amount, following [ISO 4217].
+*String* (mandatory, if `funded_amount` is provided; optional otherwise): currency of the funded amount, following [ISO 4217].
 
 ```json
     "currency": "EUR"
@@ -109,7 +113,7 @@ These bodies, both public and private, can be funders, foundations, governments,
 ```
 
 ### `duration`
-*Object* (optional): the duration of the [Grant]. It includes the following information:
+*Object* (optional): The duration of the [Grant]. It includes the following information:
 - `start` *String* (mandatory): The start datetime of the [Grant]. The string should be compliant with the [ISO 8601] datetime string.
 - `end` *String* (optional): The end datetime (if any) of the [Grant]. The string should be compliant with the [ISO 8601] datetime string.
 
@@ -128,7 +132,7 @@ These bodies, both public and private, can be funders, foundations, governments,
 ```
 
 ### `beneficiaries`
-*List* (optional): A list of the [Organisation] identifiers funded by the [Grant].
+*List* (optional): A list of the [Organisations] identifiers funded by the [Grant].
  
 ```json
     "beneficiaries": ["org_2", "org_5"]
@@ -150,6 +154,7 @@ These bodies, both public and private, can be funders, foundations, governments,
 [Agent]: {% link interoperability-framework/docs/agent.md %}
 [Person]: {% link interoperability-framework/docs/agent.md %}
 [Organisation]: {% link interoperability-framework/docs/agent.md %}
+[Organisations]: {% link interoperability-framework/docs/agent.md %}
 [Research product]: {% link interoperability-framework/docs/research-product.md %}
 [Venue]: {% link interoperability-framework/docs/venue.md %}
 [Grant]: {% link interoperability-framework/docs/grant.md %}

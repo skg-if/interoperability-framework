@@ -20,6 +20,7 @@ nav_order: 1
 ### `local_identifier`
 *String* (mandatory): Unique code identifiying the [Research product] in the SKG (if any, otherwise "stateless identifier").
 
+{: .highlight }
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
@@ -29,10 +30,11 @@ nav_order: 1
 
 ### `identifiers`
 *List* (recommended):  A list of objects representing external identifiers for the entity. Each object is structured as follows.
-- `scheme` *String* (mandatory): The scheme for the external identifier (e.g., doi, handle, purl, pubmed, etc.).
+- `scheme` *String* (mandatory): The scheme for the external identifier.
 - `value` *String* (mandatory): The external identifier.
 
-**Note:** the current version of SKG-IF includes the following types of identifiers (to be specified as strings in the field “scheme”): doi, pmid, url, ...
+{: .attention }
+**Note:** the current version of SKG-IF includes the following types of identifiers (to be specified as strings in the field “scheme”): `doi`, `handle`, `pmid`, `url`, `omid`, ...
 
 ```json
     "identifiers": [

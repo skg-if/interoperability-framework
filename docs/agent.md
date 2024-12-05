@@ -18,6 +18,7 @@ This page describes the metadata fields for an [Agent] and all its subtypes (i.e
 ### `local_identifier`
 *String* (mandatory): Unique code identifying the [Agent] in the SKG (if any, otherwise "stateless identifier").
 
+{: .highlight }
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
@@ -28,10 +29,11 @@ This page describes the metadata fields for an [Agent] and all its subtypes (i.e
 
 *List* (recommended): A list of objects representing external identifiers for the entity. 
 Each object is structured as follows:
-- `scheme` *String* (mandatory): The scheme for the external identifier (e.g., orcid, viaf, etc.).
+- `scheme` *String* (mandatory): The scheme for the external identifier.
 - `value` *String* (mandatory): The external identifier.
 
-**Note:** the current version of SKG-IF includes the following types of identifiers (to be specified as strings in the field “scheme”): orcid, viaf, …
+{: .important }
+The current version of SKG-IF includes the following types of identifiers (to be specified as strings in the field “scheme”): `orcid`, `viaf`, ...
 
 ```json
     "identifiers": [
@@ -73,7 +75,7 @@ Each object is structured as follows:
 ### `affiliations`
 *List* (optional): A list of all the affiliations of a [Person] (à la ORCID). Each element of the list is structured as follows:
 - `affiliation` *String* (mandatory): The identifier of the [Organisation] a [Person] is affiliated with.
-- `role` *String* (mandatory): The role that a [Person] had in the context of the [Organisation]. Needed for parsing purposes; fixed to “affiliate”.
+- `role` *String* (mandatory): The role that a [Person] had in the context of the [Organisation]. Needed for parsing purposes; fixed to `affiliate`.
 - `period` *Object* (recommended): the time period where the [Person] was affiliated to the [Organisation]. It includes the following information:
 - `start` *String* (mandatory): The start datetime of the affiliation with the [Organisation]. The string should be compliant with the [ISO 8601] datetime string.
 - `end` *String* (optional): The end datetime (if any) of the affiliation with the [Organisation]. The string should be compliant with the [ISO 8601] datetime string.

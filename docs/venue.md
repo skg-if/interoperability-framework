@@ -8,8 +8,10 @@ nav_order: 4
 # Venue
 A [Venue] is an entity that models a publishing “gateway” used by an [Agent] to make their [Research products] available to others.
 
-**Example:** [Episciences](https://episciences.org)  is an overlay platform supporting the management of open-access journals on top of the Open Access repository [HAL](https://hal.science). In this context, episciences.org is a publishing [Venue] (journal, open access, open peer review), while HAL is a [Data source]. Articles published via episciences.org will be therefore linked to the respective journal (publishing [Venue]) and the data source HAL. 
-    However, HAL is also a publishing [Venue] for researchers that are directly uploading their [Research product]. More specifically, a publishing [Venue] with peer-review and some support for metadata curation. In this case, a [Research product] will be linked to HAL both as a publishing [Venue] and as a [Data source]. 
+{: .highlight }
+>**Example:** [Episciences](https://episciences.org)  is an overlay platform supporting the management of open-access journals on top of the Open Access repository [HAL](https://hal.science). In this context, episciences.org is a publishing [Venue] (journal, open access, open peer review), while HAL is a [Data source]. Articles published via episciences.org will be therefore linked to the respective journal (publishing [Venue]) and the data source HAL. 
+>
+>However, HAL is also a publishing [Venue] for researchers that are directly uploading their [Research product]. More specifically, a publishing [Venue] with peer-review and some support for metadata curation. In this case, a [Research product] will be linked to HAL both as a publishing [Venue] and as a [Data source]. 
 
 <!-- **Note:** Each [Research product] must be associated with its publishing [Venue] and its [Data source].  -->
 
@@ -20,6 +22,7 @@ A [Venue] is an entity that models a publishing “gateway” used by an [Agent]
 ### `local_identifier`		
 *String* (mandatory): Unique code identifiying the [Venue] in the SKG (if any, otherwise "stateless identifier").
  
+{: .highlight }
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
@@ -28,18 +31,11 @@ A [Venue] is an entity that models a publishing “gateway” used by an [Agent]
 
 ### `identifiers`
 *List* (recommended): A list of objects representing external identifiers for the entity. Each object is structured as follows.
-
 - `scheme` *String* (mandatory): The scheme for the external identifier. It can be one of the following
-    - `issn`
-    - `eissn`
-    - `lissn`
-    - `isbn`
-    - `opendoar`
-    - `re3data.org`
-    - `fairsharing`
-    - `doi`
-    - `handle`
 - `value` *String* (mandatory): The external identifier.
+
+{: .attention }
+**Note:** the current version of SKG-IF includes the following types of identifiers (to be specified as strings in the field “scheme”): `issn`, `eissn`, `lissn`, `isbn`, `opendoar`, `re3data.org`, `fairsharing`, `doi`, `handle`
 
 ```json
     "identifiers": [
@@ -97,8 +93,8 @@ A [Venue] is an entity that models a publishing “gateway” used by an [Agent]
 
 ### `access_rights` 
 *Object* (mandatory): The access right for the specific journal. It specifies the following properties:
-    - `status` *String* (mandatory): describe if the journal is open access (`open`), closed access (`closed`), or hybrid (`hybrid`).
-    - `description` *String* (recommended): describe and qualify the specific status selected.
+- `status` *String* (mandatory): describe if the journal is open access (`open`), closed access (`closed`), or hybrid (`hybrid`).
+- `description` *String* (recommended): describe and qualify the specific status selected.
 
 ```json
     "access_rights": {
@@ -116,7 +112,6 @@ A [Venue] is an entity that models a publishing “gateway” used by an [Agent]
 
 ### `contributions`
 *List* (optional): A list of [Agents] that contributed to the [Venue]. Each element of the list is structured as follows:
-
 - `by` *String* (mandatory): The identifier of an [Agent].
 - `roles` *List* (mandatory): The roles of the [Agent] contributing to the [Venue], to choose from the following list:
     - `publisher`

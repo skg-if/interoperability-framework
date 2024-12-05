@@ -18,6 +18,7 @@ This section describes the metadata fields for a [Topic].
 ### `local_identifier`		
 *String* (mandatory): Unique code identifiying the [Topic] in the SKG (if any, otherwise "stateless identifier").
 
+{: .highlight }
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
