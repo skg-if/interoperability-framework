@@ -8,6 +8,11 @@ nav_order: 4
 # Venue
 A [Venue] is an entity that models a publishing “gateway” used by an [Agent] to make their [Research products] available to others.
 
+[Venues] are defined with an editorial point of view.
+- A scholarly journal is a typical example of [Venue] for a [Research product] sub-typed as `literature`;
+- A dataset catalog is a typical example of [Venue] for a [Research product] subtyped as `research data`.
+Depending on the context an entity can be represented as a [Venue] or a [Research product]; a book is one of these specific entities.
+
 {: .highlight }
 >**Example:** [Episciences](https://episciences.org)  is an overlay platform supporting the management of open-access journals on top of the Open Access repository [HAL](https://hal.science). In this context, episciences.org is a publishing [Venue] (journal, open access, open peer review), while HAL is a [Data source]. Articles published via episciences.org will be therefore linked to the respective journal (publishing [Venue]) and the data source HAL. 
 >
@@ -142,6 +147,7 @@ A [Venue] is an entity that models a publishing “gateway” used by an [Agent]
 [Research product]: {% link interoperability-framework/docs/research-product.md %}
 [Research products]: {% link interoperability-framework/docs/research-product.md %}
 [Venue]: {% link interoperability-framework/docs/venue.md %}
+[Venues]: {% link interoperability-framework/docs/venue.md %}
 [Grant]: {% link interoperability-framework/docs/grant.md %}
 [Topic]: {% link interoperability-framework/docs/topic.md %}
 [Data source]: {% link interoperability-framework/docs/data-source.md %}
