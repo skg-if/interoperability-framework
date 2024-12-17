@@ -14,7 +14,7 @@ These bodies, both public and private, can be funders, foundations, governments,
 ## Properties
 
 ### `local_identifier`
-*String* (mandatory): Unique code identifying the [Grant] in the SKG (if any, otherwise "stateless identifier").
+*String* (mandatory): Unique code identifying a [Grant] in the SKG (if any, otherwise "stateless identifier").
 
 {: .highlight }
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
@@ -32,7 +32,7 @@ These bodies, both public and private, can be funders, foundations, governments,
 ```
 
 ### `identifiers`
-*List* (recommended):  A list of objects representing external identifiers for the entity. Each object is structured as follows.
+*List* (recommended):  Objects representing external identifiers for the entity. Each object is structured as follows.
 
 - `scheme` *String* (mandatory): The scheme for the external identifier.
 - `value` *String* (mandatory): The external identifier.
@@ -99,14 +99,14 @@ The current version of SKG-IF includes the following types of identifiers for (t
 ```
 
 ### `funded_amount`
-*Numeric* (optional): Amount funded for the [Grant].
+*Numeric* (optional): Amount funded for a [Grant].
 
 ```json
     "funded_amount": 2.985.441
 ```
 
 ### `keywords`
-*List* (optional): A list of keywords for the [Grant].
+*List* (optional): Keywords of a [Grant].
  
 ```json
     "keywords": ["Open science", "mutual learning", "open research"]
@@ -132,17 +132,17 @@ The current version of SKG-IF includes the following types of identifiers for (t
 ```
 
 ### `beneficiaries`
-*List* (optional): A list of the [Organisations] identifiers funded by the [Grant].
+*List* (optional): [Organisations] identifiers funded by the [Grant].
  
 ```json
     "beneficiaries": ["org_2", "org_5"]
 ```
 
 ### `contributions`
-*List* (optional): A list of objects, each describing an [Agent], its contribution, and declared affiliations to [Organisations] in the context of the [Grant]. Each object is structured as follows:
-- `by` *String* (mandatory): The identifier of an [Agent] contributing to the [Grant].
-- `declared affiliations` *List* (recommended): A list of [Organisations] that reflect the declared affiliations of an [Agent] for the [Grant].
-- `roles` *List* (recommended): The roles that an [Agent] had in the [Grant]. Each element in the list is a String compliant with the project roles in [SCoRO], i.e.,
+*List* (optional): Objects, each describing an [Agent], its contribution, and declared affiliations to one or more [Organisations] in the context of the [Grant]. Each object is structured as follows:
+- `by` *String* (mandatory): The identifier of an [Agent] contributing to a [Grant].
+- `declared affiliations` *List* (recommended): [Organisations] identifiers that reflect the declared affiliations of an [Agent] for a [Grant].
+- `roles` *List* (recommended): The roles that an [Agent] had in a [Grant]. Each element in the list is a String compliant with the project roles in [SCoRO], i.e.,
     - `co-applicant`
     - `lead applicant`
     - `project leader`

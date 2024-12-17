@@ -18,7 +18,7 @@ nav_order: 1
 ## Properties
 
 ### `local_identifier`
-*String* (mandatory): Unique code identifiying the [Research product] in the SKG (if any, otherwise "stateless identifier").
+*String* (mandatory): Unique code identifiying a [Research product] in the SKG (if any, otherwise "stateless identifier").
 
 {: .highlight }
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
@@ -29,7 +29,7 @@ nav_order: 1
 
 
 ### `identifiers`
-*List* (recommended):  A list of objects representing external identifiers for the entity. Each object is structured as follows.
+*List* (recommended):  Objects representing external identifiers for the entity. Each object is structured as follows.
 - `scheme` *String* (mandatory): The scheme for the external identifier.
 - `value` *String* (mandatory): The external identifier.
 
@@ -92,10 +92,10 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 ```
 
 ### `topics`
-*List* (optional): A list objects referring to [Topic] covered by the [Research product]. 
+*List* (optional): Objects referring to [Topic] covered by the [Research product]. 
 Each object in the list has the following properties:
 - `term` *String* (mandatory): The identifier of a [Topic] relevant for the [Research product].
-- `provenance` *List* (recommended): A list of provenance information tracking the origin of the relation between a [Topic] and a [Research product]. Each topic provenance object has the following properties:
+- `provenance` *List* (recommended): Provenance information tracking the origin of the relation between a [Topic] and a [Research product]. Each topic provenance object has the following properties:
 - `associated_with` *String* (mandatory): the `local_identifier` of the [Agent] responsible for the topic relation.
 - `trust` *Float* (mandatory): A numeric value associated to the trust given to the relation to a [Topic]. The float should be normalised in the range [0,1].
  
@@ -123,13 +123,13 @@ Each object in the list has the following properties:
 ```
 
 ### `contributions`
-*List* (optional): A list of objects that describe an [Agent], its role, contribution, rank and declared affiliations to [Organisations] when working on a [Research product]. 
+*List* (optional): Objects that describe an [Agent], its role, contribution, rank and declared affiliations to [Organisations] when working on a [Research product]. 
 Each object is structured as follows:
-- `by` *String* (mandatory): The identifier of an [Agent] contributing to the [Research product].
-- `declared_affiliations` *List* (recommended): A list of [Organisations] that reflect the declared affiliations of a [Agent] for the [Research product].
-- `rank` *Integer* (recommended): The rank (i.e., order of appearance) of the [Agent] with a specific role (e.g. the order of an author in a list) of a [Research product].
-- `role` *String* (recommended): The role that an [Agent] had in the [Research product], to choose among `author`, `editor`, and `publisher`.
-- `contribution` *List* (recommended): The contributions that an [Agent] had in the [Research product]. Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.,
+- `by` *String* (mandatory): The identifier of an [Agent] contributing to a [Research product].
+- `declared_affiliations` *List* (recommended): [Organisations] identifiers that reflect the declared affiliations of a [Agent] for a [Research product].
+- `rank` *Integer* (recommended): The rank (i.e., order of appearance) of a [Agent] with a specific role (e.g., the order of an author in a list) of a [Research product].
+- `role` *String* (recommended): The role that an [Agent] had in a [Research product], to choose among `author`, `editor`, and `publisher`.
+- `contribution` *List* (recommended): The contributions that an [Agent] had in a [Research product]. Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.,
     - `conceptualization`
     - `data curation`
     - `formal analysis`
@@ -158,7 +158,7 @@ Each object is structured as follows:
 ```
 
 ### `manifestations`
-*List* (optional):  A list of objects representing multiple manifestations of the same [Research product] (e.g., a preprint, a postprint, etc.). Each manifestation object has the following structure:
+*List* (optional):  Objects representing multiple manifestations of the same [Research product] (e.g., a preprint, a postprint, etc.). Each manifestation object has the following structure:
 - `type` *String* (mandatory): The type of the manifestation (e.g., preprint). The type has the following properties:
     - `labels` *Object* (mandatory): the labels describing the type (multiple for multilinguism). The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
     - `defined_in` *String* (mandatory): the URL of the schema of the manifestation type, e.g., a link to the vocabulary of allowed product types.
@@ -180,7 +180,7 @@ Each object is structured as follows:
     - `request`: The date on which an agent is requested to do something, for example a reviewer is requested to write a review of a paper submitted to a journal for publication, or an author is requested to supply a revised version of the paper in response to the reviews received.
     - `retraction`: The date on which something, for example a claim or a journal article, is retracted.
     - `validity`: Date of validity of a resource.
-- `identifiers` *List* (recommended): A list of objects representing external identifiers for the manifestation. Each object is structured as follows:
+- `identifiers` *List* (recommended): Objects representing external identifiers for the manifestation. Each object is structured as follows:
     - `scheme` *String* (mandatory): The scheme for the external identifier (e.g., doi, handle, url, pubmed, etc.).
     - `value` *String* (mandatory): The external identifier.
 - `peer review` *Object* (recommended): Whether the manifestation has undergone a peer review. It must be specify only if information about peer reviewing exists, and has the following properties:
@@ -251,26 +251,26 @@ Each object is structured as follows:
 ```
 
 ### `relevant_organisations`
-*List* (optional): A list of relevant [Organisation] identifiers associated with the [Research product], in case the individual affiliations of the [Agent] are not available.
+*List* (optional): Relevant [Organisation] identifiers associated with a [Research product], in case the individual affiliations of an [Agent] are not available.
 
 ```json
     "relevant_organisations": ["org_1", "org5"]
 ```
  
 ### `funding`
-*List* (optional): A list of relevant [Grant] identifiers associated with the [Research product].
+*List* (optional): Relevant [Grant] identifiers associated with a [Research product].
 
 ```json
     "funding": ["grant_1", "grant_2"]
 ```    
 
 ### `related_products`
-*Object* (optional): A dictionary of objects representing related [Research products](), where the semantics of such relationships is specified as a key. It is structured as follows:
-- `cites` *List* (optional): A list of [Research products]() identifiers that are cited by the current [Research products]().
-- `is_supplemented_by` *List* (optional): A list of [Research products]() identifiers that are supplement of the current [Research products]().
-- `is_documented_by` *List* (optional): A list of [Research products]() identifiers that documents the current [Research products]().
-- `is_new_version_of` *List* (optional): A list of [Research products]() identifiers that are prior versions of the current [Research products]().
-- `is_part_of` *List* (optional): A list of [Research products]() identifiers that contains the current [Research products]().
+*Object* (optional): A dictionary of objects representing related [Research products], where the semantics of such relationships is specified as a key. It is structured as follows:
+- `cites` *List* (optional): [Research products] identifiers that are cited by a given [Research product].
+- `is_supplemented_by` *List* (optional): [Research products] identifiers that are supplement of a given [Research product].
+- `is_documented_by` *List* (optional): [Research products] identifiers that documents a given [Research product].
+- `is_new_version_of` *List* (optional): [Research products] identifiers that are prior versions of a given [Research product].
+- `is_part_of` *List* (optional): [Research products] identifiers that contain the current [Research product].
 
 
 ```json
@@ -289,6 +289,7 @@ Each object is structured as follows:
 [Organisation]: {% link interoperability-framework/docs/agent.md %}
 [Organisations]: {% link interoperability-framework/docs/agent.md %}
 [Research product]: {% link interoperability-framework/docs/research-product.md %}
+[Research products]: {% link interoperability-framework/docs/research-product.md %}
 [Venue]: {% link interoperability-framework/docs/venue.md %}
 [Grant]: {% link interoperability-framework/docs/grant.md %}
 [Topic]: {% link interoperability-framework/docs/topic.md %}

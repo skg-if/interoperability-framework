@@ -31,7 +31,7 @@ A data source is described by the [EOSC Profile for data sources](https://wiki.e
 ```
 
 ### `identifiers`
-*List* (recommended):  A list of objects representing external identifiers for the entity. Each object is structured as follows.
+*List* (recommended):  Objects representing external identifiers for the entity. Each object is structured as follows.
 - `scheme` *String* (mandatory): The scheme for the external identifier (e.g., a DOI).
 - `value` *String* (mandatory): The external identifier.
 
@@ -59,21 +59,21 @@ A data source is described by the [EOSC Profile for data sources](https://wiki.e
 ```
 
 ### `version_control`	
-*Boolean* (optional): True if data versioning is supported: the [Data source] explicitly allows the deposition of different versions of the same object
+*Boolean* (optional): True if data versioning is supported, indicating that a [Data source] explicitly allows the deposition of different versions of the same object.
  
 ```json
     "version_control": true
 ```
 
 ### `persistent_identity_systems`	
-*List* (optional): The persistent identifier systems that are used by the [Data source] to identify the ProductType it supports.
+*List* (optional): The persistent identifier systems that are used by a [Data source] to identify the `ProductType` it supports.
 - `for` *String* (mandatory): The Product type to which the persistent identifier is referring to. To choose from
     - `literature` (from [EOSC vocabulary Research Product Type])
     - `research data` (from [EOSC vocabulary Research Product Type])
     - `software` (from [EOSC vocabulary Research Product Type])
     - `metadata`
     - `any` 
-- `pid_schemes` *List* (mandatory): the list of persistent identifier schemes used to refer to ProductTypes. Each elements must be drawn by the EOSC vocabulary Persistent Identity Scheme, i.e.,
+- `pid_schemes` *List* (mandatory): Persistent identifier schemes used to refer to ProductTypes. Each elements must be drawn by the EOSC vocabulary Persistent Identity Scheme, i.e.,
     - `doi`
     - `handle`
     - `ror`
@@ -97,7 +97,7 @@ A data source is described by the [EOSC Profile for data sources](https://wiki.e
 ```
 
 ### `audience`	
-*List* (optional): The property defines the target audiences of the users of the [Data source]. Each item specifies the following information:
+*List* (optional): The property defines the target audiences of the users of a [Data source]. Each item specifies the following information:
 - `audience_type` String (mandatory): the type of the audience based on the vocabulary Jurisdiction, that may have the following values:
     - `Global`: intended for all users
     - `National`: intended for users of a country, e.g., national data repository
@@ -114,7 +114,7 @@ A data source is described by the [EOSC Profile for data sources](https://wiki.e
 ```
 
 ### `data_source_classification`	
-*String* (optional): The specific type of the [Data source], based on the vocabulary [Data source] Classification, which can be chosen among the following values:
+*String* (optional): The specific type of a [Data source], based on the vocabulary [Data source] Classification, which can be chosen among the following values:
 - `repository`: services for the deposition, preservation, discovery, and access of research products metadata and files, e.g. PANGAEA, Zenodo, B2SHARE, EGI AppDB, BioTools
 - `aggregator`: services for the aggregation of metadata about research products (and other entities) that are mainly collected (aka harvested) from data sources via APIs and then possibly curated/enriched by end-users, e.g. BASE, NARCIS, GESIS, B2FIND, OpenAIRE Research Graph
 - `scientific database`: Scientific Databases intended to store structured information about scientific entities, e.g. PROTDB, ENA, ECRIN Studies Database
@@ -127,14 +127,14 @@ A data source is described by the [EOSC Profile for data sources](https://wiki.e
 ```
 
 ### `research_product_type`	
-*List* (optional): The types of OpenAIRE entities managed by the [Data source], based on the [EOSC vocabulary Research Product Type].
+*List* (optional): The types of OpenAIRE entities managed by a [Data source], based on the [EOSC vocabulary Research Product Type].
  
 ```json
     "research_product_type": []
 ```
 
 ### disciplines
-*List* (optional): The disciplines for which the [Data source] is dedicated. The disciplines must be specified using the Library of Congress Classification codes, available at <https://id.loc.gov/authorities/classification> (e.g. `PA3000-PA3049` for classical literature). In case the [Data source] is discipline agnostic, the string `all` should be specified.
+*List* (optional): The disciplines for which a [Data source] is dedicated. The disciplines must be specified using the Library of Congress Classification codes, available at <https://id.loc.gov/authorities/classification> (e.g. `PA3000-PA3049` for classical literature). In case a [Data source] is discipline agnostic, the string `all` should be specified.
  
 ```json
     "discipline": [

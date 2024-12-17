@@ -25,7 +25,7 @@ Depending on the context an entity can be represented as a [Venue] or a [Researc
 ## Properties
 
 ### `local_identifier`		
-*String* (mandatory): Unique code identifiying the [Venue] in the SKG (if any, otherwise "stateless identifier").
+*String* (mandatory): Unique code identifiying a [Venue] in the SKG (if any, otherwise "stateless identifier").
  
 {: .highlight }
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
@@ -35,7 +35,7 @@ Depending on the context an entity can be represented as a [Venue] or a [Researc
 ```
 
 ### `identifiers`
-*List* (recommended): A list of objects representing external identifiers for the entity. Each object is structured as follows.
+*List* (recommended): Objects representing external identifiers for the entity. Each object is structured as follows.
 - `scheme` *String* (mandatory): The scheme for the external identifier. It can be one of the following
 - `value` *String* (mandatory): The external identifier.
 
@@ -63,7 +63,7 @@ Depending on the context an entity can be represented as a [Venue] or a [Researc
 ```
 
 ### `name` 
- *String* (optional): The name of the [Venue].
+ *String* (optional): The name of a [Venue].
 
 ```json
     "name": "The Semantic Web – ISWC 2020: 19th International Semantic Web Conference, Athens, Greece, November 2–6, 2020, Proceedings, Part II"
@@ -77,7 +77,7 @@ Depending on the context an entity can be represented as a [Venue] or a [Researc
 ```
 
 ### `type`
-*String* (optional): The type of the [Venue]. The String follows the vocabulary below
+*String* (optional): The type of a [Venue]. The String follows the vocabulary below
 - `journal`
 - `conference`
 - `book`
@@ -109,16 +109,16 @@ Depending on the context an entity can be represented as a [Venue] or a [Researc
 ```
 
 ### `creation_date`
-*String* (optional): The date of creation of the [Venue]. The string should be compliant with the [ISO 8601]  datetime string.
+*String* (optional): The date of creation of a [Venue]. The string should be compliant with the [ISO 8601] datetime string.
  
 ```json
     "creation_date": "2019-09-13T00:00:00+00:00"
 ```
 
 ### `contributions`
-*List* (optional): A list of [Agents] that contributed to the [Venue]. Each element of the list is structured as follows:
+*List* (optional): [Agents] that contributed to a [Venue]. Each element of the list is structured as follows:
 - `by` *String* (mandatory): The identifier of an [Agent].
-- `roles` *List* (mandatory): The roles of the [Agent] contributing to the [Venue], to choose from the following list:
+- `roles` *List* (mandatory): The roles of an [Agent] contributing to a [Venue], to choose from the following list:
     - `publisher`
     - `editor`
 

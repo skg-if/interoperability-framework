@@ -16,7 +16,7 @@ This page describes the metadata fields for an [Agent] and all its subtypes (i.e
 ## Properties
 
 ### `local_identifier`
-*String* (mandatory): Unique code identifying the [Agent] in the SKG (if any, otherwise "stateless identifier").
+*String* (mandatory): Unique code identifying an [Agent] in the SKG (if any, otherwise "stateless identifier").
 
 {: .highlight }
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
@@ -27,7 +27,7 @@ This page describes the metadata fields for an [Agent] and all its subtypes (i.e
 
 ### `identifiers`
 
-*List* (recommended): A list of objects representing external identifiers for the entity. 
+*List* (recommended): Objects representing external identifiers for the entity. 
 Each object is structured as follows:
 - `scheme` *String* (mandatory): The scheme for the external identifier.
 - `value` *String* (mandatory): The external identifier.
@@ -73,12 +73,12 @@ The current version of SKG-IF includes the following types of identifiers (to be
 ```
 
 ### `affiliations`
-*List* (optional): A list of all the affiliations of a [Person] (à la ORCID). Each element of the list is structured as follows:
-- `affiliation` *String* (mandatory): The identifier of the [Organisation] a [Person] is affiliated with.
-- `role` *String* (mandatory): The role that a [Person] had in the context of the [Organisation]. Needed for parsing purposes; fixed to `affiliate`.
-- `period` *Object* (recommended): the time period where the [Person] was affiliated to the [Organisation]. It includes the following information:
-- `start` *String* (mandatory): The start datetime of the affiliation with the [Organisation]. The string should be compliant with the [ISO 8601] datetime string.
-- `end` *String* (optional): The end datetime (if any) of the affiliation with the [Organisation]. The string should be compliant with the [ISO 8601] datetime string.
+*List* (optional): All the affiliations of a [Person] (à la ORCID). Each element of the list is structured as follows:
+- `affiliation` *String* (mandatory): The identifier of an [Organisation] a [Person] is affiliated with.
+- `role` *String* (mandatory): The role that a [Person] had in the context of an [Organisation]. Needed for parsing purposes; fixed to `affiliate`.
+- `period` *Object* (recommended): The time period where the [Person] was affiliated with an [Organisation]. It includes the following information:
+    - `start` *String* (mandatory): The start datetime of the affiliation with an [Organisation]. The string should be compliant with the [ISO 8601] datetime string.
+    - `end` *String* (optional): The end datetime (if any) of the affiliation with an [Organisation]. The string should be compliant with the [ISO 8601] datetime string.
 
 ```json
     "affiliations": [
@@ -101,14 +101,14 @@ The current version of SKG-IF includes the following types of identifiers (to be
 ```
 
 ### `short_name`
-*String* (optional): The short name/acronym for the [Organisation].
+*String* (optional): The short name/acronym for an [Organisation].
 
 ```json
     "short_name": "CNR"
 ```
 
 ### `other_names`
-*List* (optional): A list of other names, maybe in different languages, identifiying the [Organisation].
+*List* (optional): Other names, perhaps in different languages, identifiying an [Organisation].
 
 ```json
      "other_names": [ 
@@ -118,21 +118,21 @@ The current version of SKG-IF includes the following types of identifiers (to be
 ```
 
 ### `website`
-*String* (optional): The website URL for the [Organisation].
+*String* (optional): The website URL for an [Organisation].
 
 ```json
     "website": "https://www.cnr.it/"
 ```
 
 ### `country`
-*String* (optional): The country code of the [Organisation] expressed as [ISO 3166-1 alpha-2].
+*String* (optional): The country code of an [Organisation] expressed as [ISO 3166-1 alpha-2].
 
 ```json
     "country": "IT"
 ```
 
 ### `type`
-*List* (optional): The types of the [Organisation]. One or more from the following values:
+*List* (optional): The types of an [Organisation]. One or more from the following values:
 - `archive`
 - `company`
 - `education`
