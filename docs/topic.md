@@ -9,7 +9,6 @@ nav_order: 5
 
 A [Topic] describes the scientific disciplines, subjects and keywords potentially relevant for a [Research product].
 
-
 This section describes the metadata fields for a [Topic].
 
 
@@ -26,7 +25,10 @@ This section describes the metadata fields for a [Topic].
 ```
 
 ### `identifiers`
-*List* (recommended):  Objects representing external identifiers for the entity. Each object is structured as follows.
+*List* (recommended):  Objects representing external identifiers for the entity. 
+
+Each object is structured as follows.
+
 - `scheme` *String* (mandatory): The scheme for the external identifier.
 - `value` *String* (mandatory): The external identifier.
  
@@ -44,14 +46,18 @@ This section describes the metadata fields for a [Topic].
 ```
 
 ### `entity_type`
-*String* (mandatory): Field stating what kind of entity is being serialised. Needed for parsing purposes; fixed to `topic`.
+*String* (mandatory): Field stating what kind of entity is being serialised. 
+
+Needed for parsing purposes; fixed to `topic`.
 
 ```json
     "entity_type": "topic"
 ```
 
 ### `labels`
-*Object* (optional): The labels describing a [Topic] (multiple for multilinguism). The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
+*Object* (optional): The labels describing a [Topic] (multiple for multilinguism). 
+
+The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
 
 ```json
     "labels": {

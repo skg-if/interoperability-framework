@@ -35,7 +35,10 @@ Depending on the context an entity can be represented as a [Venue] or a [Researc
 ```
 
 ### `identifiers`
-*List* (recommended): Objects representing external identifiers for the entity. Each object is structured as follows.
+*List* (recommended): Objects representing external identifiers for the entity. 
+
+Each object is structured as follows.
+
 - `scheme` *String* (mandatory): The scheme for the external identifier. It can be one of the following
 - `value` *String* (mandatory): The external identifier.
 
@@ -56,7 +59,9 @@ Depending on the context an entity can be represented as a [Venue] or a [Researc
 ```
 
 ### `entity_type`
-*String* (mandatory): Field stating what kind of entity is being serialised. Needed for parsing purposes; fixed to `venue`.
+*String* (mandatory): Field stating what kind of entity is being serialised. 
+
+Needed for parsing purposes; fixed to `venue`.
 
 ```json
     "entity_type": "venue"
@@ -77,7 +82,9 @@ Depending on the context an entity can be represented as a [Venue] or a [Researc
 ```
 
 ### `type`
-*String* (optional): The type of a [Venue]. The String follows the vocabulary below
+*String* (optional): The type of a [Venue]. 
+
+The String follows the vocabulary below:
 - `journal`
 - `conference`
 - `book`
@@ -97,7 +104,10 @@ Depending on the context an entity can be represented as a [Venue] or a [Researc
 ```
 
 ### `access_rights` 
-*Object* (mandatory): The access right for the specific journal. It specifies the following properties:
+*Object* (mandatory): The access right for the specific journal. 
+
+It specifies the following properties:
+
 - `status` *String* (mandatory): describe if the journal is open access (`open`), closed access (`closed`), or hybrid (`hybrid`).
 - `description` *String* (recommended): describe and qualify the specific status selected.
 
@@ -116,9 +126,13 @@ Depending on the context an entity can be represented as a [Venue] or a [Researc
 ```
 
 ### `contributions`
-*List* (optional): [Agents] that contributed to a [Venue]. Each element of the list is structured as follows:
+*List* (optional): [Agents] that contributed to a [Venue]. 
+
+Each element of the list is structured as follows:
 - `by` *String* (mandatory): The identifier of an [Agent].
-- `roles` *List* (mandatory): The roles of an [Agent] contributing to a [Venue], to choose from the following list:
+- `roles` *List* (mandatory): The roles of an [Agent] contributing to a [Venue].
+  
+  To choose from the following list:
     - `publisher`
     - `editor`
 

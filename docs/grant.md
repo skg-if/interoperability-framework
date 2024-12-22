@@ -7,8 +7,7 @@ nav_order: 3
 
 # Grant
 
-The entity [Grant] describes funding awarded to a [Agent] by a funding body. 
-These bodies, both public and private, can be funders, foundations, governments, agencies or institutions.
+The entity [Grant] describes funding awarded to a [Agent] by a funding body. These bodies, both public and private, can be funders, foundations, governments, agencies or institutions.
 
 
 ## Properties
@@ -32,7 +31,9 @@ These bodies, both public and private, can be funders, foundations, governments,
 ```
 
 ### `identifiers`
-*List* (recommended):  Objects representing external identifiers for the entity. Each object is structured as follows.
+*List* (recommended):  Objects representing external identifiers for the entity. 
+
+Each object is structured as follows:
 
 - `scheme` *String* (mandatory): The scheme for the external identifier.
 - `value` *String* (mandatory): The external identifier.
@@ -50,7 +51,9 @@ The current version of SKG-IF includes the following types of identifiers for (t
 ```
 
 ### `entity_type`
-*String* (mandatory): Field stating what kind of entity is being serialised. Needed for parsing purposes; fixed to `grant`.
+*String* (mandatory): Field stating what kind of entity is being serialised. 
+
+Needed for parsing purposes; fixed to `grant`.
 
 ```json
     "entity_type": "grant"
@@ -92,7 +95,7 @@ The current version of SKG-IF includes the following types of identifiers for (t
 ```
 
 ### `currency`
-*String* (mandatory, if `funded_amount` is provided; optional otherwise): currency of the funded amount, following [ISO 4217].
+*String* (mandatory, if `funded_amount` is provided; optional otherwise): Currency of the funded amount, following [ISO 4217].
 
 ```json
     "currency": "EUR"
@@ -113,7 +116,9 @@ The current version of SKG-IF includes the following types of identifiers for (t
 ```
 
 ### `duration`
-*Object* (optional): The duration of the [Grant]. It includes the following information:
+*Object* (optional): The duration of the [Grant]. 
+
+It includes the following information:
 - `start` *String* (mandatory): The start datetime of the [Grant]. The string should be compliant with the [ISO 8601] datetime string.
 - `end` *String* (optional): The end datetime (if any) of the [Grant]. The string should be compliant with the [ISO 8601] datetime string.
 
@@ -139,7 +144,9 @@ The current version of SKG-IF includes the following types of identifiers for (t
 ```
 
 ### `contributions`
-*List* (optional): Objects, each describing an [Agent], its contribution, and declared affiliations to one or more [Organisations] in the context of the [Grant]. Each object is structured as follows:
+*List* (optional): Objects, each describing an [Agent], its contribution, and declared affiliations to one or more [Organisations] in the context of the [Grant]. 
+
+Each object is structured as follows:
 - `by` *String* (mandatory): The identifier of an [Agent] contributing to a [Grant].
 - `declared affiliations` *List* (recommended): [Organisations] identifiers that reflect the declared affiliations of an [Agent] for a [Grant].
 - `roles` *List* (recommended): The roles that an [Agent] had in a [Grant]. Each element in the list is a String compliant with the project roles in [SCoRO], i.e.,

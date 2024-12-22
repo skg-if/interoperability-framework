@@ -1,5 +1,5 @@
 ---
-title: Interoperability Framework
+title: SKG-IF Interoperability Framework
 layout: default
 nav_order: 2
 has_toc: false

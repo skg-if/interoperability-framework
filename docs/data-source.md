@@ -7,8 +7,7 @@ nav_order: 6
 
 # Data source
 
-A [Data source] is a service or platform where a [Research product] (its metadata and files) is stored, preserved, and made discoverable and accessible. 
-A data source is described by the [EOSC Profile for data sources](https://wiki.eoscfuture.eu/display/PUBLIC/D.+v4.00+EOSC+Data+Source+Profile).
+A [Data source] is a service or platform where a [Research product] (its metadata and files) is stored, preserved, and made discoverable and accessible. A data source is described by the [EOSC Profile for data sources](https://wiki.eoscfuture.eu/display/PUBLIC/D.+v4.00+EOSC+Data+Source+Profile).
 
 {: .highlight }
 >**Example:** [Episciences](https://episciences.org)  is an overlay platform supporting the management of open-access journals on top of the Open Access repository [HAL](https://hal.science). In this context, episciences.org is a publishing [Venue] (journal, open access, open peer review), while HAL is a [Data source]. Articles published via episciences.org will be therefore linked to the respective journal (publishing [Venue]) and the data source HAL. 
@@ -31,7 +30,9 @@ A data source is described by the [EOSC Profile for data sources](https://wiki.e
 ```
 
 ### `identifiers`
-*List* (recommended):  Objects representing external identifiers for the entity. Each object is structured as follows.
+*List* (recommended):  Objects representing external identifiers for the entity. 
+
+Each object is structured as follows.
 - `scheme` *String* (mandatory): The scheme for the external identifier (e.g., a DOI).
 - `value` *String* (mandatory): The external identifier.
 
@@ -45,7 +46,9 @@ A data source is described by the [EOSC Profile for data sources](https://wiki.e
 ```
 
 ### `entity_type`
-*String* (mandatory): Field stating what kind of entity is being serialised. Needed for parsing purposes; fixed to `datasource`.
+*String* (mandatory): Field stating what kind of entity is being serialised. 
+
+Needed for parsing purposes; fixed to `datasource`.
 
 ```json
     "entity_type": "datasource"
@@ -67,13 +70,19 @@ A data source is described by the [EOSC Profile for data sources](https://wiki.e
 
 ### `persistent_identity_systems`	
 *List* (optional): The persistent identifier systems that are used by a [Data source] to identify the `ProductType` it supports.
-- `for` *String* (mandatory): The Product type to which the persistent identifier is referring to. To choose from
+
+- `for` *String* (mandatory): The Product type to which the persistent identifier is referring to. 
+  
+  To choose from
     - `literature` (from [EOSC vocabulary Research Product Type])
     - `research data` (from [EOSC vocabulary Research Product Type])
     - `software` (from [EOSC vocabulary Research Product Type])
     - `metadata`
     - `any` 
-- `pid_schemes` *List* (mandatory): Persistent identifier schemes used to refer to ProductTypes. Each elements must be drawn by the EOSC vocabulary Persistent Identity Scheme, i.e.,
+
+- `pid_schemes` *List* (mandatory): Persistent identifier schemes used to refer to ProductTypes. 
+  
+  Each elements must be drawn by the EOSC vocabulary Persistent Identity Scheme, i.e.,
     - `doi`
     - `handle`
     - `ror`
@@ -97,8 +106,12 @@ A data source is described by the [EOSC Profile for data sources](https://wiki.e
 ```
 
 ### `audience`	
-*List* (optional): The property defines the target audiences of the users of a [Data source]. Each item specifies the following information:
-- `audience_type` String (mandatory): the type of the audience based on the vocabulary Jurisdiction, that may have the following values:
+*List* (optional): The property defines the target audiences of the users of a [Data source]. 
+
+Each item specifies the following information:
+- `audience_type` *String* (mandatory): the type of the audience based on the vocabulary Jurisdiction. 
+  
+  It may have the following values:
     - `Global`: intended for all users
     - `National`: intended for users of a country, e.g., national data repository
     - `Regional`: intended for users of a region (e.g., Europe)
@@ -113,8 +126,10 @@ A data source is described by the [EOSC Profile for data sources](https://wiki.e
     ]
 ```
 
-### `data_source_classification`	
-*String* (optional): The specific type of a [Data source], based on the vocabulary [Data source] Classification, which can be chosen among the following values:
+### `data_source_classification`
+*String* (optional): The specific type of a [Data source], based on the vocabulary [Data source] Classification. 
+
+It can be chosen among the following values:
 - `repository`: services for the deposition, preservation, discovery, and access of research products metadata and files, e.g. PANGAEA, Zenodo, B2SHARE, EGI AppDB, BioTools
 - `aggregator`: services for the aggregation of metadata about research products (and other entities) that are mainly collected (aka harvested) from data sources via APIs and then possibly curated/enriched by end-users, e.g. BASE, NARCIS, GESIS, B2FIND, OpenAIRE Research Graph
 - `scientific database`: Scientific Databases intended to store structured information about scientific entities, e.g. PROTDB, ENA, ECRIN Studies Database
@@ -143,13 +158,16 @@ A data source is described by the [EOSC Profile for data sources](https://wiki.e
 ```
 
 ### `policy`
-- `about` *String* (mandatory): the type of policy to consider, to choose among the following possibilities:
+*List* (optional): The policies followed by a [Data source].
+
+- `about` *String* (mandatory): the type of policy to consider. 
+To choose among the following possibilities:
     - `submission`: This policy provides a comprehensive framework for the contribution of research products. Criteria for submitting content to the repository as well as product preparation guidelines can be stated. Concepts for quality assurance may be provided.
     - `preservation`: This policy provides a comprehensive framework for the long-term preservation of the research products. Principles aims and responsibilities must be clarified. An important aspect is the description of preservation concepts to ensure the technical and conceptual utility of the content.
-    - `embargoed access` (from [COAR Access Rights 1.0]): This policy provides the possibility of having / handling embargoed access refers to the resources in the [Data source].
-    - `metadata only access` (from [COAR Access Rights 1.0]): This policy provides the possibility of having / handling metadata only access refers to the resources in the [Data source].
-    - `open access` (from [COAR Access Rights 1.0]): This policy provides the possibility of having / handling [Data source] resources that are immediately and permanently online.
-    - `restricted access` (from [COAR Access Rights 1.0]): This policy provides the possibility of having / handling restricted access to the resources in the [Data source].
+    - `embargoed access`: This policy provides the possibility of having / handling embargoed access refers to the resources in the [Data source] (from [COAR Access Rights 1.0]).
+    - `metadata only access`: This policy provides the possibility of having / handling metadata only access refers to the resources in the [Data source] (from [COAR Access Rights 1.0]).
+    - `open access`: This policy provides the possibility of having / handling [Data source] resources that are immediately and permanently online (from [COAR Access Rights 1.0]).
+    - `restricted access`: This policy provides the possibility of having / handling restricted access to the resources in the [Data source] (from [COAR Access Rights 1.0]).
 - `target` *List* (recommended): the types of resources to which the policy applies to. Each item in the list should be compliant with the following terms:
     - `metadata`
     - `research data` (from [EOSC vocabulary Research Product Type])

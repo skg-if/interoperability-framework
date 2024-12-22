@@ -7,8 +7,7 @@ nav_order: 2
 
 # Agent
  
-The [Agent] entity represents an individual (e.g., a person, an organisation, or another kind of entity being able to act) who is involved in the creation, publication, dissemination, etc. of a [Research product]. 
-An [Agent] can be an author, a reviewer, an editor, a publisher, a researcher, or any other stakeholder involved in the scholarly communication process.
+The [Agent] entity represents an individual (e.g., a person, an organisation, or another kind of entity being able to act) who is involved in the creation, publication, dissemination, etc. of a [Research product]. An [Agent] can be an author, a reviewer, an editor, a publisher, a researcher, or any other stakeholder involved in the scholarly communication process.
 
 This page describes the metadata fields for an [Agent] and all its subtypes (i.e., persons and organisations).
 
@@ -28,6 +27,7 @@ This page describes the metadata fields for an [Agent] and all its subtypes (i.e
 ### `identifiers`
 
 *List* (recommended): Objects representing external identifiers for the entity. 
+
 Each object is structured as follows:
 - `scheme` *String* (mandatory): The scheme for the external identifier.
 - `value` *String* (mandatory): The external identifier.
@@ -45,7 +45,9 @@ The current version of SKG-IF includes the following types of identifiers (to be
 ```
 
 ### `entity_type`
-*String* (mandatory): Field stating what kind of entity is being serialised. It can be `agent` (generic agent), `person`, or `organisation`.
+*String* (mandatory): Field stating what kind of entity is being serialised. 
+
+It can be `agent` (generic agent), `person`, or `organisation`.
 
 ```json
     "entity_type": "person"
@@ -73,7 +75,9 @@ The current version of SKG-IF includes the following types of identifiers (to be
 ```
 
 ### `affiliations`
-*List* (optional): All the affiliations of a [Person] (à la ORCID). Each element of the list is structured as follows:
+*List* (optional): All the affiliations of a [Person] (à la ORCID). 
+
+Each element of the list is structured as follows:
 - `affiliation` *String* (mandatory): The identifier of an [Organisation] a [Person] is affiliated with.
 - `role` *String* (mandatory): The role that a [Person] had in the context of an [Organisation]. Needed for parsing purposes; fixed to `affiliate`.
 - `period` *Object* (recommended): The time period where the [Person] was affiliated with an [Organisation]. It includes the following information:
@@ -132,7 +136,9 @@ The current version of SKG-IF includes the following types of identifiers (to be
 ```
 
 ### `type`
-*List* (optional): The types of an [Organisation]. One or more from the following values:
+*List* (optional): The types of an [Organisation]. 
+
+One or more from the following values:
 - `archive`
 - `company`
 - `education`
