@@ -56,7 +56,7 @@ In case a full URL is specified as a local identifier, such URL is used for iden
 
 then the URL `https://w3id.org/oc/meta/br/062501777134` is used as stateless identifier for the entity described. In this example, the URL specified resolves to some available data on the Web since the original source handles all the URLs it provides as local identifiers via content negotiation.
 
-It is also possible to specify a non-URL string as a local identifier. In this case, the Interoperability Framework interprets it as a URL by combining the base URL specified in the [JSON-LD preamble above]() of the SKG-IF document with the string specified. For instance, supposing that the base URL declared in the preamble is `https://w3id.org/skg-if/sandbox/oc/` as shown in the example above, if an SKG-IF document specifies the following local identifier
+It is also possible to specify a non-URL string as a local identifier. In this case, the Interoperability Framework interprets it as a URL by combining the base URL specified in the [JSON-LD preamble above](#json-ld-preamble) of the SKG-IF document with the string specified. For instance, supposing that the base URL declared in the preamble is `https://w3id.org/skg-if/sandbox/oc/` as shown in the example above, if an SKG-IF document specifies the following local identifier
 
 ```json
     "local_identifier": "my-entity-id-1"
