@@ -61,13 +61,6 @@ Needed for parsing purposes; fixed to `datasource`.
     "name": "Zenodo"
 ```
 
-### `version_control`	
-*Boolean* (optional): True if data versioning is supported, indicating that a [Data source] explicitly allows the deposition of different versions of the same object.
- 
-```json
-    "version_control": true
-```
-
 ### `persistent_identity_systems`	
 *List* (optional): The persistent identifier systems that are used by a [Data source] to identify the `ProductType` it supports.
 
