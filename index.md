@@ -82,7 +82,7 @@ where
 
 * `otf` stands for *on-the-fly* to explicitly clarify the local identifiers it has been created for the purpose of creating this SKG-IF document; 
 * `<session identifier>` is a string portion that enables the source to uniquely identifier the session in which such SKG-IF document has been created - e.g. it could be the current time of the software run to create the SKG expressed in milliseconds;
-* `<session identifier>` is a string portion that identifies the particular entity in consideration. For instance, a possible example of such a local identifier would be
+* `<identifier string>` is a string portion that identifies the particular entity in consideration. For instance, a possible example of such a local identifier would be
 
 ```json
     "local_identifier": "otf___1730027051396___person-1"
