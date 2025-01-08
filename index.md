@@ -8,12 +8,12 @@ has_toc: false
 # SKG-IF Interoperability Framework
 
 The SKG-IF Interoperability Framework enables to exchange data about six core entities and their relationships. These are:
-- Research product
-- Agent
-- Grant
-- Venue
-- Topic
-- Data source
+- [Research product]
+- [Agent]
+- [Grant]
+- [Venue]
+- [Topic]
+- [Data source]
 
 This section contains the description of the JSON-LD format used for exchanging data compliant with the [SKG-IF Data Model](/data-model/).
 
@@ -89,3 +89,15 @@ where
 ```
 
 that is interpreted by the Interoperability Framework (considering having `https://w3id.org/skg-if/sandbox/oc/` as base URL) as `https://w3id.org/skg-if/sandbox/oc/otf___1730027051396___person-1`.
+
+
+
+----
+[Agent]: {% link interoperability-framework/docs/agent.md %}
+[Person]: {% link interoperability-framework/docs/agent.md %}
+[Organisation]: {% link interoperability-framework/docs/agent.md %}
+[Research product]: {% link interoperability-framework/docs/research-product.md %}
+[Venue]: {% link interoperability-framework/docs/venue.md %}
+[Grant]: {% link interoperability-framework/docs/grant.md %}
+[Topic]: {% link interoperability-framework/docs/topic.md %}
+[Data source]: {% link interoperability-framework/docs/data-source.md %}
