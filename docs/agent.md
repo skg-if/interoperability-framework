@@ -79,10 +79,10 @@ It can be `agent` (generic agent), `person`, or `organisation`.
 
 Each element of the list is structured as follows:
 - `affiliation` *String* (mandatory): The identifier of an [Organisation] a [Person] is affiliated with.
-- `role` *String* (mandatory): The role that a [Person] had in the context of an [Organisation]. Needed for parsing purposes; fixed to `affiliate`.
+- `role` *String* (recommended): The role that a [Person] had in the context of an [Organisation]. Needed for parsing purposes; fixed to `affiliate`.
 - `period` *Object* (recommended): The time period where the [Person] was affiliated with an [Organisation]. It includes the following information:
-    - `start` *String* (mandatory): The start datetime of the affiliation with an [Organisation]. The string should be compliant with the [ISO 8601] datetime string.
-    - `end` *String* (optional): The end datetime (if any) of the affiliation with an [Organisation]. The string should be compliant with the [ISO 8601] datetime string.
+    - `start` *String* (recommended): The start datetime of the affiliation with an [Organisation]. The string should be compliant with the [ISO 8601] datetime string.
+    - `end` *String* (recommended): The end datetime (if any) of the affiliation with an [Organisation]. The string should be compliant with the [ISO 8601] datetime string.
 
 ```json
     "affiliations": [
