@@ -143,7 +143,7 @@ Each object is structured as follows:
 - `role` *String* (recommended): The role that an [Agent] had in a [Research product], to choose among `author`, `editor`, and `publisher`.
 - `contribution` *List* (recommended): The contributions that an [Agent] had in a [Research product]. 
 
-Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.,
+    Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.,
     - `conceptualization`
     - `data curation`
     - `formal analysis`
