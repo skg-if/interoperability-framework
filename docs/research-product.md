@@ -104,9 +104,11 @@ One of the following values:
 
 Each object in the list has the following properties:
 - `term` *String* (mandatory): The identifier of a [Topic] relevant for the [Research product].
-- `provenance` *List* (recommended): Provenance information tracking the origin of the relation between a [Topic] and a [Research product]. Each topic provenance object has the following properties:
-- `associated_with` *String* (mandatory): the `local_identifier` of the [Agent] responsible for the topic relation.
-- `trust` *Float* (mandatory): A numeric value associated to the trust given to the relation to a [Topic]. The float should be normalised in the range [0,1].
+- `provenance` *List* (recommended): Provenance information tracking the origin of the relation between a [Topic] and a [Research product]. 
+
+Each topic provenance object has the following properties:
+    - `associated_with` *String* (mandatory): the `local_identifier` of the [Agent] responsible for the topic relation.
+    - `trust` *Float* (mandatory): A numeric value associated to the trust given to the relation to a [Topic]. The float should be normalised in the range [0,1].
  
 ```json
     "topics": [
