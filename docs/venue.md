@@ -104,7 +104,7 @@ The String follows the vocabulary below:
 ```
 
 ### `access_rights` 
-*Object* (mandatory): The access right for the specific journal. 
+*Object* (recommended): The access right for the specific journal. 
 
 It specifies the following properties:
 
@@ -130,7 +130,7 @@ It specifies the following properties:
 
 Each element of the list is structured as follows:
 - `by` *String* (mandatory): The identifier of an [Agent].
-- `roles` *List* (mandatory): The roles of an [Agent] contributing to a [Venue].
+- `roles` *List* (recommended): The roles of an [Agent] contributing to a [Venue].
   
   To choose from the following list:
     - `publisher`
