@@ -29,9 +29,9 @@ nav_order: 1
 
 
 ### `identifiers`
-*List* (recommended):  Objects representing external identifiers for the entity. 
+*List* (recommended): Objects representing external identifiers for the entity. 
 
-Each object is structured as follows:
+Each identifier is structured as follows:
 - `scheme` *String* (mandatory): The scheme for the external identifier.
 - `value` *String* (mandatory): The external identifier.
 
