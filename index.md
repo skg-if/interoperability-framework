@@ -1,11 +1,11 @@
 ---
-title: SKG-IF Interoperability Framework
+title: Interoperability Framework
 layout: default
 nav_order: 2
 has_toc: false
 ---
 
-# SKG-IF Interoperability Framework
+# Interoperability Framework
 
 The SKG-IF Interoperability Framework enables to exchange data about six core entities and their relationships. These are:
 - [Research product]
