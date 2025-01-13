@@ -175,9 +175,9 @@ Each element in the list is a String compliant with the [CRediT taxonomy](https:
 *List* (optional):  Objects representing multiple manifestations of the same [Research product] (e.g., a preprint, a postprint, etc.). 
 
 Each manifestation object has the following structure:
-- `type` *String* (recommended): The type of the manifestation (e.g., preprint). 
+- `type` *Object* (recommended): The type of the manifestation (e.g., preprint). 
 
-  The type has the following properties:
+  The object has the following properties:
     - `class` *String* (recommended): The URL of the class identifying the entity (e.g., in an ontology) describing that type.
     - `labels` *Object* (recommended): the labels describing the type (multiple for multilinguism). 
       The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
