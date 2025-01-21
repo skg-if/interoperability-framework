@@ -105,7 +105,7 @@ Needed for parsing purposes; fixed to `grant`.
 *Numeric* (optional): Amount funded for a [Grant].
 
 ```json
-    "funded_amount": 2.985.441
+    "funded_amount": 2985441
 ```
 
 ### `keywords`
