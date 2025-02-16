@@ -64,18 +64,14 @@ Needed for parsing purposes; fixed to `datasource`.
 ### `persistent_identity_systems`	
 *List* (optional): The persistent identifier systems that are used by a [Data source] to identify the `ProductType` it supports.
 
-- `for` *String* (mandatory): The Product type to which the persistent identifier is referring to. 
-  
-  To choose from
+- `for` *String* (mandatory): The Product type to which the persistent identifier is referring to. To choose from
     - `literature` (from [EOSC vocabulary Research Product Type])
     - `research data` (from [EOSC vocabulary Research Product Type])
     - `software` (from [EOSC vocabulary Research Product Type])
     - `metadata`
     - `any` 
 
-- `pid_schemes` *List* (mandatory): Persistent identifier schemes used to refer to ProductTypes. 
-  
-  Each elements must be drawn by the EOSC vocabulary Persistent Identity Scheme, i.e.,
+- `pid_schemes` *List* (mandatory): Persistent identifier schemes used to refer to ProductTypes. Each elements must be drawn by the EOSC vocabulary Persistent Identity Scheme, i.e.,
     - `doi`
     - `handle`
     - `ror`
