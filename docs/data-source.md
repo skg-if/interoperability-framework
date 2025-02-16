@@ -143,7 +143,7 @@ It can be chosen among the following values:
     - `any`
  
 ```json
-    "research_product_type": []
+    "research_product_type": ["metadata", "literature"]
 ```
 
 ### disciplines
