@@ -30,9 +30,7 @@ A [Data source] is a service or platform where a [Research product] (its metadat
 ```
 
 ### `identifiers`
-*List* (recommended):  Objects representing external identifiers for the entity. 
-
-Each object is structured as follows.
+*List* (recommended):  Objects representing external identifiers for the entity. Each object is structured as follows.
 - `scheme` *String* (mandatory): The scheme for the external identifier (e.g., a DOI).
 - `value` *String* (mandatory): The external identifier.
 
@@ -46,9 +44,7 @@ Each object is structured as follows.
 ```
 
 ### `entity_type`
-*String* (mandatory): Field stating what kind of entity is being serialised. 
-
-Needed for parsing purposes; fixed to `datasource`.
+*String* (mandatory): Field stating what kind of entity is being serialised. Needed for parsing purposes; fixed to `datasource`.
 
 ```json
     "entity_type": "datasource"
@@ -116,9 +112,7 @@ Each item specifies the following information:
 ```
 
 ### `data_source_classification`
-*String* (optional): The specific type of a [Data source], based on the vocabulary [Data source] Classification. 
-
-It can be chosen among the following values:
+*String* (optional): The specific type of a [Data source], based on the vocabulary [Data source] Classification. It can be chosen among the following values:
 - `repository`: services for the deposition, preservation, discovery, and access of research products metadata and files, e.g. PANGAEA, Zenodo, B2SHARE, EGI AppDB, BioTools
 - `aggregator`: services for the aggregation of metadata about research products (and other entities) that are mainly collected (aka harvested) from data sources via APIs and then possibly curated/enriched by end-users, e.g. BASE, NARCIS, GESIS, B2FIND, OpenAIRE Research Graph
 - `scientific database`: Scientific Databases intended to store structured information about scientific entities, e.g. PROTDB, ENA, ECRIN Studies Database
@@ -153,6 +147,8 @@ It can be chosen among the following values:
 
 ### `policy`
 *List* (optional): The policies followed by a [Data source].
+
+Each item specifies the following information:
 
 - `about` *String* (mandatory): The type of policy to consider. 
 To choose among the following possibilities:
