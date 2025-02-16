@@ -135,7 +135,9 @@ It can be chosen among the following values:
 ```
 
 ### `research_product_type`	
-*List* (optional): The types of entities managed by a [Data source]. Each item in the list should be compliant with the following terms:
+*List* (optional): The types of entities managed by a [Data source]. 
+
+Each item in the list should be compliant with the following terms:
     - `metadata`
     - `research data` (from [EOSC vocabulary Research Product Type])
     - `literature` (from [EOSC vocabulary Research Product Type])
