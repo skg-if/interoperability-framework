@@ -135,7 +135,12 @@ It can be chosen among the following values:
 ```
 
 ### `research_product_type`	
-*List* (optional): The types of OpenAIRE entities managed by a [Data source], based on the [EOSC vocabulary Research Product Type].
+*List* (optional): The types of entities managed by a [Data source]. Each item in the list should be compliant with the following terms:
+    - `metadata`
+    - `research data` (from [EOSC vocabulary Research Product Type])
+    - `literature` (from [EOSC vocabulary Research Product Type])
+    - `software` (from [EOSC vocabulary Research Product Type])
+    - `any`
  
 ```json
     "research_product_type": []
@@ -153,7 +158,7 @@ It can be chosen among the following values:
 ### `policy`
 *List* (optional): The policies followed by a [Data source].
 
-- `about` *String* (mandatory): the type of policy to consider. 
+- `about` *String* (mandatory): The type of policy to consider. 
 To choose among the following possibilities:
     - `submission`: This policy provides a comprehensive framework for the contribution of research products. Criteria for submitting content to the repository as well as product preparation guidelines can be stated. Concepts for quality assurance may be provided.
     - `preservation`: This policy provides a comprehensive framework for the long-term preservation of the research products. Principles aims and responsibilities must be clarified. An important aspect is the description of preservation concepts to ensure the technical and conceptual utility of the content.
@@ -161,14 +166,14 @@ To choose among the following possibilities:
     - `metadata only access`: This policy provides the possibility of having / handling metadata only access refers to the resources in the [Data source] (from [COAR Access Rights 1.0]).
     - `open access`: This policy provides the possibility of having / handling [Data source] resources that are immediately and permanently online (from [COAR Access Rights 1.0]).
     - `restricted access`: This policy provides the possibility of having / handling restricted access to the resources in the [Data source] (from [COAR Access Rights 1.0]).
-- `target` *List* (recommended): the types of resources to which the policy applies to. Each item in the list should be compliant with the following terms:
+- `target` *List* (recommended): The types of resources to which the policy applies to. Each item in the list should be compliant with the following terms:
     - `metadata`
     - `research data` (from [EOSC vocabulary Research Product Type])
     - `literature` (from [EOSC vocabulary Research Product Type])
     - `software` (from [EOSC vocabulary Research Product Type])
     - `any`
-- `documented_at` *String* (recommended): the URL of the document that describes the policy.
-- `description` *String* (recommended): describe the type of policy, if necessary.
+- `documented_at` *String* (recommended): The URL of the document that describes the policy.
+- `description` *String* (recommended): Describe the type of policy, if necessary.
 
 ```json
     "policy": [
