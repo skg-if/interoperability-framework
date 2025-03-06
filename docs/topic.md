@@ -15,7 +15,7 @@ This section describes the metadata fields for a [Topic].
 ## Properties
 
 ### `local_identifier`		
-*String* (mandatory): Unique code identifiying a [Topic] in the SKG (if any, otherwise "stateless identifier").
+*String* (mandatory): Unique code identifying a [Topic] in the SKG (if any, otherwise "stateless identifier").
 
 {: .highlight }
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
@@ -55,9 +55,9 @@ Needed for parsing purposes; fixed to `topic`.
 ```
 
 ### `labels`
-*Object* (optional): The labels describing a [Topic] (multiple for multilinguism). 
+*Object* (optional): The labels describing a [Topic] (multiple for multilingualism). 
 
-The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
+The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
 
 ```json
     "labels": {

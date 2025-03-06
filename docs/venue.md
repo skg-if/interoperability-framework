@@ -25,7 +25,7 @@ Depending on the context an entity can be represented as a [Venue] or a [Researc
 ## Properties
 
 ### `local_identifier`		
-*String* (mandatory): Unique code identifiying a [Venue] in the SKG (if any, otherwise "stateless identifier").
+*String* (mandatory): Unique code identifying a [Venue] in the SKG (if any, otherwise "stateless identifier").
  
 {: .highlight }
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
