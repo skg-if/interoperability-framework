@@ -36,7 +36,7 @@ Each document compliant with the SKG-IF format must start with the following pre
 
 This preamble is crucial to enable software system to see the JSON document as a **parsable JSON-LD file**. It also allows for extending the [current default context](/context/) with additional mappings that may be necessary for using specific [SKG-IF extensions](/extensions/).
 
-In addition, it is also crucial to specify the **base URLs** that will be used for local identifiers in case no URLs are specified in the appropriate fields (see the term `local_identifier` introduced for all the entities described by the Interoperability Framework). This is key to expose all Interoperability Framework entities as identifiable with an URL, which is a key condition for having data compliant with the RDF data model and Linked Data principles that we are strictly following in SKG-IF. Such URLs can be, indeed, derefereancable or not depending on the specific source that is providing it. Thus, in case no URLs are explicitly specified by the source, which may prefer to using only string values instead, the specification of a base as defined in the preamble above enables the automatic creation of sandbox URLs also in presence of string values. For doing so, the base URLs specified must follow a specific template, i.e.
+In addition, it is also crucial to specify the **base URLs** that will be used for local identifiers in case no URLs are specified in the appropriate fields (see the term `local_identifier` introduced for all the entities described by the Interoperability Framework). This is key to expose all Interoperability Framework entities as identifiable with an URL, which is a key condition for having data compliant with the RDF data model and Linked Data principles that we are strictly following in SKG-IF. Such URLs can be, indeed, dereferenceable or not depending on the specific source that is providing it. Thus, in case no URLs are explicitly specified by the source, which may prefer to using only string values instead, the specification of a base as defined in the preamble above enables the automatic creation of sandbox URLs also in presence of string values. For doing so, the base URLs specified must follow a specific template, i.e.
 
 ```
 https://w3id.org/skg-if/sandbox/<provider acronym>/
@@ -48,7 +48,7 @@ where the `<provider acronym>` should be substituted with the one of the provide
 ## Local identifiers of entities
 All the strings specified for defining local identifiers of SKG-ID entities are **always interpreted as URLs**. 
 
-In case a full URL is specified as a local identifier, such URL is used for identifying the related entity without any additional intervention by the Interoperability Framework. It is up to the source providing the data, though, to be sure it is **deferenceable** on the Web. For instance, if an SKG-IF document specifies the following local identifier
+In case a full URL is specified as a local identifier, such URL is used for identifying the related entity without any additional intervention by the Interoperability Framework. It is up to the source providing the data, though, to be sure it is **dereferenceable** on the Web. For instance, if an SKG-IF document specifies the following local identifier
 
 ```json
     "local_identifier": "https://w3id.org/oc/meta/br/062501777134"
@@ -66,11 +66,11 @@ it is interpreted by the Interoperability Framework as `https://w3id.org/skg-if/
 
 The local identifiers specified for any SKG-IF entity are usually those adopted by the particular source providing SKG-IF documents for referring to such entities internally to its system. However, it is also possible that a source may not have such an internal identifier explicitly defined and need to create new SKG-IF local identifiers on-the-fly, while creating the SKG-IF document to return. 
 
-To this end, it is important to clarify that all these URLs specified as local identifiers of SKG-IF entities (either directly or indirectly via the combitation of the SKG-IF base and the string) identify the related entity **globally**, at least in theory. In particular, if the same URL is used in two or more SKG-IF documents, it refer always to the same entity. 
+To this end, it is important to clarify that all these URLs specified as local identifiers of SKG-IF entities (either directly or indirectly via the combination of the SKG-IF base and the string) identify the related entity **globally**, at least in theory. In particular, if the same URL is used in two or more SKG-IF documents, it refer always to the same entity. 
 
 Thus, in case one specifies a non-URL string for a local identifier of an entity, and such non-URL string is created on-the-fly for the reason highlighted above, it is up to the source providing the SKG-IF data to prepare a string that does not create inconsistencies with other SKG-IF data generated in the past.
 
-Please note that having two distinct local identifiers referring to the same real world entity does not create particular issues - in particular when other external identifiers (e.g. DOI, ORCID, ROR) are specified and can be used to decupling entities. Instead, having a local identifier that refers to two distinct entities (either in the same SKG-IF document or in different SKG-IF documents) creates consistency problems and may result in erroneous interpretation of the SKG-IF data.
+Please note that having two distinct local identifiers referring to the same real world entity does not create particular issues - in particular when other external identifiers (e.g. DOI, ORCID, ROR) are specified and can be used to decoupling entities. Instead, having a local identifier that refers to two distinct entities (either in the same SKG-IF document or in different SKG-IF documents) creates consistency problems and may result in erroneous interpretation of the SKG-IF data.
 
 Thus, in case there is the need of creating such on-the-fly identifiers, the recommendation is to clearly state that by adopting the following template:
 

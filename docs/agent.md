@@ -112,7 +112,7 @@ Each element of the list is structured as follows:
 ```
 
 ### `other_names`
-*List* (optional): Other names, perhaps in different languages, identifiying an [Organisation].
+*List* (optional): Other names, perhaps in different languages, identifying an [Organisation].
 
 ```json
      "other_names": [ 

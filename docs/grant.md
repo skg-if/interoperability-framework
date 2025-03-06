@@ -24,7 +24,7 @@ The entity [Grant] describes funding awarded to a [Agent] by a funding body. The
 
 
 ### `grant_number`
-*String* (recommended): Unique code identifiying the [Grant] at the funder.
+*String* (recommended): Unique code identifying the [Grant] at the funder.
  
 ```json
     "grant_number": "101095129"
@@ -130,7 +130,7 @@ It includes the following information:
 ```
 
 ### `website`
-*String* (optional): An URL poiting to the website of the funded project.
+*String* (optional): An URL pointing to the website of the funded project.
  
 ```json
     "website": "https://graspos.eu"
