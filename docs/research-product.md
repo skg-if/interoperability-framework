@@ -1,6 +1,6 @@
 ---
 title: Research product
-parent: Interoperability Framework
+parent: Interoperability framework
 layout: default
 nav_order: 1
 ---

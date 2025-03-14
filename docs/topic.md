@@ -1,6 +1,6 @@
 ---
 title: Topic
-parent: Interoperability Framework
+parent: Interoperability framework
 layout: default
 nav_order: 5
 ---

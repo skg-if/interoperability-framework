@@ -1,6 +1,6 @@
 ---
 title: Agent
-parent: Interoperability Framework
+parent: Interoperability framework
 layout: default
 nav_order: 2
 ---

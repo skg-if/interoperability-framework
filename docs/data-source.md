@@ -1,6 +1,6 @@
 ---
 title: Data source
-parent: Interoperability Framework
+parent: Interoperability framework
 layout: default
 nav_order: 6
 ---
