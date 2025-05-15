@@ -26,9 +26,9 @@ Each document compliant with the SKG-IF format must start with the following pre
     "@context": [ 
         "https://w3id.org/skg-if/context/skg-if.json",
         { 
-            "@base": "https://w3id.org/skg-if/sandbox/<provider acronym>/",
-            "skg": "https://w3id.org/skg-if/sandbox/<provider acronym>/"
-        }
+            "@base": "https://w3id.org/skg-if/sandbox/<provider acronym>/"
+        },
+        "https://w3id.org/skg-if/extension/<extension acronym>/context/skg-if.json"
     ],
     "@graph": [ <here is where to specifies the various entities> ]
 }
