@@ -84,7 +84,7 @@ Needed for parsing purposes; fixed to `grant`.
 *String* (optional): The local identifier of an [Organisation] funding the [Grant].
 
 ```json
-    "funder": "EC"
+    "funding_agency": "EC"
 ```
 
 ### `funding_stream`
