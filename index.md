@@ -27,14 +27,25 @@ Each document compliant with the SKG-IF format must start with the following pre
         "https://w3id.org/skg-if/context/skg-if.json",
         { 
             "@base": "https://w3id.org/skg-if/sandbox/<provider acronym>/"
-        },
-        "https://w3id.org/skg-if/extension/<extension acronym>/context/skg-if.json"
+        }
     ],
     "@graph": [ <here is where to specifies the various entities> ]
 }
 ```
 
-This preamble is crucial to enable software system to see the JSON document as a **parsable JSON-LD file**. It also allows for extending the [current default context](/context/) with additional mappings that may be necessary for using specific [SKG-IF extensions](/extensions/).
+This preamble is crucial to enable software system to see the JSON document as a **parsable JSON-LD file**. It also allows for extending the [current default context](/context/) with additional mappings that may be necessary for using specific [SKG-IF extensions](/extensions/). In that case, the contexts related to the extensions to use should be added within the `@context` appending it at the end of the list, e.g.:
+
+```
+"@context": [ 
+    "https://w3id.org/skg-if/context/skg-if.json",
+    { 
+        "@base": "https://w3id.org/skg-if/sandbox/<provider acronym>/"
+    },
+    "https://w3id.org/skg-if/extension/<extension acronym 1>/context/skg-if.json",
+    "https://w3id.org/skg-if/extension/<extension acronym 2>/context/skg-if.json",
+    ...
+]
+```
 
 In addition, it is also crucial to specify the **base URLs** that will be used for local identifiers in case no URLs are specified in the appropriate fields (see the term `local_identifier` introduced for all the entities described by the Interoperability Framework). This is key to expose all Interoperability Framework entities as identifiable with an URL, which is a key condition for having data compliant with the RDF data model and Linked Data principles that we are strictly following in SKG-IF. Such URLs can be, indeed, dereferenceable or not depending on the specific source that is providing it. Thus, in case no URLs are explicitly specified by the source, which may prefer to using only string values instead, the specification of a base as defined in the preamble above enables the automatic creation of sandbox URLs also in presence of string values. For doing so, the base URLs specified must follow a specific template, i.e.
 
