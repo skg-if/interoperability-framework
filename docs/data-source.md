@@ -136,11 +136,11 @@ Each item specifies the following information:
     "research_product_type": ["metadata", "literature"]
 ```
 
-### disciplines
+### `disciplines`
 *List* (optional): The disciplines for which a [Data source] is dedicated. The disciplines must be specified using the Library of Congress Classification codes, available at <https://id.loc.gov/authorities/classification> (e.g. `PA3000-PA3049` for classical literature). In case a [Data source] is discipline agnostic, the string `all` should be specified.
  
 ```json
-    "discipline": [
+    "disciplines": [
         "QC790.95-QC791.8"
     ]
 ```
