@@ -102,6 +102,11 @@ where
 that is interpreted by the Interoperability Framework (considering having `https://w3id.org/skg-if/sandbox/oc/` as base URL) as `https://w3id.org/skg-if/sandbox/oc/otf___1730027051396___person-1`.
 
 
+## External identifiers of entities
+All the entities created using this framework can have some external identifier associated with them, specified via the property `identifiers`. The current version of SKG-IF includes the following types of identifiers: `arxiv`, `bibcode`, `crossref`, `doi`, `eissn`, `handle`, `isbn`, `issn`, `ivoid`, `lissn`, `omid`, `openalex`, `opendoar`, `orcid`, `pmcid`, `pmid`, `ror`, `spase`, `url`, `urn`, `viaf`, `w3id`.
+
+Please note that some of these identifiers can be used only with specific kinds of entities. For instance, an `orcid` can be used to identify a [Person] but it is inappropriate to use it with a [Venue].
+
 
 ----
 [Agent]: {% link interoperability-framework/docs/agent.md %}

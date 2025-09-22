@@ -32,7 +32,7 @@ Each object is structured as follows:
 - `scheme` *String* (mandatory): The scheme for the external identifier.
 - `value` *String* (mandatory): The external identifier.
 
-**Note:** the current version of SKG-IF includes the following types of identifiers (to be specified as strings in the field “scheme”): `orcid`, `viaf`, ...
+**Note:** the current version of SKG-IF includes the types of identifiers (to be specified as strings in the field `scheme`) as introduced in [Section "External identifiers of entities"](https://skg-if.github.io/interoperability-framework/#external-identifiers-of-entities).
 
 ```json
     "identifiers": [

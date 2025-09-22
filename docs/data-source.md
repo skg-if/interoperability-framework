@@ -34,14 +34,17 @@ A [Data source] is a service or platform where a [Research product] (its metadat
 - `scheme` *String* (mandatory): The scheme for the external identifier (e.g., a DOI).
 - `value` *String* (mandatory): The external identifier.
 
+**Note:** the current version of SKG-IF includes the types of identifiers (to be specified as strings in the field `scheme`) as introduced in [Section "External identifiers of entities"](https://skg-if.github.io/interoperability-framework/#external-identifiers-of-entities).
+
 ```json
     "identifiers": [
         {
-            "scheme": "doi"
-            "value": "https://doi.org/..."
+            "scheme": "opendoar",
+            "value": "2659"
         }
     ]
 ```
+
 
 ### `entity_type`
 *String* (mandatory): Field stating what kind of entity is being serialised. Needed for parsing purposes; fixed to `datasource`.

@@ -30,19 +30,22 @@ This section describes the metadata fields for a [Topic].
 Each object is structured as follows.
 - `scheme` *String* (mandatory): The scheme for the external identifier.
 - `value` *String* (mandatory): The external identifier.
+
+**Note:** the current version of SKG-IF includes the types of identifiers (to be specified as strings in the field `scheme`) as introduced in [Section "External identifiers of entities"](https://skg-if.github.io/interoperability-framework/#external-identifiers-of-entities).
  
 ```json
     "identifiers": [
         {
-            "scheme": "Computer Science Ontology",
+            "scheme": "url",
             "value": "https://cso.kmi.open.ac.uk/topics/semantic_web"
         },
         {
-            "scheme": "dbpedia",
+            "scheme": "url",
             "value": "https://dbpedia.org/page/Semantic_Web"
         }
     ]
 ```
+
 
 ### `entity_type`
 *String* (mandatory): Field stating what kind of entity is being serialised. 

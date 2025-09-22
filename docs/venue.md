@@ -41,7 +41,7 @@ Each object is structured as follows.
 - `scheme` *String* (mandatory): The scheme for the external identifier. It can be one of the following
 - `value` *String* (mandatory): The external identifier.
 
-**Note:** the current version of SKG-IF includes the following types of identifiers (to be specified as strings in the field “scheme”): `issn`, `eissn`, `lissn`, `isbn`, `opendoar`, `re3data.org`, `fairsharing`, `doi`, `handle`
+**Note:** the current version of SKG-IF includes the types of identifiers (to be specified as strings in the field `scheme`) as introduced in [Section "External identifiers of entities"](https://skg-if.github.io/interoperability-framework/#external-identifiers-of-entities).
 
 ```json
     "identifiers": [
@@ -55,6 +55,7 @@ Each object is structured as follows.
         }
     ]
 ```
+
 
 ### `entity_type`
 *String* (mandatory): Field stating what kind of entity is being serialised. 
