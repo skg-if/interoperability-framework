@@ -125,7 +125,7 @@ Each object in the list has the following properties:
             "term": "topic_2",
             "provenance": [
                 {
-                    "type": "openalex-infra",
+                    "associated_with": "openalex-infra",
                     "trust": 0.9
                 }
             ]
