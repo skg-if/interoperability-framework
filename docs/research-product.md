@@ -140,7 +140,7 @@ Each object is structured as follows:
 - `declared_affiliations` *List* (recommended): [Organisations] identifiers that reflect the declared affiliations of a [Agent] for a [Research product].
 - `rank` *Integer* (recommended): The rank (i.e., order of appearance) of a [Agent] with a specific role (e.g., the order of an author in a list) of a [Research product].
 - `role` *String* (recommended): The role that an [Agent] had in a [Research product], to choose among `author`, `editor`, and `publisher`.
-- `contribution` *List* (recommended): The contributions that an [Agent] had in a [Research product]. 
+- `contribution_types` *List* (recommended): The contributions that an [Agent] had in a [Research product]. 
 
     Each element in the list is a String compliant with the [CRediT taxonomy](https://credit.niso.org), i.e.,
     - `conceptualization`
@@ -164,7 +164,7 @@ Each object is structured as follows:
             "by": "person_123",
             "declared_affiliations": ["org_1", "org_3"],
             "rank": 1,
-            "contribution": ["writing – original draft", "conceptualization"],
+            "contribution_types": ["writing – original draft", "conceptualization"],
             "role": "author"
         }
     ]

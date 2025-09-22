@@ -134,7 +134,7 @@ Each element of the list is structured as follows:
     "country": "IT"
 ```
 
-### `type`
+### `types`
 *List* (optional): The types of an [Organisation]. 
 
 One or more from the following values:
@@ -150,7 +150,7 @@ One or more from the following values:
 - `unspecified`
 
 ```json
-    "type": ["research"]
+    "types": ["research"]
 ```
 
 ----

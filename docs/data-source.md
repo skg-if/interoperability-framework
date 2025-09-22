@@ -124,7 +124,7 @@ Each item specifies the following information:
     "data_source_classification": "repository"
 ```
 
-### `research_product_type`	
+### `research_product_types`	
 *List* (optional): The types of entities managed by a [Data source]. Each item in the list should be compliant with the following terms:
 - `metadata`
 - `research data` (from [EOSC vocabulary Research Product Type])
@@ -133,7 +133,7 @@ Each item specifies the following information:
 - `any`
  
 ```json
-    "research_product_type": ["metadata", "literature"]
+    "research_product_types": ["metadata", "literature"]
 ```
 
 ### `disciplines`
@@ -145,7 +145,7 @@ Each item specifies the following information:
     ]
 ```
 
-### `policy`
+### `policies`
 *List* (optional): The policies followed by a [Data source].
 
 Each item specifies the following information:
@@ -158,7 +158,7 @@ To choose among the following possibilities:
     - `metadata only access`: This policy provides the possibility of having / handling metadata only access refers to the resources in the [Data source] (from [COAR Access Rights 1.0]).
     - `open access`: This policy provides the possibility of having / handling [Data source] resources that are immediately and permanently online (from [COAR Access Rights 1.0]).
     - `restricted access`: This policy provides the possibility of having / handling restricted access to the resources in the [Data source] (from [COAR Access Rights 1.0]).
-- `target` *List* (recommended): The types of resources to which the policy applies to. Each item in the list should be compliant with the following terms:
+- `targets` *List* (recommended): The types of resources to which the policy applies to. Each item in the list should be compliant with the following terms:
     - `metadata`
     - `research data` (from [EOSC vocabulary Research Product Type])
     - `literature` (from [EOSC vocabulary Research Product Type])
@@ -168,20 +168,20 @@ To choose among the following possibilities:
 - `description` *String* (recommended): Describe the type of policy, if necessary.
 
 ```json
-    "policy": [
+    "policies": [
         {
             "about": "submission",
-            "target": [ "any" ],
+            "targets": [ "any" ],
             "documented_at": "http://www.example.com/submission"
         }, 
         {
             "about": "preservation",
-            "target": [ "any" ],
+            "targets": [ "any" ],
             "documented_at": "http://www.example.com/preservation"
         }, 
         {
             "about": "open access",
-            "target": [ "metadata", "literature" ],
+            "targets": [ "metadata", "literature" ],
             "documented_at": "https://creativecommons.org/licenses/by/4.0/legalcode.en",
             "description": "Creative Commons Attribution (CC-BY) 4.0"
         }
