@@ -59,18 +59,26 @@ Needed for parsing purposes; fixed to `grant`.
     "entity_type": "grant"
 ```
 
-### `title`
-*String* (optional): Title of the [Grant].
+### `titles`
+*Object* (optional): The titles of a [Grant] (multiple for multilingualism).
+
+The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
  
 ```json
-    "title": "GraspOS: next Generation Research Assessment to Promote Open Science"
+    "titles": {
+        "en": "GraspOS: next Generation Research Assessment to Promote Open Science"
+    }
 ```
 
-### `abstract`
-*String* (optional): The abstract or a description of the [Grant].
+### `abstracts`
+*Object* (optional): The abstracts of a [Grant] (multiple for multilingualism).
+
+The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
  
 ```json
-    "abstract": "GraspOS aims to build and operate a data infrastructure to support the policy reforms and pave the way towards a responsible research assessment system that embeds OS practices and accelerates its adoption in Europe. GraspOS will focus on extending the EOSC ecosystem with tools and services that will facilitate monitoring the use and uptake of various types of research services and outputs (publications, datasets, software) and will catalyse the implementation of policy-level rewards to foster OS practices. These tools and services will build upon multiple sources of metric data (e.g. OpenCitations, Scholexplorer) including capabilities offered by the EOSC Core, that will be federated in the context of the project, and will take into consideration both contemporary guidelines for Responsible Research Assessment (RRA), like those provided by initiatives like DORA and the Leiden Manifesto, and the suggestions from a diversity of relevant stakeholders. GraspOS will also incorporate piloting activities to co-design, showcase, validate, and evaluate GraspOS’s key results considering domain-specific aspects and different levels of OS-aware RRA, such as the researcher (individual/group), institution, and national level."
+    "abstracts": {
+        "en": "Open science (OS) has proven to provide several benefits to scientific research and collaboration. The EU-funded GraspOS project will further extend the reach and influence of OS. Specifically, it will develop a data infrastructure that will help policy reforms and bring about the adoption of a responsible research assessment system that embeds OS practices. Additionally, the project will create the necessary tools to expand the reach of the European Open Science Cloud ecosystem and improve monitoring services. These services will also allow for policy-level rewards that encourage OS practices and mindsets."
+    }
 ```
 
 ### `acronym`
