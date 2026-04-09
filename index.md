@@ -21,7 +21,7 @@ This section contains the description of the JSON-LD format used for exchanging 
 ## JSON-LD preamble
 Each document compliant with the SKG-IF format must start with the following preamble:
 
-```
+```json
 {
     "@context": [ 
         "https://w3id.org/skg-if/context/skg-if.json",
@@ -35,7 +35,7 @@ Each document compliant with the SKG-IF format must start with the following pre
 
 This preamble is crucial to enable software system to see the JSON document as a **parsable JSON-LD file**. It also allows for extending the [current default context](/context/) with additional mappings that may be necessary for using specific [SKG-IF extensions](/extensions/). In that case, the contexts related to the extensions to use should be added within the `@context` appending it at the end of the list, e.g.:
 
-```
+```json
 "@context": [ 
     "https://w3id.org/skg-if/context/skg-if.json",
     { 
@@ -47,11 +47,8 @@ This preamble is crucial to enable software system to see the JSON document as a
 ]
 ```
 
-In addition, it is also crucial to specify the **base URLs** that will be used for local identifiers in case no URLs are specified in the appropriate fields (see the term `local_identifier` introduced for all the entities described by the Interoperability Framework). This is key to expose all Interoperability Framework entities as identifiable with an URL, which is a key condition for having data compliant with the RDF data model and Linked Data principles that we are strictly following in SKG-IF. Such URLs can be, indeed, dereferenceable or not depending on the specific source that is providing it. Thus, in case no URLs are explicitly specified by the source, which may prefer to using only string values instead, the specification of a base as defined in the preamble above enables the automatic creation of sandbox URLs also in presence of string values. For doing so, the base URLs specified must follow a specific template, i.e.
+In addition, it is also crucial to specify the **base URLs** that will be used for local identifiers in case no URLs are specified in the appropriate fields (see the term `local_identifier` introduced for all the entities described by the Interoperability Framework). This is key to expose all Interoperability Framework entities as identifiable with an URL, which is a key condition for having data compliant with the RDF data model and Linked Data principles that we are strictly following in SKG-IF. Such URLs can be, indeed, dereferenceable or not depending on the specific source that is providing it. Thus, in case no URLs are explicitly specified by the source, which may prefer to using only string values instead, the specification of a base as defined in the preamble above enables the automatic creation of sandbox URLs also in presence of string values. For doing so, the base URLs specified must follow a specific template, i.e. `https://w3id.org/skg-if/sandbox/<provider acronym>/`
 
-```
-https://w3id.org/skg-if/sandbox/<provider acronym>/
-```
 
 where the `<provider acronym>` should be substituted with the one of the provider of SKG-IF-compliant data – e.g. `https://w3id.org/skg-if/sandbox/oc/`. It is up to the provider to choose the right acronym to use.
 
@@ -83,13 +80,7 @@ Thus, in case one specifies a non-URL string for a local identifier of an entity
 
 Please note that having two distinct local identifiers referring to the same real world entity does not create particular issues - in particular when other external identifiers (e.g. DOI, ORCID, ROR) are specified and can be used to decoupling entities. Instead, having a local identifier that refers to two distinct entities (either in the same SKG-IF document or in different SKG-IF documents) creates consistency problems and may result in erroneous interpretation of the SKG-IF data.
 
-Thus, in case there is the need of creating such on-the-fly identifiers, the recommendation is to clearly state that by adopting the following template:
-
-```
-otf___<session identifier>___<identifier string>
-```
-
-where
+Thus, in case there is the need of creating such on-the-fly identifiers, the recommendation is to clearly state that by adopting the following template `otf___<session identifier>___<identifier string>`, where
 
 * `otf` stands for *on-the-fly* to explicitly clarify the local identifiers it has been created for the purpose of creating this SKG-IF document; 
 * `<session identifier>` is a string portion that enables the source to uniquely identifier the session in which such SKG-IF document has been created - e.g. it could be the current time of the software run to create the SKG expressed in milliseconds;
