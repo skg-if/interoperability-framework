@@ -59,7 +59,7 @@ All the strings specified for defining local identifiers of SKG-ID entities are 
 In case a full URL is specified as a local identifier, such URL is used for identifying the related entity without any additional intervention by the Interoperability Framework. It is up to the source providing the data, though, to be sure it is **dereferenceable** on the Web. For instance, if an SKG-IF document specifies the following local identifier
 
 ```json
-    "local_identifier": "https://w3id.org/oc/meta/br/062501777134"
+"local_identifier": "https://w3id.org/oc/meta/br/062501777134"
 ```
 
 then the URL `https://w3id.org/oc/meta/br/062501777134` is used as stateless identifier for the entity described. In this example, the URL specified resolves to some available data on the Web since the original source handles all the URLs it provides as local identifiers via content negotiation.
@@ -67,7 +67,7 @@ then the URL `https://w3id.org/oc/meta/br/062501777134` is used as stateless ide
 It is also possible to specify a non-URL string as a local identifier. In this case, the Interoperability Framework interprets it as a URL by combining the base URL specified in the [JSON-LD preamble above](#json-ld-preamble) of the SKG-IF document with the string specified. For instance, supposing that the base URL declared in the preamble is `https://w3id.org/skg-if/sandbox/oc/` as shown in the example above, if an SKG-IF document specifies the following local identifier
 
 ```json
-    "local_identifier": "my-entity-id-1"
+"local_identifier": "my-entity-id-1"
 ```
 
 it is interpreted by the Interoperability Framework as `https://w3id.org/skg-if/sandbox/oc/my-entity-id-1`.
@@ -87,7 +87,7 @@ Thus, in case there is the need of creating such on-the-fly identifiers, the rec
 * `<identifier string>` is a string portion that identifies the particular entity in consideration. For instance, a possible example of such a local identifier would be
 
 ```json
-    "local_identifier": "otf___1730027051396___person-1"
+"local_identifier": "otf___1730027051396___person-1"
 ```
 
 that is interpreted by the Interoperability Framework (considering having `https://w3id.org/skg-if/sandbox/oc/` as base URL) as `https://w3id.org/skg-if/sandbox/oc/otf___1730027051396___person-1`.

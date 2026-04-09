@@ -24,7 +24,7 @@ nav_order: 1
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
-    "local_identifier": "https://w3id.org/oc/meta/br/062501777134"
+"local_identifier": "https://w3id.org/oc/meta/br/062501777134"
 ```
 
 
@@ -38,16 +38,16 @@ Each identifier is structured as follows:
 **Note:** the current version of SKG-IF includes the types of identifiers (to be specified as strings in the field `scheme`) as introduced in [Section "External identifiers of entities"](https://skg-if.github.io/interoperability-framework/#external-identifiers-of-entities).
 
 ```json
-    "identifiers": [
-        {
-            "scheme": "doi",
-            "value": "10.1162/qss_a_00023"
-        },
-        {
-            "scheme": "omid",
-            "value": "br/062501777134"
-        }
-    ]
+"identifiers": [
+    {
+        "scheme": "doi",
+        "value": "10.1162/qss_a_00023"
+    },
+    {
+        "scheme": "omid",
+        "value": "br/062501777134"
+    }
+]
 ```
 
 
@@ -57,7 +57,7 @@ Each identifier is structured as follows:
 Needed for parsing purposes; fixed to `product`.
 
 ```json
-    "entity_type": "product"
+"entity_type": "product"
 ```
 
 ### `titles`
@@ -66,11 +66,11 @@ Needed for parsing purposes; fixed to `product`.
 The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
 
 ```json
-    "titles": {
-        "en": ["Title of the paper", "Title variant"],
-        "it": ["Titolo in italiano"],
-        "none": ["Itletay ofyay ethay aperpay"]
-    }
+"titles": {
+    "en": ["Title of the paper", "Title variant"],
+    "it": ["Titolo in italiano"],
+    "none": ["Itletay ofyay ethay aperpay"]
+}
 ```
 
 ### `abstracts`
@@ -79,11 +79,11 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the informtion about the language is not available or cannot be shared.
 
 ```json
-    "abstracts": {
-        "en": ["Abstract", "Summary"],
-        "es": ["Resumen"],
-        "none": ["Aperpay ummarysay"]
-    }
+"abstracts": {
+    "en": ["Abstract", "Summary"],
+    "es": ["Resumen"],
+    "none": ["Aperpay ummarysay"]
+}
 ```
 
 ### `product_type`
@@ -96,7 +96,7 @@ One of the following values:
 - `other`
 
 ```json
-    "product_type": "literature"
+"product_type": "literature"
 ```
 
 ### `topics`
@@ -111,26 +111,26 @@ Each object in the list has the following properties:
     - `trust` *Float* (mandatory): A numeric value associated to the trust given to the relation to a [Topic]. The float should be normalised in the range [0,1].
  
 ```json
-    "topics": [
-        {
-            "term": "topic_1",
-            "provenance": [
-                {
-                    "associated_with": "openaire-infra",
-                    "trust": 0.7
-                }
-            ]
-        },
-        {
-            "term": "topic_2",
-            "provenance": [
-                {
-                    "associated_with": "openalex-infra",
-                    "trust": 0.9
-                }
-            ]
-        }
-    ]
+"topics": [
+    {
+        "term": "topic_1",
+        "provenance": [
+            {
+                "associated_with": "openaire-infra",
+                "trust": 0.7
+            }
+        ]
+    },
+    {
+        "term": "topic_2",
+        "provenance": [
+            {
+                "associated_with": "openalex-infra",
+                "trust": 0.9
+            }
+        ]
+    }
+]
 ```
 
 ### `contributions`
@@ -160,15 +160,15 @@ Each object is structured as follows:
     - `writing – review & editing`
 
 ```json
-    "contributions": [
-        {
-            "by": "person_123",
-            "declared_affiliations": ["org_1", "org_3"],
-            "rank": 1,
-            "contribution_types": ["writing – original draft", "conceptualization"],
-            "role": "author"
-        }
-    ]
+"contributions": [
+    {
+        "by": "person_123",
+        "declared_affiliations": ["org_1", "org_3"],
+        "rank": 1,
+        "contribution_types": ["writing – original draft", "conceptualization"],
+        "role": "author"
+    }
+]
 ```
 
 ### `manifestations`
@@ -234,65 +234,65 @@ Each manifestation object has the following structure:
     - `hosting_data_source` *String* (optional): A [Data source] identifier for the manifestation.
 
 ```json
-    "manifestations": [
-        {
-            "type": {
-                "class": "http://purl.org/spar/fabio/Preprint",
-                "labels": {
-                    "en": "preprint"
-                },
-                "defined_in": "http://purl.org/spar/fabio"
+"manifestations": [
+    {
+        "type": {
+            "class": "http://purl.org/spar/fabio/Preprint",
+            "labels": {
+                "en": "preprint"
             },
-            "dates": {
-                "modified": ["2024-01-15T14:15:43Z", "2024-02-11T11:12:04Z"],
-                "distribution": "2024-02-12T12:00:00Z"
+            "defined_in": "http://purl.org/spar/fabio"
+        },
+        "dates": {
+            "modified": ["2024-01-15T14:15:43Z", "2024-02-11T11:12:04Z"],
+            "distribution": "2024-02-12T12:00:00Z"
+        },
+        "identifiers": [
+            {
+                "scheme": "arxiv",
+                "value": "2407.13329"
             },
-            "identifiers": [
-                {
-                    "scheme": "arxiv",
-                    "value": "2407.13329"
-                },
-                {
-                    "scheme": "url",
-                    "value": "https://arxiv.org/abs/2407.13329"
-                }
-            ],
-            "peer_review": {
-                "status": "peer reviewed",
-                "description": "single-blind peer review"
-            },
-            "access_rights": {
-                "status": "restricted",
-                "description": "Only publishers can access the manifestation"
-            },
-            "licence": "https://creativecommons.org/licenses/by/4.0/legalcode.en",
-            "version": "1.0.0",
-            "biblio": {
-                "issue": "1",
-                "pages": {
-                    "first": "640",
-                    "last": "645"
-                },
-                "volume": "17",
-                "in": "ven1",
-                "hosting_data_source": "123"
+            {
+                "scheme": "url",
+                "value": "https://arxiv.org/abs/2407.13329"
             }
+        ],
+        "peer_review": {
+            "status": "peer reviewed",
+            "description": "single-blind peer review"
+        },
+        "access_rights": {
+            "status": "restricted",
+            "description": "Only publishers can access the manifestation"
+        },
+        "licence": "https://creativecommons.org/licenses/by/4.0/legalcode.en",
+        "version": "1.0.0",
+        "biblio": {
+            "issue": "1",
+            "pages": {
+                "first": "640",
+                "last": "645"
+            },
+            "volume": "17",
+            "in": "ven1",
+            "hosting_data_source": "123"
         }
-    ]
+    }
+]
 ```
 
 ### `relevant_organisations`
 *List* (optional): Relevant [Organisation] identifiers associated with a [Research product], in case the individual affiliations of an [Agent] are not available.
 
 ```json
-    "relevant_organisations": ["org_1", "org5"]
+"relevant_organisations": ["org_1", "org5"]
 ```
  
 ### `funding`
 *List* (optional): Relevant [Grant] identifiers associated with a [Research product].
 
 ```json
-    "funding": ["grant_1", "grant_2"]
+"funding": ["grant_1", "grant_2"]
 ```    
 
 ### `related_products`
@@ -307,13 +307,13 @@ It is structured as follows:
 
 
 ```json
-    "related_products": {
-        "cites": ["product_2", "product_3", "product_4"],
-        "is_supplemented_by": ["product_7", "product_8", "product_9"],
-        "is_documented_by": ["product_10", "product_13"],
-        "is_new_version_of": ["product_10", "product_13"],
-        "is_part_of": ["product_11"]
-    }
+"related_products": {
+    "cites": ["product_2", "product_3", "product_4"],
+    "is_supplemented_by": ["product_7", "product_8", "product_9"],
+    "is_documented_by": ["product_10", "product_13"],
+    "is_new_version_of": ["product_10", "product_13"],
+    "is_part_of": ["product_11"]
+}
 ```
 
 ----

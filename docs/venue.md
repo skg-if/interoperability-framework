@@ -31,7 +31,7 @@ Depending on the context an entity can be represented as a [Venue] or a [Researc
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
-    "local_identifier": "https://w3id.org/oc/meta/br/062501778099"
+"local_identifier": "https://w3id.org/oc/meta/br/062501778099"
 ```
 
 ### `identifiers`
@@ -44,16 +44,16 @@ Each object is structured as follows.
 **Note:** the current version of SKG-IF includes the types of identifiers (to be specified as strings in the field `scheme`) as introduced in [Section "External identifiers of entities"](https://skg-if.github.io/interoperability-framework/#external-identifiers-of-entities).
 
 ```json
-    "identifiers": [
-        {
-            "scheme": "issn"
-            "value": "0302-9743"
-        },
-        {
-            "scheme": "isbn"
-            "value": "978-3-031-25049-1"
-        }
-    ]
+"identifiers": [
+    {
+        "scheme": "issn"
+        "value": "0302-9743"
+    },
+    {
+        "scheme": "isbn"
+        "value": "978-3-031-25049-1"
+    }
+]
 ```
 
 
@@ -63,21 +63,21 @@ Each object is structured as follows.
 Needed for parsing purposes; fixed to `venue`.
 
 ```json
-    "entity_type": "venue"
+"entity_type": "venue"
 ```
 
 ### `name` 
  *String* (optional): The name of a [Venue].
 
 ```json
-    "name": "The Semantic Web – ISWC 2020: 19th International Semantic Web Conference, Athens, Greece, November 2–6, 2020, Proceedings, Part II"
+"name": "The Semantic Web – ISWC 2020: 19th International Semantic Web Conference, Athens, Greece, November 2–6, 2020, Proceedings, Part II"
 ```
 
 ### `acronym` 
  *String* (optional): Acronym used by a [Venue].
 
 ```json
-    "acronym": "JASIST"
+"acronym": "JASIST"
 ```
 
 ### `type`
@@ -92,14 +92,14 @@ The String follows the vocabulary below:
 - `unknown`
 
 ```json
-    "type": "journal"
+"type": "journal"
 ```
 
 ### `series`
 *String* (optional): The name of the conference or book series.
 
 ```json
-    "series": "Lecture Notes in Computer Science (LNCS)"
+"series": "Lecture Notes in Computer Science (LNCS)"
 ```
 
 ### `access_rights` 
@@ -111,17 +111,17 @@ It specifies the following properties:
 - `description` *String* (recommended): describe and qualify the specific status selected.
 
 ```json
-    "access_rights": {
-        "status": "open",
-        "description": "Diamond Open Access journal"
-    }
+"access_rights": {
+    "status": "open",
+    "description": "Diamond Open Access journal"
+}
 ```
 
 ### `creation_date`
 *String* (optional): The date of creation of a [Venue]. The string should be compliant with the [ISO 8601] datetime string.
  
 ```json
-    "creation_date": "2019-09-13T00:00:00+00:00"
+"creation_date": "2019-09-13T00:00:00+00:00"
 ```
 
 ### `contributions`
@@ -136,20 +136,20 @@ Each element of the list is structured as follows:
     - `editor`
 
 ```json
-    "contributions": [
-        {
-            "by": "pub1",
-            "role": "publisher"
-        },
-        {
-            "by": "ed1",
-            "role": "editor"
-        },
-        {
-            "by": "ed2",
-            "role": "editor"
-        }
-    ]
+"contributions": [
+    {
+        "by": "pub1",
+        "role": "publisher"
+    },
+    {
+        "by": "ed1",
+        "role": "editor"
+    },
+    {
+        "by": "ed2",
+        "role": "editor"
+    }
+]
 ```
 
 ----

@@ -26,7 +26,7 @@ A [Data source] is a service or platform where a [Research product] (its metadat
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
-    "local_identifier": "https://ror.org/00m2zh467"
+"local_identifier": "https://ror.org/00m2zh467"
 ```
 
 ### `identifiers`
@@ -37,12 +37,12 @@ A [Data source] is a service or platform where a [Research product] (its metadat
 **Note:** the current version of SKG-IF includes the types of identifiers (to be specified as strings in the field `scheme`) as introduced in [Section "External identifiers of entities"](https://skg-if.github.io/interoperability-framework/#external-identifiers-of-entities).
 
 ```json
-    "identifiers": [
-        {
-            "scheme": "opendoar",
-            "value": "2659"
-        }
-    ]
+"identifiers": [
+    {
+        "scheme": "opendoar",
+        "value": "2659"
+    }
+]
 ```
 
 
@@ -50,14 +50,14 @@ A [Data source] is a service or platform where a [Research product] (its metadat
 *String* (mandatory): Field stating what kind of entity is being serialised. Needed for parsing purposes; fixed to `datasource`.
 
 ```json
-    "entity_type": "datasource"
+"entity_type": "datasource"
 ```    
 
 ### `name`
 *String* (optional): Name of the [Data source].
  
 ```json
-    "name": "Zenodo"
+"name": "Zenodo"
 ```
 
 ### `persistent_identity_systems`	
@@ -81,16 +81,16 @@ A [Data source] is a service or platform where a [Research product] (its metadat
     - `ark`
 
 ```json
-    "persistent_identity_systems": [
-        {
-            "pid_schemes": [ "doi", "arxiv" ],
-            "for": [ "literature" ]
-        },
-        {
-            "pid schemes": [ "doi" ],
-            "for": [ "metadata" ]
-        }
-    ]
+"persistent_identity_systems": [
+    {
+        "pid_schemes": [ "doi", "arxiv" ],
+        "for": [ "literature" ]
+    },
+    {
+        "pid schemes": [ "doi" ],
+        "for": [ "metadata" ]
+    }
+]
 ```
 
 ### `audience`	
@@ -108,10 +108,10 @@ Each item specifies the following information:
     - `e-Infrastructure`: intended for users of horizontal e-infra services (e.g., EGI, GEANT, OpenAIRE, EUDAT, Fenix, gaia-x)
 
 ```json
-    "audience": [
-        { "audience_type": "National" },
-        { "audience_type": "e-Infrastructure" }
-    ]
+"audience": [
+    { "audience_type": "National" },
+    { "audience_type": "e-Infrastructure" }
+]
 ```
 
 ### `data_source_classification`
@@ -124,7 +124,7 @@ Each item specifies the following information:
 - `cris system`: A current research information system (CRIS) is an information system to store, manage and exchange contextual metadata for the research products funded by a research funder or conducted at a research-performing organisation
  
 ```json
-    "data_source_classification": "repository"
+"data_source_classification": "repository"
 ```
 
 ### `research_product_types`	
@@ -136,16 +136,16 @@ Each item specifies the following information:
 - `any`
  
 ```json
-    "research_product_types": ["metadata", "literature"]
+"research_product_types": ["metadata", "literature"]
 ```
 
 ### `disciplines`
 *List* (optional): The disciplines for which a [Data source] is dedicated. The disciplines must be specified using the Library of Congress Classification codes, available at <https://id.loc.gov/authorities/classification> (e.g. `PA3000-PA3049` for classical literature). In case a [Data source] is discipline agnostic, the string `all` should be specified.
  
 ```json
-    "disciplines": [
-        "QC790.95-QC791.8"
-    ]
+"disciplines": [
+    "QC790.95-QC791.8"
+]
 ```
 
 ### `policies`
@@ -171,24 +171,24 @@ To choose among the following possibilities:
 - `description` *String* (recommended): Describe the type of policy, if necessary.
 
 ```json
-    "policies": [
-        {
-            "about": "submission",
-            "targets": [ "any" ],
-            "documented_at": "http://www.example.com/submission"
-        }, 
-        {
-            "about": "preservation",
-            "targets": [ "any" ],
-            "documented_at": "http://www.example.com/preservation"
-        }, 
-        {
-            "about": "open access",
-            "targets": [ "metadata", "literature" ],
-            "documented_at": "https://creativecommons.org/licenses/by/4.0/legalcode.en",
-            "description": "Creative Commons Attribution (CC-BY) 4.0"
-        }
-    ]
+"policies": [
+    {
+        "about": "submission",
+        "targets": [ "any" ],
+        "documented_at": "http://www.example.com/submission"
+    }, 
+    {
+        "about": "preservation",
+        "targets": [ "any" ],
+        "documented_at": "http://www.example.com/preservation"
+    }, 
+    {
+        "about": "open access",
+        "targets": [ "metadata", "literature" ],
+        "documented_at": "https://creativecommons.org/licenses/by/4.0/legalcode.en",
+        "description": "Creative Commons Attribution (CC-BY) 4.0"
+    }
+]
 ```
 
 ----

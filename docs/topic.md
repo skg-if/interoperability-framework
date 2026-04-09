@@ -21,7 +21,7 @@ This section describes the metadata fields for a [Topic].
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
-    "local_identifier": "http://id.loc.gov/authorities/classification/Q"
+"local_identifier": "http://id.loc.gov/authorities/classification/Q"
 ```
 
 ### `identifiers`
@@ -34,16 +34,16 @@ Each object is structured as follows.
 **Note:** the current version of SKG-IF includes the types of identifiers (to be specified as strings in the field `scheme`) as introduced in [Section "External identifiers of entities"](https://skg-if.github.io/interoperability-framework/#external-identifiers-of-entities).
  
 ```json
-    "identifiers": [
-        {
-            "scheme": "url",
-            "value": "https://cso.kmi.open.ac.uk/topics/semantic_web"
-        },
-        {
-            "scheme": "url",
-            "value": "https://dbpedia.org/page/Semantic_Web"
-        }
-    ]
+"identifiers": [
+    {
+        "scheme": "url",
+        "value": "https://cso.kmi.open.ac.uk/topics/semantic_web"
+    },
+    {
+        "scheme": "url",
+        "value": "https://dbpedia.org/page/Semantic_Web"
+    }
+]
 ```
 
 
@@ -53,7 +53,7 @@ Each object is structured as follows.
 Needed for parsing purposes; fixed to `topic`.
 
 ```json
-    "entity_type": "topic"
+"entity_type": "topic"
 ```
 
 ### `labels`
@@ -62,10 +62,10 @@ Needed for parsing purposes; fixed to `topic`.
 The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
 
 ```json
-    "labels": {
-        "en": "Computer Science",
-        "it": "Informatica"
-    }
+"labels": {
+    "en": "Computer Science",
+    "it": "Informatica"
+}
 
 ```
 

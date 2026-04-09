@@ -21,7 +21,7 @@ This page describes the metadata fields for an [Agent] and all its subtypes (i.e
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
-    "local_identifier": "https://w3id.org/oc/meta/ra/0614010840729"
+"local_identifier": "https://w3id.org/oc/meta/ra/0614010840729"
 ```
 
 ### `identifiers`
@@ -35,12 +35,12 @@ Each object is structured as follows:
 **Note:** the current version of SKG-IF includes the types of identifiers (to be specified as strings in the field `scheme`) as introduced in [Section "External identifiers of entities"](https://skg-if.github.io/interoperability-framework/#external-identifiers-of-entities).
 
 ```json
-    "identifiers": [
-        {
-            "scheme": "orcid",
-            "value": "0000-0002-5193-7851"
-        }           
-    ]
+"identifiers": [
+    {
+        "scheme": "orcid",
+        "value": "0000-0002-5193-7851"
+    }           
+]
 ```
 
 ### `entity_type`
@@ -49,28 +49,28 @@ Each object is structured as follows:
 It can be `agent` (generic agent), `person`, or `organisation`.
 
 ```json
-    "entity_type": "person"
+"entity_type": "person"
 ```
 
 ### `name`
 *String* (optional): The string containing whatever concatenation of an [Agent] name(s).
 
 ```json
-    "name": "Andrea Mannocci, PhD"
+"name": "Andrea Mannocci, PhD"
 ```
 
 ### `given_name`
 *String* (optional): The given name of a [Person].
 
 ```json
-    "given_name": "Andrea"
+"given_name": "Andrea"
 ```
 
 ### `family_name`
 *String* (optional): The family name of a [Person].
 
 ```json
-    "family_name": "Mannocci"
+"family_name": "Mannocci"
 ```
 
 ### `affiliations`
@@ -84,54 +84,54 @@ Each element of the list is structured as follows:
     - `end` *String* (recommended): The end datetime (if any) of the affiliation with an [Organisation]. The string should be compliant with the [ISO 8601] datetime string.
 
 ```json
-    "affiliations": [
-        {
-            "affiliation": "org_1",
-            "role": "affiliate",
-            "period": {
-                "start": "2017-04-13T00:00:00Z",
-                "end": "2019-02-11T23:59:59Z"
-            }
-        },
-        {
-            "affiliation": "org_2",
-            "role": "affiliate",
-            "period": {
-                "start": "2019-02-12T00:00:00Z"
-            }
+"affiliations": [
+    {
+        "affiliation": "org_1",
+        "role": "affiliate",
+        "period": {
+            "start": "2017-04-13T00:00:00Z",
+            "end": "2019-02-11T23:59:59Z"
         }
-    ]
+    },
+    {
+        "affiliation": "org_2",
+        "role": "affiliate",
+        "period": {
+            "start": "2019-02-12T00:00:00Z"
+        }
+    }
+]
 ```
 
 ### `short_name`
 *String* (optional): The short name/acronym for an [Organisation].
 
 ```json
-    "short_name": "CNR"
+"short_name": "CNR"
 ```
 
 ### `other_names`
 *List* (optional): Other names, perhaps in different languages, identifying an [Organisation].
 
 ```json
-     "other_names": [ 
-        "National Research Council", 
-        "Conseil National de la Recherche"
-    ]
+    "other_names": [ 
+    "National Research Council", 
+    "Conseil National de la Recherche"
+]
 ```
 
 ### `website`
 *String* (optional): The website URL for an [Organisation].
 
 ```json
-    "website": "https://www.cnr.it/"
+"website": "https://www.cnr.it/"
 ```
 
 ### `country`
 *String* (optional): The country code of an [Organisation] expressed as [ISO 3166-1 alpha-2].
 
 ```json
-    "country": "IT"
+"country": "IT"
 ```
 
 ### `types`
@@ -150,7 +150,7 @@ One or more from the following values:
 - `unspecified`
 
 ```json
-    "types": ["research"]
+"types": ["research"]
 ```
 
 ----

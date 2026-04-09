@@ -19,7 +19,7 @@ The entity [Grant] describes funding awarded to a [Agent] by a funding body. The
 **Suggestion:** Use a URL as a string to make this entity dereferenceable on the Web. For additional information, see the [section 'Local identifiers of entities' of the Interoperability Framework](/interoperability-framework/#local-identifiers-of-entities).
 
 ```json
-    "local_identifier": "https://doi.org/10.3030/101095129"
+"local_identifier": "https://doi.org/10.3030/101095129"
 ```
 
 
@@ -27,7 +27,7 @@ The entity [Grant] describes funding awarded to a [Agent] by a funding body. The
 *String* (recommended): Unique code identifying the [Grant] at the funder.
  
 ```json
-    "grant_number": "101095129"
+"grant_number": "101095129"
 ```
 
 ### `identifiers`
@@ -41,12 +41,12 @@ Each object is structured as follows:
 **Note:** the current version of SKG-IF includes the types of identifiers (to be specified as strings in the field `scheme`) as introduced in [Section "External identifiers of entities"](https://skg-if.github.io/interoperability-framework/#external-identifiers-of-entities).
 
 ```json
-    "identifiers": [
-        {
-            "scheme": "doi"
-            "value": "10.3030/101095129"
-        }
-    ]
+"identifiers": [
+    {
+        "scheme": "doi"
+        "value": "10.3030/101095129"
+    }
+]
 ```
 
 
@@ -56,7 +56,7 @@ Each object is structured as follows:
 Needed for parsing purposes; fixed to `grant`.
 
 ```json
-    "entity_type": "grant"
+"entity_type": "grant"
 ```
 
 ### `titles`
@@ -65,9 +65,9 @@ Needed for parsing purposes; fixed to `grant`.
 The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
  
 ```json
-    "titles": {
-        "en": "GraspOS: next Generation Research Assessment to Promote Open Science"
-    }
+"titles": {
+    "en": "GraspOS: next Generation Research Assessment to Promote Open Science"
+}
 ```
 
 ### `abstracts`
@@ -76,51 +76,51 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 The object is a dictionary, the keys represent language codes following [ISO 639-1]; the special key `none` is reserved whenever the information about the language is not available or cannot be shared.
  
 ```json
-    "abstracts": {
-        "en": "Open science (OS) has proven to provide several benefits to scientific research and collaboration. The EU-funded GraspOS project will further extend the reach and influence of OS. Specifically, it will develop a data infrastructure that will help policy reforms and bring about the adoption of a responsible research assessment system that embeds OS practices. Additionally, the project will create the necessary tools to expand the reach of the European Open Science Cloud ecosystem and improve monitoring services. These services will also allow for policy-level rewards that encourage OS practices and mindsets."
-    }
+"abstracts": {
+    "en": "Open science (OS) has proven to provide several benefits to scientific research and collaboration. The EU-funded GraspOS project will further extend the reach and influence of OS. Specifically, it will develop a data infrastructure that will help policy reforms and bring about the adoption of a responsible research assessment system that embeds OS practices. Additionally, the project will create the necessary tools to expand the reach of the European Open Science Cloud ecosystem and improve monitoring services. These services will also allow for policy-level rewards that encourage OS practices and mindsets."
+}
 ```
 
 ### `acronym`
 *String* (optional): The acronym of the [Grant].
  
 ```json
-    "acronym": "GraspOS"
+"acronym": "GraspOS"
 ```
 
 ### `funding_agency`
 *String* (optional): The local identifier of an [Organisation] funding the [Grant].
 
 ```json
-    "funding_agency": "EC"
+"funding_agency": "EC"
 ```
 
 ### `funding_stream`
 *String* (optional): The funding stream of the [Grant].
 
 ```json
-    "funding_stream": "Horizon Europe"
+"funding_stream": "Horizon Europe"
 ```
 
 ### `currency`
 *String* (mandatory, if `funded_amount` is provided; optional otherwise): Currency of the funded amount, following [ISO 4217].
 
 ```json
-    "currency": "EUR"
+"currency": "EUR"
 ```
 
 ### `funded_amount`
 *Numeric* (optional): Amount funded for a [Grant].
 
 ```json
-    "funded_amount": 2985441
+"funded_amount": 2985441
 ```
 
 ### `keywords`
 *List* (optional): Keywords of a [Grant].
  
 ```json
-    "keywords": ["Open science", "mutual learning", "open research"]
+"keywords": ["Open science", "mutual learning", "open research"]
 ```
 
 ### `duration`
@@ -131,24 +131,24 @@ It includes the following information:
 - `end` *String* (optional): The end datetime (if any) of the [Grant]. The string should be compliant with the [ISO 8601] datetime string.
 
 ```json
-    "duration": {
-        "start": "2023-01-01T00:00:00",
-        "end": "2025-12-31T23:59:59"
-    }
+"duration": {
+    "start": "2023-01-01T00:00:00",
+    "end": "2025-12-31T23:59:59"
+}
 ```
 
 ### `website`
 *String* (optional): An URL pointing to the website of the funded project.
  
 ```json
-    "website": "https://graspos.eu"
+"website": "https://graspos.eu"
 ```
 
 ### `beneficiaries`
 *List* (optional): [Organisations] identifiers funded by the [Grant].
  
 ```json
-    "beneficiaries": ["org_2", "org_5"]
+"beneficiaries": ["org_2", "org_5"]
 ```
 
 ### `contributions`
