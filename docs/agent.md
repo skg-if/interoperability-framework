@@ -114,8 +114,8 @@ Each element of the list is structured as follows:
 *List* (optional): Other names, perhaps in different languages, identifying an [Organisation].
 
 ```json
-    "other_names": [ 
-    "National Research Council", 
+"other_names": [ 
+    "National Research Council",    
     "Conseil National de la Recherche"
 ]
 ```
