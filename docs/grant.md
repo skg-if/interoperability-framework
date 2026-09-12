@@ -110,10 +110,10 @@ The object is a dictionary, the keys represent language codes following [ISO 639
 ```
 
 ### `funded_amount`
-*Numeric* (optional): Amount funded for a [Grant].
+*Float* (optional): Amount funded for a [Grant].
 
 ```json
-"funded_amount": 2985441
+"funded_amount": 2985441.00
 ```
 
 ### `keywords`
